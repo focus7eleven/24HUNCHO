@@ -1,0 +1,119 @@
+
+:local(.cardContainer){
+  padding: 15px;
+  color: #4a4a4a;
+  border: 1px solid #e9e9e9;
+  margin-top: 10px;
+  font-size: 12px;
+
+  :local(.titleContainer){
+    position: relative;
+
+    :local(.options){
+      float: right;
+      width: 50px;
+      text-align: right;
+
+      svg {
+        fill: #cccccc;
+        width: 16px;
+        height: 16px;
+        transition: all .3s;
+      }
+      &:hover svg {
+        fill: #666;
+      }
+    }
+
+    :local(.title){
+      font-size: 14px;
+      font-weight: 500;
+
+
+    }
+  }
+
+  :local(.info){
+    display: flex;
+    align-items: center;
+    margin: 8px 0 4px 0;
+    :local(.item){
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+      :local(.label){
+        color: #9b9b9b;
+        white-space: nowrap;
+      }
+
+      :local(.content) {
+        display: inline-block;
+        white-space: nowrap;
+
+        > span {
+          display: inline-block;
+        }
+
+        :local(.defaultAvatar), img{
+          width: 21px;
+          height: 21px;
+          border-radius:50%;
+          background: #9b9b9b;
+          vertical-align: middle;
+
+          margin-right: 5px;
+        }
+
+        :local(.respName){
+          white-space: nowrap;
+          min-width: 90px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          vertical-align: middle;
+
+        }
+
+      }
+
+      .ant-select-open .ant-select-selection {
+        box-shadow: none;
+        border: none;
+      }
+
+      .ant-select-selection {
+        border: none;
+
+        &:focus {
+          border:none;
+          box-shadow: none;
+        }
+      }
+
+
+    }
+  }
+
+  :local(.remark){
+    color: #9b9b9b;
+  }
+}
+
+:local(.icon){
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+:local(.respPop) {
+  img{
+    width: 21px;
+    height: 21px;
+    border-radius:50%;
+    background: #9b9b9b;
+    vertical-align: middle;
+
+    margin-right: 5px;
+  }
+}

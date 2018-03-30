@@ -1,0 +1,29 @@
+@import "~theme.scss";
+
+:local(.modalContainer) {
+
+
+  .ant-modal-header {
+    border-bottom: none;
+
+    .ant-modal-title {
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+
+  :local(.container){
+    padding: 20px 50px;
+
+    :local(.userContainer) {
+      // display: inline-flex;
+      font-size: 14px;
+      margin-bottom: 10px;
+
+      :local(.remind) {
+        color: #4a90e2;
+        cursor: pointer;
+      }
+    }
+  }
+}

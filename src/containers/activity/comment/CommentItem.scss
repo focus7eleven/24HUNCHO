@@ -1,0 +1,128 @@
+@import '~theme.scss';
+
+@mixin delete_style() {
+  cursor: pointer;
+  svg {
+    fill: #cccccc;
+    width: 12px;
+    height: 12px;
+    transition: all .3s;
+  }
+}
+
+@mixin toTop_style() {
+  cursor: pointer;
+  svg {
+    fill: white;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: $primary-color;
+    transition: all .3s;
+  }
+}
+
+:local(.commentContainer){
+  position: relative;
+  color: #4a4a4a;
+  padding: 15px 10px;
+
+  &:not(:last-of-type) {
+    border-bottom: solid 1px #eeeeee;
+  }
+
+  &:hover {
+    background-color: $bg-content
+  }
+
+  :local(.avatar){
+    float:left;
+    vertical-align: top;
+    margin-top: 5px;
+
+    //background: #9b9b9b;
+
+    >img{
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+    }
+
+    :local(.defaultAvatar) {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: $content-color
+    }
+  }
+
+  :local(.right){
+    margin-left:24px;
+    padding-left: 5px;
+    overflow: hidden;
+
+    > div {
+      margin: 5px;
+    }
+
+    :local(.content) {
+      position: relative;
+      font-size: 12px;
+
+      :local(.time){
+        color: #9b9b9b;
+        display: block;
+        margin-top: 3px;
+      }
+
+      :local(.actionGroup) {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        & > div {
+          vertical-align: middle;
+          margin-left: 15px;
+        }
+      }
+
+      :local(.reply){
+        color: #9b9b9b;
+        cursor: pointer;
+        display: inline-block;
+        margin-right: 10px;
+        transition: all .3s;
+
+        &:hover {
+          color: #926dea;
+        }
+      }
+
+      :local(.toTop) {
+        @include toTop_style;
+        display: none;
+      }
+
+      :local(.showToTop) {
+        @include toTop_style;
+        display: inline-flex;
+      }
+
+      :local(.delete) {
+        @include delete_style;
+        display: none;
+      }
+
+      :local(.showDelete) {
+        @include delete_style;
+        display: inline-flex;
+      }
+
+      // &:hover {
+      //   :local(.delete) {
+      //     display: inline-block;
+      //   }
+      // }
+    }
+  }
+}

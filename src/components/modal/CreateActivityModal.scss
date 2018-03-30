@@ -1,0 +1,38 @@
+
+:local(.modalWrapper) {
+  .ant-col-20 {
+    width: 550px;
+  }
+
+  .ant-calendar-picker {
+    width: 100% !important;
+  }
+
+  :local(.homeworkExtra) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    >div:first-child {
+      width: 334px;
+    }
+
+    >div:nth-child(2) {
+      width: 326px;
+    }
+  }
+
+  :local(.uploadButton) {
+    width: 550px;
+    height: 32px !important;
+    border: 1px dashed #d9d9d9;
+    color: #bdbdbd;
+  }
+
+  :local(.editor) {
+    height: 304px;
+    border-radius: 6px;
+    border: solid 1px #e9e9e9;
+  }
+
+}

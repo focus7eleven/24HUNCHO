@@ -1,0 +1,196 @@
+@import '~theme.scss';
+@import '~mixins.scss';
+
+:local(.container) {
+  width: 100%;
+  border-radius: 3px;
+  flex-shrink: 0;
+  box-shadow: 0 0 8px 0 rgba(96, 79, 113, 0.12);
+  background-color: #ffffff;
+  margin-bottom: 20px;
+
+  height: 100%;
+  font-size: 14px;
+
+  :local(.back) {
+    padding: 20px;
+    color: $normal-color;
+    border-bottom: solid 1px #e9e9e9;
+    cursor: pointer;
+
+    svg {
+      width: 15px;
+      fill: $content-color;
+      transform: rotate(180deg);
+      margin-right: 7px;
+      vertical-align: middle;
+    }
+  }
+
+  :local(.detailContainer) {
+    overflow: auto;
+    height: 90%;
+  }
+
+  :local(.contentContainer) {
+    padding: 20px 70px;
+    :local(.headerContainer) {
+      color: $normal-color;
+      font-size: 12px;
+      margin-bottom: 18px;
+
+      :local(.header) {
+        margin-bottom: 18px;
+        // > span {
+        //   vertical-align: middle;
+        // }
+        display: flex;
+        justify-content: space-between;
+        :local(.title) {
+          font-size: 16px;
+          font-weight: 500;
+          color: $text-color;
+          margin-left: 10px;
+        }
+
+        :local(.editContainer) {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          color: #4a90e2;
+          cursor: pointer;
+          svg {
+            width: 14px;
+            margin-right: 5px;
+            fill: #4a90e2;
+          }
+        }
+      }
+
+      :local(.info) {
+        display: flex;
+        justify-content: space-between;
+        > div {
+          display: inline-block;
+        }
+      }
+    }
+
+    :local(.homeworkInfo) {
+      > div {
+        display: inline-block;
+        margin-right: 30px;
+      }
+
+      :local(.infoLabel) {
+        font-weight: 500;
+      }
+
+    }
+
+    :local(.bodyContainer) {
+      margin-top: 18px;
+
+      :local(.imgList){
+        display:flex;
+        margin-top:20px;
+        flex-wrap:wrap;
+        img{
+          height:120px;
+          width:120px;
+          border-radius:3px;
+          margin-right:10px;
+          margin-bottom:10px;
+        }
+      }
+
+      .alignment-right {
+          & > div {
+              text-align: right;
+          }
+      }
+
+      .alignment-center {
+          & > div {
+              text-align: center;
+          }
+      }
+
+      .alignment-left {
+          & > div {
+              text-align: left;
+          }
+      }
+
+      .RichEditor-blockquote {
+          border-left: 5px solid #e65100;
+          color: #4a4a4a;
+          margin: 16px 0;
+          padding: 0px 8px;
+          font-size: 14px;
+          line-height: 1.5;
+      }
+
+      .Main-body {
+          font-size: 14px;
+          color: #4a4a4a;
+          line-height: 1.5;
+      }
+
+      pre {
+          background-color: #F4F4F4;
+          max-width: 800px;
+          line-height: 1.8;
+          margin: 10px 0px;
+          font-family: monaco,consolas;
+      }
+
+      h1 {
+          font-size: 18px;
+          font-weight: $font-bold;
+      }
+
+      h2 {
+          font-size: 16px;
+          font-weight: $font-bold;
+      }
+
+      h3 {
+          font-size: 14px;
+          font-weight: $font-bold;
+      }
+
+
+    }
+  }
+
+  :local(.tabContainer) {
+    .ant-tabs-nav {
+      left: 70px;
+      font-size: 14px;
+    }
+
+    :local(.tabPane) {
+      padding: 20px 70px;
+    }
+  }
+
+  :local(.icon) {
+    display: inline-block;
+    width: 36px;
+    height: 20px;
+    border-radius: 6px;
+    text-align: center;
+    border: solid 1px;
+  }
+}
+
+:local(.loadingContainer) {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  padding: 40px 60px;
+  @include course-box;
+}

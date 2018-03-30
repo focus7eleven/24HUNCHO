@@ -1,0 +1,19 @@
+@import "~theme.scss";
+
+.ant-calendar-picker {
+  width: 100%;
+}
+
+:local(.homeworkExtra) {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  >div:first-child {
+    width: 334px;
+  }
+
+  >div:nth-child(2) {
+    width: 326px;
+  }
+}

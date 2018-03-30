@@ -1,0 +1,23 @@
+
+:local(.container) {
+  width: 100%;
+
+  :local(.title) {
+    width: 100%;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    :local(.createBtn) {
+      color: white;
+      background-color: #90b5df;
+      text-align: center;
+      border: none;
+
+      &:hover {
+        border: none;
+      }
+    }
+  }
+}

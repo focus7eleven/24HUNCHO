@@ -1,0 +1,20 @@
+:local(.modalContainer) {
+
+  .ant-modal-header {
+    border-bottom: none;
+    padding: 17px 20px;
+
+    .ant-modal-title {
+      font-size: 18px;
+    }
+  }
+
+  .ant-modal-body {
+    padding: 15px 30px;
+  }
+
+  .ant-modal-footer {
+    border-top: none;
+    padding: 15px 30px 30px 15px;
+  }
+}

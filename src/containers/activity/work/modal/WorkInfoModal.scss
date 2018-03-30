@@ -1,0 +1,37 @@
+:local(.infoModal){
+
+  :local(.main){
+    padding: 0 30px 30px 60px;
+
+    :local(.item){
+      line-height: 32px;
+
+      >div{
+        display: inline-block;
+        font-size:14px;
+      }
+
+      :local(.label){
+        width: 70px;
+        vertical-align: top;
+      }
+
+      :local(.content){
+        width: 300px;
+        >div{
+          display: inline-block;
+        }
+
+        :local(.icon){
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+      }
+
+    }
+  }
+
+}

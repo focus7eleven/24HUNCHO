@@ -1,0 +1,54 @@
+@import "~theme.scss";
+@import "~mixins.scss";
+
+:local(.container){
+  @include course-box;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  padding: 30px;
+
+  :local(.coverContainer) {
+    width: 100%;
+    height: 446px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+
+    :local(.cover) {
+      width: 714px;
+      height: 100%;
+
+      :local(.defaultCover) {
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+      	background-color: #eeeeee;
+      }
+    }
+
+    :local(.preview) {
+      width: calc( 100% - 714px );
+      height: 100%;
+    }
+  }
+
+  :local(.description) {
+    margin-top: 18px;
+    font-size: 14px;
+    color: #4a4a4a;
+  }
+
+}
+
+:local(.icon){
+  display: inline-block;
+  text-align: center;
+  width: 34px;
+  height: 20px;
+  color: #ffffff;
+  font-size: 12px;
+  border-radius: 6px;
+}

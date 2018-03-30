@@ -1,0 +1,70 @@
+@import "~theme.scss";
+
+:local(.fileCard) {
+  width: 165px;
+  min-height: 60px;
+  border-radius: $border-radius-base;
+  background-color: #f7f7f7;
+  position: relative;
+  cursor: default;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 10px;
+
+  &:local(.bulgeLeft):after, &:local(.bulgeRight):after {
+    content: '';
+    position: absolute;
+    border: 5px solid transparent;
+    width: 0;
+    height: 0;
+    top: 10px;
+  }
+
+  &:local(.bulgeLeft):after {
+    left: -10px;
+    border-color: transparent #f7f7f7 transparent transparent;
+  }
+
+  &:local(.bulgeRight):after {
+    right: -10px;
+    border-color: transparent transparent transparent #f7f7f7;
+  }
+
+  :local(.opt) {
+    position: absolute;
+    top: 20px;
+
+    &.left {
+      right: -20px;
+    }
+
+    &.right {
+      left: -20px;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  svg {
+    width: 32px;
+    height: 38px;
+  }
+
+  :local(.description) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+    text-align: left;
+
+    & > div:first-child {
+      max-width: 100px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}

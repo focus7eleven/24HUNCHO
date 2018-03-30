@@ -1,0 +1,82 @@
+@import "~theme.scss";
+
+:local(.container) {
+  width: 250px;
+  height: 100px;
+  border-radius: 10px;
+  border: 1px solid #ebebeb;
+  background-color: #ffffff;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  &:hover{
+    box-shadow: 0 0 8px 0 rgba(96, 79, 113, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+  }
+
+  :local(.left) {
+    height: 100%;
+    padding: 22px 15px 22px 22px;
+
+    :local(.avatar){
+      width: 56px;
+      height: 56px;
+      border-radius: 100px;
+    }
+  }
+
+  :local(.right) {
+    height: 100%;
+    padding: 20px 0 22px 0;
+
+    :local(.name) {
+      font-size: 14px;
+      coloir: $text-color;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row;
+      align-items: center;
+
+      >svg {
+        margin-left: 6px;
+      }
+    }
+
+    :local(.id) {
+      margin-top: 3px;
+      color: $normal-color;
+    }
+
+    :local(.operation) {
+      margin-top: 3px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: row;
+      >svg {
+        width: 14px;
+        height: 20px;
+        margin-right: 6px;
+        position: relative;
+      }
+
+      >span {
+        cursor: pointer;
+      }
+
+    }
+  }
+
+  :local(.remove) {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: $link-color;
+    cursor: pointer;
+  }
+
+}

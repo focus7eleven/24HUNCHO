@@ -1,0 +1,127 @@
+// 创建小组和申请加入小组的样式表
+
+@import '~theme.scss';
+
+:local(.modalWrapper) {
+  .ant-modal-header {
+    border-bottom: none;
+    padding: 17px 20px;
+    .ant-modal-title {
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+
+  .ant-form-item-label {
+    label {
+      font-size: 14px;
+    }
+  }
+
+  .ant-modal-close-x {
+    font-size: 18px;
+  }
+
+  .ant-modal-footer {
+    padding: 0 30px 30px 30px;
+    border-top: none;
+
+    button {
+      font-weight: normal;
+    }
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  :local(.groupName) {
+    font-size: 14px;
+  }
+
+  // InviteModal
+  :local(.rolesContainer) {
+    border-radius: 6px;
+    border: solid 1px #d9d9d9;
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+
+    :local(.roleItemContainer) {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 10px;
+      width: 210px;
+
+      :local(.roleContainer) {
+        overflow: hidden;
+
+        :local(.avatar) {
+          float: left;
+          img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+          }
+          :local(.defaultAvatar) {
+            width: 30px;
+            height: 30px;
+          }
+        }
+
+        :local(.infoContainer) {
+          float: right;
+          margin-left: 8px;
+          :local(.realName) {
+            color: $text-color
+          }
+
+          :local(.id) {
+            color: $normal-color
+          }
+        }
+      }
+    }
+  }
+
+  :local(.chosenContainer) {
+
+    :local(.chosenRole) {
+      margin-right: 10px;
+      margin-top: 10px;
+      padding: 6px 9px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f7f7f7;
+      border-radius: 6px;
+
+      :local(.realName) {
+        margin-left: 5px;
+        margin-right: 10px;
+      }
+
+      svg {
+        width: 12px;
+        fill: $normal-color;
+        cursor: pointer;
+      }
+    }
+  }
+
+
+
+
+  :local(.defaultAvatar) {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: $content-color;
+  }
+
+
+}

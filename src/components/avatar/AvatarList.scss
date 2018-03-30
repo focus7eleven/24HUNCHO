@@ -1,0 +1,30 @@
+@import '~theme.scss';
+
+:local(.rolesContainer){
+  position: relative;
+  display:inline-block;
+
+  :local(.rolesWrapper){
+    width: 35px;
+    height: 24px;
+    position: relative;
+
+    :local(.avatarWrapper){
+      position: absolute;
+      >img {
+        width: 21px;
+        height: 21px;
+        border-radius: 50%;
+      }
+
+      :local(.defaultAvatar) {
+        display: inline-block;
+        width: 21px;
+        height: 21px;
+        border-radius: 50%;
+        background-color: $content-color;
+      }
+    }
+  }
+
+}

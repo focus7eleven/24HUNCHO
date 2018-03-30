@@ -1,0 +1,26 @@
+@import '~theme.scss';
+
+:local(.roleItem){
+  // display: inline-flex;
+
+  img {
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+
+  :local(.defaultAvatar){
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background: $normal-color;
+    vertical-align: middle;
+  }
+
+  :local(.text){
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+}

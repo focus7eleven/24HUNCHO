@@ -1,0 +1,32 @@
+:local(.profile) {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+
+	:local(.avatar) {
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+		background-color: #ebebeb;
+		background-size: contain;
+		margin-right: 8px;
+		cursor:pointer;
+	}
+
+	:local(.name) {
+		font-size: 16px;
+		white-space: nowrap;
+		color: #ffffff;
+	}
+}
+
+:local(.extra) {
+	margin-left: 22px;
+
+	.ant-dropdown-menu-item {
+		padding: 0;
+	}
+	div {
+		padding: 7px 15px;
+	}
+}

@@ -1,0 +1,44 @@
+@import '~theme.scss';
+@import '~mixins.scss';
+
+:local(.container) {
+  @include course-box;
+  padding: 20px 30px;
+  height: 100%;
+  color: $text-color;
+  overflow: auto;
+  :local(.titleContainer) {
+    display: flex;
+    justify-content: space-between;
+  }
+  :local(.groups) {
+    margin: 15px 30px;
+
+    :local(.cardContainer) {
+      margin-top: 10px;
+      // column-width: 400px;
+      // column-gap: 20px;
+      // column-fill: auto;
+      //
+      :local(.line1) {
+        display: inline-flex;
+        flex-direction: column;
+        margin-right: 20px;
+      }
+      :local(.line2) {
+        display: inline-flex;
+        flex-direction: column;
+      }
+      :local(.groupCard) {
+        margin-bottom: 20px;
+      }
+
+    }
+
+  }
+
+  :local(.nullPage) {
+    @include null-page;
+  }
+
+}

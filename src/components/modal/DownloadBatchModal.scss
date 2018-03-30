@@ -1,0 +1,31 @@
+@import "~theme.scss";
+
+:local(.simpleModal) {
+  :local(.line) {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8px 20px 21px 57px;
+
+    font-size: 14px;
+
+    .ant-input {
+      width: 220px;
+    }
+    :local(.input) {
+      width: 220px;
+    }
+
+  }
+
+  .ant-modal-header {
+    border-bottom: none;
+  }
+
+  .ant-modal-footer {
+    border-top: none;
+  }
+
+}

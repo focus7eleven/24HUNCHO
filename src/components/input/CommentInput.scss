@@ -1,0 +1,51 @@
+
+:local(.commentInput){
+  position: relative;
+  .ant-input {
+    height: 40px;
+    padding-left: 16px;
+    padding-right: 100px;
+  }
+
+  :local(.btnAfterContainer){
+    position:absolute;
+    right: 6px;
+    top: 6px;
+    svg {
+      vertical-align: middle;
+      width: 22px;
+      height: 22px;
+      margin-right: 10px;
+      position: relative;
+      top: -1px;
+    }
+  }
+}
+
+:local(.emojiPanel){
+  width:330px;
+
+  :local(.scroll){
+    background-color:#fff;
+    z-index:999;
+    height:144px;
+    overflow-y:auto;
+    border-radius: 3px;
+
+    :local(.emojiBox){
+      cursor:pointer;
+      display:inline-block;
+
+      div {
+        height:36px;
+        width:36px;
+        padding:4px 0 6px 8px;
+
+        &:hover{
+          background-color: #f4f4f4;
+          border-radius: 100%;
+        }
+      }
+    }
+  }
+}

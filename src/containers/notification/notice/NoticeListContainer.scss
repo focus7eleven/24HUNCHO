@@ -1,0 +1,73 @@
+@import "~theme.scss";
+@import "~global.scss";
+
+@keyframes loading {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+:local(.container) {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 30px;
+
+  :local(.messageList) {
+
+  }
+
+  :local(.loadMore) {
+      font-size: $font-size-base;
+      font-family: $font-family;
+      color: $normal-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      margin-top: 20px;
+      margin-bottom: 30px;
+
+      svg {
+          width: 16px;
+          height: 16px;
+          margin-right: 6px;
+          fill: $normal-color;
+          animation: loading 1s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+      }
+  }
+
+  .ant-pagination {
+    display: flex;
+    justify-content: center;
+    flex: 0 0 auto;
+    padding-top: 30px;
+  }
+
+  :local(.noMore) {
+    text-align: center;
+    @extend .u-text-l-14;
+    img {
+      width: 300px;
+      height: 300px;
+      margin-top: 100px;
+
+    }
+    :local(.note) {
+      margin-top: 30px;
+      font-size: 16px;
+      letter-spacing: -0.4px;
+      text-align: left;
+      color: #9b9b9b;
+      text-align: center;
+      padding-left: 10px;
+    }
+  }
+}

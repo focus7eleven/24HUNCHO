@@ -1,0 +1,41 @@
+@import "~theme.scss";
+
+:local(.container){
+  font-size: 12px;
+
+  :local(.titleContainer) {
+    display: flex;
+    justify-content: space-between;
+    color: $normal-color;
+    margin-bottom: 10px;
+  }
+
+  :local(.listContainer) {
+    :local(.titleContainer) {
+      font-size: 14px;
+      display: inline-block;
+      color: $text-color;
+
+      svg {
+        width: 18px;
+        margin-right: 12px;
+        vertical-align:  middle;
+      }
+
+      :local(.message) {
+        font-size: 12px;
+        font-weight: 500;
+        color: #f45b6c;
+        margin-left: 5px;
+        vertical-align: middle;
+      }
+    }
+
+    :local(.optWrapper) {
+      svg {
+        margin-left: 5px;
+      }
+
+    }
+  }
+}

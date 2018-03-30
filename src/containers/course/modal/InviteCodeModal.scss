@@ -1,0 +1,28 @@
+@import '~theme.scss';
+
+:local(.modalContainer){
+
+  .ant-modal-content {
+    padding: 10px;
+  }
+  .ant-modal-header {
+    border-bottom: none;
+    .ant-modal-title{
+      font-size: 18px;
+    }
+  }
+
+  .ant-modal-body {
+    padding: 50px 70px 30px 70px;
+    .ant-form-item-label{
+      label {
+        font-size: 14px;
+      }
+    }
+
+  }
+
+  .ant-modal-footer {
+    border-top: none;
+  }
+}

@@ -1,0 +1,474 @@
+:local(.modalPanel) {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fafafa;
+  // top: 100%;
+  transition: all 0.6s ease-out;
+  display: flex;
+  flex-direction: column;
+
+  &.visible {
+    top: 0;
+  }
+
+  :local(.panelHeader) {
+    display: flex;
+    padding: 16px 20px;
+    font-size: 12px;
+    color: #9b9b9b;
+    flex: 0 0 auto;
+
+    :local(.title) {
+      flex: 1 0 auto;
+      line-height: 24px;
+    }
+
+    :local(.close) {
+      opacity: 0.35;
+    }
+  }
+
+  :local(.panelContent) {
+    width: 100%;
+    padding: 0 20px;
+    overflow: auto;
+    flex: 1 1 500px;
+
+    :local(.contentWrapper) {
+      width: 100%;
+      height: auto;
+
+      &.image {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+
+    :local(.loadMore) {
+      width: 100%;
+      height: 50px;
+      font-weight: 400;
+      font-size: 14px;
+      text-align: center;
+      line-height: 50px;
+    }
+  }
+}
+
+:local(.chatRecordPanel) {
+  $themePurple: #926dea;
+
+  :local(.search) {
+    height: 30px;
+    padding: 0 15px;
+
+    .ant-input-search-icon {
+      color: #cccccc;
+      width: 16px;
+
+      &:hover {
+        color: $themePurple;
+      }
+    }
+  }
+
+  :local(.types) {
+    display: flex;
+    height: auto;
+    flex-wrap: wrap;
+    padding: 15px 15px;
+
+    :local(.typeItem) {
+      margin-left: 15px;
+      margin-right: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 15px;
+      cursor: pointer;
+
+      > svg {
+        fill: #9b9b9b;
+        margin-right: 3px;
+      }
+    }
+  }
+
+  :local(.textMessage) {
+    display: flex;
+    padding: 10px 6px;
+    align-items: center;
+    border-bottom: 1px solid #e9e9e9;
+    font-size: 12px;
+
+    :local(.avatar) {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+
+      > img {
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+
+    :local(.right) {
+      flex: 1 0 100px;
+      color: #9b9b9b;
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      :local(.title) {
+        display: flex;
+        justify-content: space-between;
+
+        .name {
+          color: #4a4a4a;
+        }
+
+      }
+
+      :local(.content) {
+
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        .superid-chat-highlight-text {
+          color: #926dea;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  :local(.fundMessage) {
+    display: flex;
+    padding: 10px 6px;
+    border-bottom: 1px solid #e9e9e9;
+    font-size: 12px;
+    flex-direction: column;
+
+    :local(.top) {
+      display: flex;
+      align-items: center;
+
+      :local(.avatar) {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+
+        > img {
+          width: 100%;
+          border-radius: 50%;
+        }
+      }
+
+      :local(.title) {
+        display: flex;
+        flex-grow: 1;
+
+        .name {
+          color: #4a4a4a;
+        }
+
+      }
+
+      :local(.time) {
+        font-weight: 300;
+        color: #9b9b9b;
+      }
+    }
+
+    :local(.content) {
+      margin-top: 9px;
+      height: 52px;
+      border-radius: 3px;
+      background-color: #ffffff;
+      border: solid 1px #d9d9d9;
+
+      display: flex;
+      align-items: center;
+      padding: 10px;
+
+
+      :local(.fundIcon) {
+        width: 30px;
+        height: 30px;
+        background-color: #ffa64e;
+        border-radius: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      :local(.fundInfo) {
+        display: flex;
+        flex-direction: column;
+        margin-left: 12px;
+
+        .remark {
+          font-weight: 300;
+          color: #9b9b9b;
+        }
+
+      }
+    }
+
+  }
+
+  :local(.materialMessage) {
+    display: flex;
+    padding: 10px 6px;
+    border-bottom: 1px solid #e9e9e9;
+    font-size: 12px;
+    flex-direction: column;
+
+    :local(.top) {
+      display: flex;
+      align-items: center;
+
+      :local(.avatar) {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+
+        > img {
+          width: 100%;
+          border-radius: 50%;
+        }
+      }
+
+      :local(.title) {
+        display: flex;
+        flex-grow: 1;
+
+        .name {
+          color: #4a4a4a;
+        }
+
+      }
+
+      :local(.time) {
+        font-weight: 300;
+        color: #9b9b9b;
+      }
+    }
+
+    :local(.content) {
+      margin-top: 9px;
+      height: 52px;
+      border-radius: 3px;
+      background-color: #ffffff;
+      border: solid 1px #d9d9d9;
+
+      display: flex;
+      align-items: center;
+      padding: 10px;
+
+
+      :local(.materialIcon) {
+        width: 30px;
+        height: 30px;
+        background-color: #6ca2f3;
+        border-radius: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      :local(.materialInfo) {
+        display: flex;
+        flex-direction: column;
+        margin-left: 12px;
+
+        .remark {
+          font-weight: 300;
+        }
+
+      }
+    }
+
+  }
+
+  :local(.fileMessage) {
+    display: flex;
+    padding: 10px 6px;
+    border-bottom: 1px solid #e9e9e9;
+    font-size: 12px;
+    flex-direction: column;
+
+    :local(.top) {
+      display: flex;
+      align-items: center;
+
+      :local(.avatar) {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+
+        > img {
+          width: 100%;
+          border-radius: 50%;
+        }
+      }
+
+      :local(.title) {
+        display: flex;
+        flex-grow: 1;
+
+        .name {
+          color: #4a4a4a;
+        }
+
+      }
+
+      :local(.time) {
+        font-weight: 300;
+        color: #9b9b9b;
+      }
+    }
+
+    :local(.content) {
+      margin-top: 9px;
+      height: 52px;
+      border-radius: 3px;
+      background-color: #ffffff;
+      border: solid 1px #d9d9d9;
+
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      cursor: pointer;
+
+      :local(.fileIcon) {
+        width: 30px;
+        height: 30px;
+        border-radius: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+          width: 32px;
+          height: 38px;
+        }
+      }
+
+      :local(.fileInfo) {
+        display: flex;
+        flex-direction: column;
+        margin-left: 12px;
+
+        .remark {
+          font-weight: 300;
+          max-width: 184px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+
+      }
+    }
+
+  }
+  :local(.imageMessageInTime) {
+    display: flex;
+    padding: 10px 6px;
+    border-bottom: 1px solid #e9e9e9;
+    font-size: 12px;
+    flex-direction: column;
+
+    :local(.top) {
+      display: flex;
+      align-items: center;
+
+      :local(.avatar) {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+
+        > img {
+          width: 100%;
+          border-radius: 50%;
+        }
+      }
+
+      :local(.title) {
+        display: flex;
+        flex-grow: 1;
+
+        .name {
+          color: #4a4a4a;
+        }
+
+      }
+
+      :local(.time) {
+        font-weight: 300;
+        color: #9b9b9b;
+      }
+    }
+
+    :local(.content) {
+      margin-top: 9px;
+      height: 100px;
+      // border-radius: 3px;
+      // background-color: #ffffff;
+      // border: solid 1px #d9d9d9;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      img {
+        height: 100%;
+      }
+
+    }
+
+  }
+
+  :local(.imageMessage) {
+    flex: 0 0 120px;
+    height: 120px;
+    margin-right: 10px;
+    margin-bottom: 14px;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+:local(.imageModal) {
+  width: 800px !important;
+
+  i.anticon.anticon-info-circle {
+    display: none;
+  }
+
+  .ant-confirm-btns {
+    display: none;
+  }
+
+  .ant-confirm-body .ant-confirm-content {
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+
+  > .ant-modal-content > .ant-modal-body {
+    padding: 16px !important;
+  }
+
+  :local(.imagePreviewer) {
+    width: 100%;
+  }
+}

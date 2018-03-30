@@ -1,0 +1,113 @@
+@import "~theme.scss";
+
+:local(.navigation) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 0 17px;
+
+    & > p {
+      font-size: 16px;
+      font-weight: $font-bold;
+      line-height: 1.2;
+      color: $normal-color;
+      display: flex;
+      align-items: center;
+
+      span {
+        cursor: pointer;
+
+        svg {
+          width: 14px;
+          height: 14px;
+          margin-left: 6px;
+          fill: #9b9b9b;
+        }
+      }
+    }
+
+    :local(.courseTab) {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        :local(.activeCourseTabBar) {
+            position: absolute;
+            top: 35px;
+            left: -8px;
+            height: 2px;
+            width: 42px;
+            background-color: $primary-color;
+        }
+
+        :local(.activeCourseTab) {
+            color: $primary-color;
+            font-weight:500;
+        }
+
+        & > div {
+            flex-shrink: 0;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 14px;
+            color: $normal-color;
+            margin: 0 8px;
+        }
+    }
+
+    :local(.splitLine) {
+        height: 100%;
+        border: solid 1px #eeeeee;
+        margin: 0 6px;
+    }
+
+    :local(.position) {
+        padding:0px 10px 0px 10px;
+        font-size: 13px;
+        color: $text-color;
+        position: relative;
+        flex: 1 0 auto;
+        display:flex;
+        align-items:center;
+
+
+        span {
+            color: $normal-color;
+        }
+
+        :local(.roleType){
+          color: #4a4a4a;
+        }
+    }
+
+}
+
+:local(.rightPanel) {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+:local(.indexContainer) {
+    width: 100%;
+    height: 100%;
+}
+
+:local(.logoContainer) {
+  width: 55px;
+  height: 55px;
+  background: #ffffff;
+  box-shadow: 0 0 8px 0 rgba(96, 79, 114, 0.12);
+  border-radius: 3px;
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > img {
+    width: 45px;
+    height: 45px;
+  }
+}

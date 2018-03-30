@@ -1,0 +1,47 @@
+@import "~theme.scss";
+
+:local(.container){
+  padding: 5px 70px;
+  :local(.statistics) {
+    border: 1px solid #cddced;
+    background-color: #fafcff;
+    color: $text-color;
+    padding: 10px 25px;
+    margin-bottom: 10px;
+
+    :local(.item) {
+      padding: 5px 0;
+      :local(.label) {
+        color: $normal-color
+      }
+    }
+  }
+
+  // :local(.titleContainer) {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   color: $normal-color;
+  // }
+  //
+  // :local(.homeworkList) {
+  //   :local(.titleContainer) {
+  //     font-size: 14px;
+  //     display: inline-block;
+  //     color: $text-color;
+  //
+  //     svg {
+  //       width: 18px;
+  //       margin-right: 12px;
+  //       vertical-align:  middle;
+  //     }
+  //
+  //     :local(.message) {
+  //       font-size: 12px;
+  //       font-weight: 500;
+  //       color: #f45b6c;
+  //       margin-left: 5px;
+  //       vertical-align: middle;
+  //     }
+  //   }
+  // }
+}

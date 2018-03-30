@@ -1,0 +1,144 @@
+:local(.container) {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+:local(.containerColumn) {
+  flex-direction: column;
+  display: inline-flex;
+}
+
+:local(.officialContainer) {
+  display: flex;
+  height: 30px;
+  line-height: 30px;
+  flex-direction: row;
+  align-items: flex-start;
+
+  :local(.title) {
+    font-size: 14px;
+    margin-left: 2px;
+    margin-right: 10px;
+  }
+}
+
+:local(.official) {
+  cursor: pointer;
+  width: 21px;
+  height: 21px;
+  margin: 4.5px 0;
+  border-radius: 50%;
+  margin-right: 5px;
+  background-color: #d8d8d8;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  :local(.officialMask) {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, .5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+:local(.officialPopover) {
+  .ant-popover-arrow {
+    display: none;
+  }
+
+  :local(.mainRolePanel) {
+    min-width: 160px;
+    height: 200px;
+    padding: 7px 0;
+    overflow:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    .ant-input-wrapper {
+      margin: 0 8px 13px 8px;
+    }
+
+    :local(.mainRole) {
+      padding: 5px 10px 5px 10px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      flex-shrink:0;
+
+      &:hover {
+        background-color: #fbf8ff;
+      }
+
+      :local(.mainRoleAvatar) {
+        border-radius: 50%;
+        margin-right: 8px;
+        width: 21px;
+        height: 21px;
+        background-color: #d8d8d8;
+        overflow: hidden;
+
+        img {
+          width: 21px;
+          height: 21px;
+        }
+      }
+    }
+  }
+}
+
+:local(.addIcon) {
+  height: 21px;
+  width: 21px;
+  margin: 4.5px 0;
+  border-radius: 100px;
+  border: 1px dashed #ccc;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0px;
+  transition: border .3s;
+
+  svg {
+    width: 15px;
+    height: 15px;
+    fill: #ccc;
+    transition: fill .3s;
+  }
+
+  &:hover {
+    border: 1px dashed #926dea;
+  }
+
+  &:hover svg {
+    fill: #926dea;
+  }
+}

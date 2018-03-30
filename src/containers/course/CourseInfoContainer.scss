@@ -1,0 +1,69 @@
+@import "~theme.scss";
+@import "~mixins.scss";
+
+:local(.homepageContainer){
+  @include course-box;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  padding: 40px 60px;
+
+  font-size: 14px;
+
+  :local(.titleContainer){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    :local(.left){
+      display: flex;
+      align-items: center;
+
+      :local(.title){
+        font-size: 18px;
+        font-weight: 500;
+        color: $text-color;
+        margin-left:  10px;
+      }
+    }
+
+    :local(.btnPanel){
+      button {
+        margin-left: 10px;
+      }
+
+      :local(.inviteCode){
+
+        svg {
+          fill: $content-color;
+          width: 14px;
+          margin-left: 10px;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+
+  :local(.contentContainer){
+    margin: 20px 0;
+    color: $normal-color;
+  }
+
+  :local(.courseInfo){
+    :local(.courseItem){
+      margin-bottom: 10px;
+    }
+  }
+}
+
+:local(.icon){
+  display: inline-block;
+  text-align: center;
+  width: 34px;
+  height: 20px;
+  color: #ffffff;
+  font-size: 12px;
+  border-radius: 6px;
+}

@@ -1,0 +1,108 @@
+:local(.chatMessage) {
+
+  margin-bottom: 10px;
+
+  :local(.title) {
+
+    > span {
+      font-size: 10px;
+      color: #cccccc;
+    }
+  }
+
+  &:local(.rightMsg) {
+    text-align: right;
+
+    :local(.title) {
+      margin-right: 35px;
+    }
+
+    :local(.msg) {
+      background-color: #b8e986;
+      text-align: left;
+      :local(.bulge) {
+        border-color: transparent transparent transparent #b8e986;
+        right: -10px !important;
+      }
+    }
+  }
+
+  &:local(.leftMsg) {
+    text-align: left;
+
+    :local(.title) {
+      margin-left: 35px;
+    }
+
+    :local(.msg) {
+      :local(.bulge) {
+        left: -10px;
+      }
+    }
+
+    :local(.avatar) {
+      margin-left: 10px;
+    }
+  }
+
+  :local(.avatar) {
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+    height: 24px;
+    width: 24px;
+
+    > img {
+      height: 24px;
+      width: 24px;
+      border-radius: 100px;
+    }
+  }
+
+  :local(.msg) {
+    max-width: 160px;
+    display: inline-block;
+    position: relative;
+    background-color: #f7f7f7;
+    border-radius: 6px;
+    padding: 8px 10px 10px 8px;
+    color: #4a4a4a;
+
+    pre {
+      white-space: pre-wrap;
+      word-break: break-all;
+      max-width: 160px;
+
+      :local(.link) {
+        cursor: pointer;
+        color: #4990e2;
+        font-weight: 500;
+      }
+    }
+
+    img {
+      width: 120px;
+      height: auto;
+    }
+
+    :local(.bulge) {
+      height: 0;
+      width: 0;
+      border: 5px solid transparent;
+      border-right-color: #f7f7f7;
+      position: absolute;
+      top: 8px;
+    }
+  }
+
+}
+
+:local(.systemNotice) {
+  padding: 5px 20px;
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  color: #cccccc;
+  margin-bottom: 10px;
+}

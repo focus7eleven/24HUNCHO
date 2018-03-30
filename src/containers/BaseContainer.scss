@@ -1,0 +1,43 @@
+@import "~theme.scss";
+
+:local(.container) {
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+
+  :local(.error) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  :local(.body) {
+    width: 100%;
+    min-width: 1360px;
+    height: calc(100% - 64px);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    background-color: $body-background;
+    overflow-x: scroll;
+
+    :local(.left) {
+      height: 100%;
+      width: 360px;
+      min-width: 360px;
+    }
+
+    :local(.right) {
+      width: 965px;
+      min-width: 965px;
+      padding-left: 20px;
+      height: 100%;
+    }
+  }
+}

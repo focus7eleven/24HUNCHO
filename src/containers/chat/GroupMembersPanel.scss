@@ -1,0 +1,127 @@
+:local(.GroupMembersPanel) {
+  width: 300px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  
+  :local(.panelHeader) {
+    display: flex;
+    padding: 16px 20px;
+    font-size: 12px;
+    color: #9b9b9b;
+    flex: 0 0 auto;
+
+    :local(.title) {
+      flex: 1 0 auto;
+    }
+
+    :local(.close) {
+      opacity: 0.35;
+    }
+  }
+
+  :local(.panelContent) {
+    width: 100%;
+    padding: 0 20px;
+    overflow: auto;
+    flex: 1 0 500px;
+
+    :local(.contentWrapper) {
+      width: 100%;
+      height: auto;
+
+    }
+  }
+
+
+  :local(.roleList) {
+
+    :local(.roleItem) {
+      display: flex;
+      align-items: center;
+      padding: 5px 0;
+
+      :local(.avatar) {
+        width: 25px;
+        height: 25px;
+
+        > img {
+          width: 25px;
+          height: 25px;
+          border-radius: 13px;
+        }
+      }
+
+      :local(.userName) {
+        font-size: 12px;
+        color: #666666;
+        margin-left: 8px;
+      }
+    }
+
+  }
+
+  :local(.groupMemberList) {
+    :local(.memberItem) {
+      display: flex;
+      align-items: center;
+      padding: 5px 0;
+
+      :local(.avatar) {
+        width: 25px;
+        height: 25px;
+
+        > img {
+          width: 25px;
+          height: 25px;
+          border-radius: 13px;
+        }
+      }
+
+      :local(.userName) {
+        font-size: 12px;
+        color: #666666;
+        margin-left: 8px;
+      }
+    }
+  }
+
+  .ant-collapse-borderless {
+    background-color: #fafafa;
+
+    .ant-collapse-item {
+      border: 0;
+
+      .ant-collapse-header {
+        color: #666666;
+        padding: 4px 0 4px 4px;
+
+        .arrow {
+          font-size: 17px;
+          top: 0;
+          left: 243px;
+          line-height: 30px;
+        }
+      }
+
+      .ant-collapse-content {
+        border: 0;
+        padding: 0 10px;
+
+        > .ant-collapse-content-box {
+          padding-top: 0;
+          padding-bottom: 8px;
+        }
+      }
+    }
+  }
+
+  :local(.editMembers) {
+    flex: 0 0 auto;
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

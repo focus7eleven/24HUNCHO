@@ -1,0 +1,65 @@
+@import "~theme.scss";
+
+:local(.wrapperClass){
+  .ant-modal{
+    .ant-modal-content{
+      .ant-modal-header{
+        padding:20px;
+      }
+      .ant-modal-body{
+        padding: 0;
+      }
+      .ant-modal-close{
+        top:25px;
+      }
+      .ant-modal-footer{
+        padding:10px 30px 30px 30px;
+      }
+    }
+  }
+  .ant-slider {
+		margin: 10px 10px;
+      .ant-slider-track {
+          background-color: #926dea;
+      }
+
+      .ant-slider-handle {
+          border: none;
+          background-color: #926dea;
+          width: 20px;
+          height: 20px;
+          margin-top: -8px;
+					margin-left: -10px;
+      }
+  }
+  :local(.content){
+    display:flex;
+
+    :local(.mainPanel){
+      flex-grow:2;
+      padding:22px 30px;
+      border-right: 1px solid $border-color-base;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+      :local(.sliderContainer){
+        position:relative;
+        margin-top: 20px;
+        width: 340px;
+        :local(.front) {
+            position: absolute;
+            display: inline-block;
+            left: -25px;
+            top: 4px;
+        }
+
+        :local(.backend) {
+            position: absolute;
+            display: inline-block;
+            right: -25px;
+            top: 4px;
+        }
+      }
+    }
+  }
+}

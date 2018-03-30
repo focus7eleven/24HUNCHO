@@ -1,0 +1,43 @@
+@import "~theme.scss";
+
+:local(.line) {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 8px 20px 21px 57px;
+
+  font-size: 14px;
+
+  :local(.error) {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    >i {
+      color: #ffaa00;
+      margin-right: 5px;
+    }
+
+    :local(.isExisted) {
+      color: red;
+      font-size: 12px;
+    }
+  }
+}
+
+
+:local(.input) {
+  width: 220px;
+}
+
+.ant-modal-header {
+  border-bottom: none;
+}
+
+.ant-modal-footer {
+  border-top: none;
+}

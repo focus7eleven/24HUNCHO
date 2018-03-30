@@ -1,0 +1,39 @@
+:local(.container){
+
+	:local(.imageWrapper) {
+		position: relative;
+		margin-bottom: 35px;
+		&, img, img + div {
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+
+			cursor: pointer;
+		}
+		img + div {
+			display: inline;
+			position: absolute;
+			left: 0;
+			opacity: 0;
+			z-index: 2;
+			line-height: 100px;
+			text-align: center;
+			font-size: 14px;
+			color: #ffffff;
+			background-color: rgba(55, 55, 55, 0.8);
+		}
+		img + div:hover {
+			opacity: 1;
+			transition: opacity 0.3s;
+		}
+	}
+
+	:local(.nameInputWrapper) {
+		svg {
+			fill: #eee;
+			position: absolute;
+			right: 3px;
+			top: 4px;
+		}
+	}
+}

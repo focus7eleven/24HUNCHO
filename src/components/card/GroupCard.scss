@@ -1,0 +1,66 @@
+@import '~theme.scss';
+
+:local(.container) {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #ebebeb;
+  color: $normal-color;
+  width: 400px;
+  position: relative;
+  border-radius: 5px;
+
+  &:hover {
+    box-shadow: 0 0 8px 0 rgba(96, 79, 114, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+  }
+  :local(.title) {
+    font-size: 14px;
+    font-weight: 500;
+    color: $text-color;
+    display: inline-block;
+  }
+
+  :local(.optWrapper) {
+    position: absolute;
+    right: 15px;
+    top: 11px;
+
+    :local(.opt) {
+      cursor: pointer;
+      svg {
+        width: 13px;
+        vertical-align: middle;
+        margin-right: 5px;
+      }
+      :local(.text) {
+        vertical-align: middle;
+      }
+
+    }
+  }
+
+  :local(.memberList) {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    > div {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 5px;
+
+      img {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+      }
+
+      :local(.defaultAvatar) {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background-color: $content-color;
+        border-radius: 50%;
+      }
+    }
+  }
+
+
+}

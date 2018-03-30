@@ -1,0 +1,119 @@
+@import "~theme.scss";
+
+:local(.container){
+  position:relative;
+  border-top:1px solid #eeeeee;
+  background-color:#ffffff;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  transition: 0.5s;
+
+  :local(.btns){
+    height:21px;
+    margin-left:5px;
+    margin-top:10px;
+
+    >svg{
+      margin-left:5px;
+      fill: $normal-color;
+
+      &:hover{
+        path{
+          fill:#666!important;
+        }
+      }
+    }
+  }
+
+  :local(.textarea){
+    width:calc(100% - 16px);
+    margin: 2px 8px 2px 8px;
+    height: 60px !important;
+    border:none;
+    outline:none;
+    overflow-y:auto;
+    word-wrap:break-word;
+    word-break:break-all;
+
+    &:focus{
+      border:none;
+      box-shadow:none;
+    }
+  }
+
+  :local(.footer){
+    display:flex;
+    align-items:flex-end;
+    justify-content:flex-end;
+    margin-bottom:5px;
+    margin-right:11px;
+
+    &>span{
+      display:inline-block;
+      height:18px;
+      width:112px;
+      font-size:12px;
+      font-weight:300;
+      color:#9b9b9b;
+      margin-right:5px;
+    }
+
+    :local(.sendBtn){
+      width:57px;
+      border-radius:3px;
+      padding:0;
+
+      span{
+        font-size:14px;
+        font-weight:500;
+      }
+    }
+
+  }
+
+  .DraftEditor-root {
+    height: 100%;
+  }
+  .DraftEditor-editorContainer {
+    height: 100%;
+  }
+  .public-DraftEditor-content {
+    height: 100%;
+  }
+}
+
+:local(.emojiPanel){
+  width:330px;
+
+  :local(.scroll){
+    background-color:#fff;
+    z-index:999;
+    height:144px;
+    overflow-y:auto;
+    border-radius: 3px;
+
+    :local(.emojiBox){
+      cursor:pointer;
+      display:inline-block;
+
+      div {
+        height:36px;
+        width:36px;
+        padding:4px 0 6px 8px;
+
+        &:hover{
+          background-color: #f4f4f4;
+          border-radius: 100%;
+        }
+      }
+    }
+  }
+}
+
+:local(.imageModal) {
+  img {
+    width: 300px;
+    height: auto;
+  }
+}

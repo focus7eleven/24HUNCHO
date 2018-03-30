@@ -1,0 +1,24 @@
+:local(.container) {
+  height: 100vh;
+  padding: 10vh 10vw;
+  display: flex;  
+  background-color: #ddd;
+  flex-wrap: wrap;
+  align-content: flex-start;
+
+  :local(.svgGroup){
+    flex-shrink: 0;
+    margin: 20px;
+    width: 70px;  
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    svg{
+      width: 70px;  
+      height: 70px;
+      fill: #000;
+    }
+  }
+}

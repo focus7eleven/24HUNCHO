@@ -1,0 +1,58 @@
+@import "~theme.scss";
+@import "~mixins.scss";
+
+:local(.container){
+  @include course-box;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: scroll;
+
+  .ant-spin {
+    margin-top: 40px;
+  }
+
+  :local(.header) {
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 30px;
+
+    :local(.search) {
+      width: 166px;
+      margin-left: 10px;
+    }
+
+    :local(.btnGroup) {
+      display: inline-block;
+      float: right;
+      margin-right: 30px;
+      :local(.inviteBtn) {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  :local(.member) {
+    margin-top: 15px;
+    padding-left: 50px;
+    width: 100%;
+
+    :local(.label) {
+      margin-bottom: 10px;
+      color: $text-color;
+    }
+
+    :local(.cards) {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+  :local(.nullPage) {
+    @include null-page;
+  }
+}

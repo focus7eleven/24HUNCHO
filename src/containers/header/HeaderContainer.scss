@@ -1,0 +1,109 @@
+@import "~theme.scss";
+@import "~global.scss";
+
+:local(.container) {
+  width: 100%;
+  min-width: 1360px;
+  height: 64px;
+  background-color: $primary-color;
+  box-shadow: 0 10px 14px 0 rgba(96, 79, 113, 0.2), 0 0 4px 0 rgba(96, 79, 113, 0.38);
+  position: relative;
+	z-index: 948;
+
+  :local(.headerContainer) {
+		width: calc(100% - 20px);
+    height: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		:local(.logo) {
+			margin-left: 20px;
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      color: white;
+		}
+
+		:local(.rightPanel) {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			svg {
+				cursor: pointer;
+			}
+
+			:local(.item) {
+				margin-right: 30px;
+				float: left;
+			}
+
+
+			:local(.menkor) {
+				color: #fff;
+				font-size: 14px;
+				white-space: nowrap;
+				margin-right: 20px;
+				cursor: pointer;
+			}
+
+			:local(.line) {
+				border-right: 1px solid #ebebeb;
+				height: 27px;
+			}
+		}
+	}
+}
+
+@keyframes paperFadeInDown {
+	0% {
+		transform: translateY(-100%);
+	}
+	70% {
+		transform: translateY(-2%);
+	}
+	80% {
+		transform: translateY(1%);
+	}
+	90% {
+		transform: translateY(-0.5%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes paperFadeOutUp {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(calc(-100vh));
+	}
+}
+
+:local(.paperIn) {
+	animation: paperFadeInDown;
+	animation-timing-function: ease-in;
+	animation-duration: 0.8s;
+	animation-fill-mode: both;
+}
+:local(.paperOut) {
+	animation: paperFadeOutUp;
+	animation-timing-function: ease-in;
+	animation-duration: 0.5s;
+	animation-fill-mode: both;
+}
+
+:local(.paper) {
+  width: 100%;
+  height: calc(100vh - 64px);
+  background-color: #ffffff;
+  box-shadow: $box-shadow;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  z-index: 928;
+}
