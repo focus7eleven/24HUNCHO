@@ -1,0 +1,291 @@
+:local(.targetContainer){
+    width:840px;
+    height:226px;
+    background-color:#fafafa;
+    padding:16px;
+    display:flex;
+    flex-direction:row;
+
+    :local(.left){
+        width:560px;
+        height:194px;
+        background-color:white;
+        margin-right:16px;
+
+        .ant-tabs-ink-bar{
+            background-color: #926dea;
+        }
+        .ant-tabs-tab-active .ant-tabs-tab-inner {
+          color: #926dea !important;
+        }
+        .ant-tabs-bar{
+            border-bottom: 1px solid #eeeeee;
+            .ant-tabs-nav-container{
+                font-size: 12px;
+                .ant-tabs-nav{
+                    height: 34px;
+                    .ant-tabs-tab-inner{
+                        padding-top:6px;
+                        color:#999999
+                    }
+                }
+            }
+        }
+        .ant-tabs-content{
+            :local(.outAllianceContainer){
+                height:162px;
+                width:100%;
+                display:flex;
+                :local(.tag){
+                    border-right:1px solid #eeeeee;
+                    width:174px;
+                    display:flex;
+                    flex-direction:column;
+                    padding-top:8px;
+                    padding-left:8px;
+                    :local(.search){
+                        padding-right:8px;
+                        height:26px;
+                        width:100%;
+                        position:relative;
+                        .ant-input{
+                            height:26px;
+                        }
+                        :local(.searchIcon){
+                            position:absolute;
+                            top:6px;
+                            right:13px;
+                        }
+                    }
+                    :local(.result){
+                        padding-top:8px;
+                        padding-left:2px;
+                        padding-right:3px;
+                        display:flex;
+                        flex-direction:column;
+                        :local(.title){
+                            font-size:12px;
+                            color:#9b9b9b;
+                        }
+                        :local(.content){
+                            display:flex;
+                            flex-direction:row;
+                            flex-wrap:wrap;
+                            overflow:auto;
+                            :local(.chosen){
+                                border-color:#926dea;
+                                color:#926dea;
+                                background-color:white;
+                            }
+                            .ant-tag {
+                                margin:4px 8px 4px 0px;
+                                transition: all .3s;
+                                &:hover {
+                                  border-color:#926dea;
+                                  color:#926dea;
+                                  background-color:white;
+                                  opacity:1;
+                                }
+                            }
+
+
+                        }
+                    }
+                }
+                :local(.affair){
+                    padding-top:4px;
+                    padding-left:8px;
+                    overflow:auto;
+                    width:calc(100% - 174px)
+                    :local(.chosenTag){
+                        :local(.chosen){
+                            border-color:#926dea;
+                            color:#926dea;
+                            background-color:white;
+                            margin:4px 8px 4px 0px;
+                            &:hover{
+                                opacity:1;
+                            }
+                        }
+                    }
+                    :local(.affairResult){
+                        width:100%;
+                        margin-top:3px;
+                        display:flex;
+                        flex-direction:row;
+                        flex-wrap:wrap;
+                        justify-content:space-between;
+                        :local(.checkBox){
+                            width: 200px;
+                            margin-top:5px;
+                            margin-bottom:5px;
+                            flex-shrink:0;
+                            color:#4a4a4a;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+
+                            .ant-checkbox-wrapper{
+                                display:flex;
+                                align-items:center;
+                                :local(.boxContent){
+                                    display:flex;
+                                    align-items:center;
+
+                                    :local(.noAvatar){
+                                        width:21px;
+                                        height:21px;
+                                        background-color:#d8d8d8;
+                                        border-radius:5px;
+                                    }
+                                    :local(.name){
+                                        margin-left:5px;
+                                    }
+                                }
+                            }
+                            .ant-checkbox+span{
+                                margin-left:6px;
+                            }
+                        }
+                    }
+
+                }
+            }
+            :local(.inAllianceContainer){
+                height:162px;
+                width:100%;
+                display:flex;
+                flex-direcition:row;
+                :local(.column){
+                    height:100%;
+                    display:flex;
+                    flex-direction:column;
+                    border-right:1px solid #eeeeee;
+                    overflow:auto;
+                    :local(.row){
+                        height:34px;
+                        padding:8px;
+                        position: relative;
+                        &:hover{
+                            background-color:#fbf8ff;
+                        }
+                        svg {
+                          position: absolute;
+                          right: 4px;
+                          top: 12px;
+                        }
+                    }
+                }
+            }
+            :local(.inAffairContainer){
+                overflow:auto;
+                height:162px;
+                width:100%;
+                padding-top:11px;
+                padding-left:16px;
+                padding-right:16px;
+                :local(.content){
+                    display:flex;
+                    flex-wrap:wrap;
+                    :local(.checkbox){
+                        margin-bottom:5px;
+                        margin-top:5px;
+                        height: 21px;
+                        width: 200px;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        .ant-checkbox-wrapper{
+                            display:flex;
+                            align-items:center;
+                            :local(.boxContent){
+                                display:flex;
+                                align-items:center;
+
+                                :local(.noRoleAvatar){
+                                    width:21px;
+                                    height:21px;
+                                    background-color:#d8d8d8;
+                                    border-radius:100px;
+                                }
+                                :local(.roleAvatar){
+                                    width:21px;
+                                    height:21px;
+                                    border-radius:100px;
+                                }
+                                :local(.name){
+                                    margin-left:5px;
+                                }
+                            }
+                        }
+                        .ant-checkbox+span{
+                            margin-left:6px;
+                        }
+                    }
+                }
+
+
+            }
+        }
+
+    }
+    :local(.right){
+        width:232px;
+        height:194px;
+        padding-top:16px;
+        padding-left:16px;
+        padding-right:16px;
+        background-color:white;
+        overflow:auto;
+        :local(.title){
+            color:#666666;
+            font-size:12px;
+        }
+        :local(.content){
+            margin-top:7px;
+            :local(.row){
+                margin-top:5px;
+                margin-bottom:5px;
+                height:21px;
+
+                :local(.noavatar){
+                    height:21px;
+                    height:21px;
+                    border-radius:100px;
+                    background-color:#ebebeb;
+                }
+                .ant-checkbox-wrapper{
+                    display:flex;
+                    align-items: center;
+                    :local(.boxContent){
+                        display:flex;
+                        align-items:center;
+                        :local(.noAvatar){
+                            width:21px;
+                            height:21px;
+                            background-color:#d8d8d8;
+                            border-radius:5px;
+                        }
+                        :local(.noRoleAvatar){
+                            width:21px;
+                            height:21px;
+                            background-color:#d8d8d8;
+                            border-radius:100px;
+                        }
+                        :local(.roleAvatar){
+                            width:21px;
+                            height:21px;
+                            border-radius:100px;
+                        }
+                        :local(.name){
+                            margin-left:5px;
+                        }
+                    }
+                }
+                .ant-checkbox+span{
+                    margin-left:6px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,200 @@
+@import "~theme.scss";
+@import "~global.scss";
+@import "~search.scss";
+
+:local(.commonModal) {
+  .ant-modal-footer {
+    padding: 20px 30px 20px 30px
+  }
+
+  .ant-modal-body {
+    padding: 20px 40px;
+  }
+
+  .ant-popover-inner{
+    border:none;
+    box-shadow:none;
+    .ant-popover-inner-content{
+      padding:0px;
+      box-shadow: 0 0 8px 0 rgba(96, 79, 113, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+      border-radius:10px;
+    }
+  }
+
+  :local(.opt) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    :local(.transfer) {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 56px;
+      width: 20%;
+
+      svg {
+        width: 8px;
+        height: 8px;
+        fill: $normal-color;
+        margin-left: 2px;
+      }
+    }
+
+    :local(.role) {
+      display: inline-flex;
+      align-items: center;
+      //justify-content: center;
+      width: 40%;
+
+      :local(.circle) {
+        width: 56px;
+        height: 56px;
+        border: 1px dashed $border-color-base;
+        border-radius: 50%;
+      }
+
+      img {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+      :local(.noavatar){
+        background-color:#ebebeb;
+        border-radius:50%;
+        width:56px;
+        height:56px;
+        margin-right: 10px;
+      }
+      & > div div {
+          &:nth-child(1) {
+            @extend .u-text-14;
+          }
+
+          &:nth-child(2) {
+            @extend .u-text-l-12;
+          }
+      }
+    }
+  }
+
+  :local(.memberList) {
+    border: 1px solid $border-color-base;
+    border-radius: $border-radius-base;
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    padding-top:7px;
+    padding-left:13px;
+    overflow:auto;
+  }
+
+  :local(.member) {
+    width: 133px;
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 0 10px 12px;
+    cursor: pointer;
+    position: relative;
+    margin:2px 2px 2px 2px;
+
+    &.checked {
+      border: 1px solid $border-color-active;
+      box-shadow: 0 0 0 2px #f0ebf8;;
+      border-radius: $border-radius-base;
+
+      &:after {
+        content: "\E62F";
+        font-family: "anticon" !important;
+        color: $primary-color;
+        position: absolute;
+        right: -4px;
+        bottom: -8px;
+        background: white;
+        border-radius: 50%;
+        font-size: 14px;
+      }
+    }
+    :local(.roleTitle){
+      max-width:80px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+
+    }
+
+    img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: none;
+      background-color: #eeeeee;
+      margin-right: 8px;
+    }
+    :local(.noavatar){
+      background-color:#ebebeb;
+      border-radius:50%;
+      width:30px;
+      height:30px;
+      margin-right: 8px;
+    }
+
+    div {
+      &:nth-child(1) {
+        @extend .u-text-14;
+
+        svg {
+          width: 18px;
+          height: 18px;
+          top: 4px;
+          position: relative;
+          fill: #6ca1ff;
+          margin-left: 2px;
+        }
+      }
+
+      &:nth-child(2) {
+        @extend .u-text-l-12;
+      }
+    }
+  }
+
+  :local(.checkList) {
+    margin-top: 5px;
+
+    :local(.role) {
+      background-color: #f7f7f7;
+      display: inline-flex;
+      padding: 5px;
+      border-radius: $border-radius-base;
+      position: relative;
+      margin-right: 10px;
+      margin-bottom: 10px;
+
+      svg {
+        width: 12px;
+        height: 12px;
+        position: relative;
+        top: 3px;
+      }
+
+      :local(.name) {
+        @extend .u-text-14;
+        margin: 0 10px 0 6px;
+      }
+
+      :local(.participant) {
+        @extend .u-text-l-12;
+        background-color: $bg-content;
+        border: 1px solid $border-color-base;
+        border-radius: $border-radius-base;
+        padding: 0 8px;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,106 @@
+:local(.content){
+  display:flex;
+  flex-direction:column;
+  :local(.header){
+    padding-left:80px;
+    display:flex;
+    :local(.block){
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      width:80px;
+      height:14px;
+      margin-bottom:9px;
+    }
+  }
+  :local(.table){
+    display:flex;
+    flex-direction:column;
+    :local(.row){
+      display:flex;
+      :local(.key){
+        width:80px;
+        height:36px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        color:#666666;
+        font-size:12px;
+        padding-left:30px;
+      }
+      &:nth-of-type(2n) > :local(.value) {
+        background-color: #fff;
+        :local(.checkBefore) {
+          color: #f4f5f6;
+        }
+      }
+      &:nth-of-type(2n+1) > :local(.value) {
+        background-color: #f4f5f6;
+        :local(.checkBefore) {
+          color: #fff;
+        }
+      }
+      &:first-of-type > :local(.value) {
+        border-top: solid 1px #e9e9e9;
+      }
+      &:last-of-type > :local(.value) {
+        border-bottom: solid 1px #e9e9e9;
+      }
+      & > div:nth-of-type(2) {
+        border-left: solid 1px #e9e9e9;
+      }
+      & > div:last-of-type {
+        border-right: solid 1px #e9e9e9;
+      }
+      :local(.value){
+        width:80px;
+        height:36px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        border-right:1px dashed #d9d9d9;
+        color:#926dea;
+      }
+      :local(.checkInvalidIcon) {
+        display: none;
+      }
+      :local(.checkDisabled) {
+        color: #bdbdbd;
+      }
+      :local(.value):hover {
+        background-color: #f0ebf8;
+
+        & > :local(.checkInvalidIcon),
+        & > :local(.checkBefore) {
+          display: inline-block;
+          color: #fbf8ff;
+        }
+      }
+    }
+    i::before {
+      font-size: 14px;
+    }
+    i:disabled {
+      color: #bdbdbd;
+    }
+  }
+}
+
+:local(.description) {
+  pointer-events: none;
+  .ant-popover-arrow {
+    transform: translateY(-10px);
+    z-index: 1;
+  }
+  .ant-popover-inner {
+    transform: translateY(-10px);
+    border-radius: 6px;
+    padding: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+    .ant-popover-inner-content{
+      word-break:break-all;
+      max-width:300px;
+    }
+  }
+}

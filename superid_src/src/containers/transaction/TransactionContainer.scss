@@ -1,0 +1,47 @@
+:local(.container){
+  background-color: #ffffff;
+  height: 100%;
+  box-shadow: 0 0 8px 0 rgba(96, 79, 114, 0.12);
+  border-radius: 3px;
+  display: flex;
+}
+
+:local(.tabNavigator) {
+  width: 99px;
+  height: 100%;
+  background-color: #fafafa;
+  border-right: 1px solid #e9e9e9;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  position: relative;
+
+  :local(.navigatorItem) {
+    height: 37px;
+    line-height: 37px;
+    text-align: center;
+    width: 100%;
+    font-size: 13px;
+    color: #9b9b9b;
+    cursor: pointer;
+    padding-right: 2px;
+  }
+
+  :local(.activeNavigatorItem) {
+    background-color: white;
+    padding-right: 0px;
+  }
+  :local(.smooth){
+    position:absolute;
+    height:37px;
+    width:2px;
+    right:0px;
+    background-color:#926dea;
+  }
+}
+
+:local(.content) {
+  width: calc(100% - 100px);
+  height: 100%;
+}

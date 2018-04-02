@@ -1,0 +1,118 @@
+:local(.AddLockedModal){
+  .ant-modal{
+    width:500px!important;
+    .ant-modal-content{
+      .ant-modal-close{
+        top:23px;
+        right:23px;
+        .ant-modal-close-x{
+          width:20px;
+          height:20px;
+          line-height:15px;
+        }
+      }
+      .ant-modal-header{
+        padding:20px 0px 0px 20px;
+
+      }
+      .ant-modal-body{
+        padding:0px;
+        margin-top:27px;
+        // margin-bottom:40px;
+        padding-left:35px;
+        padding-right:40px;
+        overflow:auto;
+        :local(.content){
+          display:flex;
+          flex-wrap:wrap;
+          .ant-checkbox-wrapper{
+            width:128px;
+            display:flex;
+            margin-left:4px;
+            margin-bottom:26px;
+            align-items:center;
+            .ant-checkbox{
+              height:14px;
+            }
+            span:nth-child(2){
+              display:flex;
+              align-items:center;
+              color:#4a494a;
+              font-size:14px;
+            }
+          }
+        }
+
+      }
+      .ant-modal-footer{
+        visibility:hidden;
+      }
+      :local(.moneyChangeContainer){
+        display:flex;
+        flex-direction:column;
+        :local(.row){
+          height:90px;
+          border-bottom: 1px dashed #d9d9d9;
+          padding-top:15px;
+          padding-bottom:18px;
+          display:flex;
+          align-items:center;
+          justify-content:space-between;
+          &:last-child{
+            border-bottom:none;
+          }
+          :local(.detail){
+            // margin-left:23px;
+            word-break: keep-all;
+            white-space: nowrap;
+            width:280px;
+            display:flex;
+            flex-direction:column;
+            :local(.title){
+              color:#4a4a4a;
+              font-size:14px;
+              margin-bottom:4px;
+            }
+            :local(.time){
+              color:#9b9b9b;
+              font-size:12px;
+            }
+            :local(.place){
+              color:#9b9b9b;
+              font-size:12px;
+            }
+          }
+          :local(.count){
+            margin-bottom: 22px;
+            width:200px;
+            display:flex;
+            align-items:center;
+            justify-content:flex-end;
+            flex-shrink:0;
+
+            :local(.column){
+              margin-top: 8px;
+              flex-direction:column;
+            }
+            :local(.avatar){
+                  width: 36;
+              margin-bottom: 10px;
+              margin-left:21px;
+
+            }
+            :local(.number){
+              color:#f45b6c;
+              font-size:14px;
+              font-weight:500;
+            }
+            :local(.wait){
+              color:#9b9b9b;
+              font-size: 14px;
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+  }
+}

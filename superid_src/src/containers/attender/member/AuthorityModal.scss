@@ -1,0 +1,204 @@
+:local(.adContainer){
+  .ant-modal-content{
+    width:510px;
+    height:500px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    .ant-modal-header{
+      height:56px;
+      border:none;
+      .ant-modal-title{
+        font-size:18px;
+        font-weight:500;
+        letter-spacing:1px;
+        color:#4a4a4a;
+      }
+    }
+    .ant-modal-body{
+      height:369px;
+      padding:0px;
+      display:flex;
+      border-bottom:1px solid #d9d9d9;
+      border-top:1px solid #d9d9d9;
+      overflow:hidden;
+      :local(.leftPanel){
+        height:100%;
+        width:314px;
+
+        :local(.noInput){
+          margin-top:147px;
+          height:56px;
+          width:100%;
+          padding-left:95px;
+          display:flex;
+          flex-direction:row;
+
+          :local(.avatar){
+            width:56px;
+            height:56px;
+            background-color:#ebebeb;
+            border-radius:100%;
+          }
+          img{
+            width:56px;
+            height:56px;
+            border-radius:100%;
+            background-color:#ebebeb;
+          }
+          :local(.info){
+            margin-left:10px;
+            display:flex;
+            flex-direction:column;
+
+            :local(.username){
+              font-size:14px;
+              color:#4a4a4a;
+              height:17px;
+              margin-top:9px;
+              display:flex;
+              align-items:center;
+              line-height:17px;
+              svg{
+                margin-left:5px;
+              }
+            }
+            :local(.rolename){
+              font-size:12px;
+              color:#9b9b9b;
+              height:14px;
+              margin-top:8px;
+            }
+          }
+        }
+        :local(.withInput){
+          width:100%;
+          height:100%;
+          display:flex;
+          flex-direction:column;
+          :local(.show){
+            margin-top:104px;
+            margin-left:74px;
+            display:flex;
+            flex-direction:row;
+            :local(.avatar){
+              width:56px;
+              height:56px;
+              background-color:#ebebeb;
+              border-radius:100%;
+            }
+            img{
+              width:56px;
+              height:56px;
+              border-radius:100%;
+            }
+            :local(.info) {
+              margin-left: 10px;
+              display: flex;
+              flex-direction: column;
+
+              :local(.username) {
+                margin-top: 9px;
+                display:flex;
+                align-items:center;
+                height:17px;
+                line-height:17px;
+                :local(.namelabel){
+                  font-size: 14px;
+                  color: #4a4a4a;
+                  margin-right:5px;
+                }
+
+              }
+              :local(.rolename) {
+                font-size: 12px;
+                color: #9b9b9b;
+                height: 14px;
+                margin-top: 8px;
+              }
+            }
+          }
+          :local(.roleInput){
+            width:220px;
+            height:26px;
+            margin-left:47px;
+            margin-top:30px;
+          }
+          :local(.affairInput){
+            width:220px;
+            height:26px;
+            margin-left:47px;
+            margin-top:20px;
+          }
+        }
+      }
+      :local(.rightPanel){
+        height:100%;
+        width:196px;
+        border-left:1px solid #d9d9d9;
+        background-color:#fafafa;
+        overflow:auto;
+
+        :local(.tab){
+          :local(.subTitle){
+            display:inline-block;
+            margin-left:16px;
+            margin-top:17px;
+            margin-right:20px;
+            font-size:12px;
+            color:#4a4a4a;
+          }
+          :local(.permissions){
+            background:#ffffff;
+            border-radius:3px;
+            width:176px;
+            margin-left:10px;
+            margin-top:7px;
+
+            .ant-checkbox-group{
+              .ant-checkbox-wrapper{
+                margin-left:12px;
+              }
+            }
+            :local(.permissionBlock){
+              display:flex;
+              padding-left:10px;
+              flex-direction:column;
+              :local(.children){
+                padding-left:10px;
+                display:flex;
+                flex-direction:column;
+
+                .ant-checkbox-wrapper + .ant-checkbox-wrapper{
+                  margin-left:0px;
+                }
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+    .ant-modal-footer{
+      border:none;
+      height:74px;
+      padding:0px;
+
+      :local(.cancelBtn){
+        margin-top:19px;
+        padding:0px!important;
+        width:68px;
+      }
+      :local(.okBtn){
+        margin-left:10px;
+        margin-right:30px;
+        margin-top:19px;
+        padding:0px!important;
+        width:68px;
+      }
+    }
+  }
+}
+
+

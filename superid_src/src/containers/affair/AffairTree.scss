@@ -1,0 +1,69 @@
+@import "~theme.scss";
+@import "~global.scss";
+
+:local(.treeScroll) {
+  display: flex;
+
+  .scrollarea-content {
+    flex: 1 0 auto;
+    width: auto;
+
+    :local(.tree) {
+      display: flex;
+
+      > div {
+        border-right: 1px solid $border-color-base;
+        height: 300px;
+        overflow: auto;
+      }
+
+      :local(.treeMenu) {
+
+        :local(.treeNode) {
+          padding: 8px 12px 8px 20px;
+          @extend .u-text-14;
+          cursor: pointer;
+          transition: 0.3s;
+
+          &:hover {
+            background-color: $bg-content;
+          }
+
+          &.active {
+            background-color: $bg-content;
+            color: $primary-color;
+            font-weight: $font-bold;
+
+            :local(.arrow) {
+              fill: $primary-color;
+            }
+          }
+
+          &.disabled {
+            background-color: #ffffff;
+            cursor: not-allowed;
+            @extend .u-text-l-14;
+
+            :local(.arrow) {
+              fill: $normal-color;
+              cursor: not-allowed;
+            }
+          }
+
+          :local(.arrow) {
+            float: right;
+            fill: #666666;
+            position: relative;
+            top: 5px;
+            width: 11px;
+          }
+        }
+
+        :local(.rootTitle) {
+          @extend .u-text-12;
+          padding: 16px 20px 8px 20px;
+        }
+      }
+    }
+  }
+}

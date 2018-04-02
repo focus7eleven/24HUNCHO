@@ -1,0 +1,111 @@
+:local(.main) {
+  padding: 16px 70px 16px 60px;
+  :local(.row) {
+    line-height: 32px;
+    & > div {
+      vertical-align:top;
+      display: inline-block;
+    }
+    :local(.label) {
+      font-size: 14px;
+      width: 80px;
+      color: #4a4a4a;
+      &::after {
+        content: '：';
+      }
+    }
+    :local(.value) {
+      font-size: 14px;
+      color: #666666;
+    }
+  }
+
+	:local(.fullBody) {
+
+	}
+}
+
+:local(.resultWrapper) {
+	position: relative;
+	& > div {
+		vertical-align: top;
+		display: inline-block;
+	}
+	:local(.role) {
+		margin-left: 25px;
+	}
+	:local(.resultAgree),
+	:local(.resultRefuse) {
+		font-size: 14px;
+		position: absolute;
+		right: 0;
+	}
+
+	:local(.resultAgree) {
+		color: #2b9300;
+	}
+
+	:local(.resultRefuse) {
+		font-weight: 500;
+		color: #f55b6c;
+	}
+
+  :local(.reasonWrapper){
+    display: block;
+    font-size:12px;
+    color: #666666;
+
+    :local(.reason){
+      margin-left:10px;
+      color: #9b9b9b;
+    }
+  }
+
+}
+
+:local(.sendAccount) {
+  div {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  :local(.accountIcon) {
+    margin-right: 8px;
+  }
+}
+
+:local(.avatarGroup){
+  max-width: 280px;
+  &>div{
+    display: inline-block;
+    margin-right:10px;
+  }
+}
+
+:local(.permissionLine) {
+  div {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  :local(.info) {
+    font-size: 14px;
+    color: #666;
+  }
+  :local(.tag) {
+    font-size: 12px;
+    color: #9b9b9b;
+    margin: 0px 8px;
+  }
+}
+
+:local(.fundTypeList) {
+  :local(.fundType) {
+    display: inline-block;
+    & > * {
+      vertical-align: middle;
+      display: inline-block;
+    }
+    svg {
+      margin-right: 8px;
+    }
+  }
+}

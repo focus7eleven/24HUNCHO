@@ -1,0 +1,30 @@
+:local(.container) {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  font-size: 16px;
+  color: #4a4a4a;
+}
+
+:local(.link) {
+  color: #4990e2;
+  cursor: pointer;
+}
+
+:local(.connector) {
+  font-size: 14px;
+  color: #9b9b9b;
+}
+
+:local(.buttonGroup) {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
+  button {
+    margin-left: 10px;
+  }
+}

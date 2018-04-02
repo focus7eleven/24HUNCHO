@@ -1,0 +1,114 @@
+@import "~theme.scss";
+
+:local(.modalContainer) {
+    :local(.menkorCreate){
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 30px;
+
+        img {
+            width: 60%;
+        }
+    }
+
+    .ant-modal {
+        .ant-modal-content {
+
+            label {
+                font-size: 14px;
+            }
+
+            :local(.checkbox) {
+                padding: 20px 36px;
+                margin: 4px;
+                border: 1px solid #eeeeee;
+                border-radius: $border-radius-sm;
+                font-size: 14px;
+
+                &.active {
+                    border: 1px solid $border-color-active;
+                    box-shadow: $input-shadow;
+                }
+
+                .ant-checkbox-checked {
+                    .ant-checkbox-inner {
+                        border-color: $primary-color;
+                        background-color: $primary-color;
+                    }
+                }
+            }
+
+            :local(.selectHeader) {
+                padding: 6px 4px;
+
+                :local(.selectTitle) {
+                    display: inline-block;
+                    margin-right: 8px;
+                }
+
+                span {
+                    font-weight: $font-normal;
+                }
+            }
+
+            .ant-modal-header {
+                background-color: #ffffff;
+                border-bottom: none;
+
+                .ant-modal-title {
+                    font-size: 18px;
+                    font-weight: $font-bold;
+                    letter-spacing: 1px;
+                    color: $text-color;
+                }
+            }
+            .ant-modal-body{
+                overflow-y:hidden;
+            }
+            .ant-modal-footer {
+                border-top: none;
+                padding-right: 10px;
+                padding-bottom: 14px;
+            }
+
+            :local(.createResult) {
+                padding: 0 10px 10px 10px;
+                line-height: 2.1;
+
+                :local(.info) {
+                    color: #2c9300;
+                    font-size: 16px;
+                    font-weight: $font-bold;
+                    line-height: 1.9;
+                }
+
+                :local(.certify) {
+                    border-radius: $border-radius-sm;
+                    background-color: $bg-content;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 10px 24px 10px 14px;
+                    margin-top: 10px;
+                    margin-bottom: 30px;
+
+                    a {
+                        font-weight: $font-bold;
+                        color: $primary-color;
+
+                        &:hover, &:focus, &:active {
+                            color: $primary-hover-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+:local(.codeTip) {
+    .ant-tooltip-inner {
+        max-width: 300px;
+    }
+}

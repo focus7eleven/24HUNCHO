@@ -1,0 +1,18 @@
+:local(.container) {
+  :local(.header) {
+    margin-bottom: 20px;
+  }
+  :local(.listContainer) {
+    & > div {
+      margin-bottom: 10px;
+    }
+
+    :local(.scrollListContainer) {
+      & > div {
+        margin-bottom: 10px;
+      }
+    }
+
+  }
+
+}

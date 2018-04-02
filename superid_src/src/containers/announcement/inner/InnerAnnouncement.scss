@@ -1,0 +1,197 @@
+@import "~theme.scss";
+
+:local(.invalidContainer) {
+  & > div {
+    opacity: 0.3;
+  }
+}
+
+:local(.container) {
+  position: relative;
+  cursor: pointer;
+  :local(.icon) {
+    flex-shrink: 0;
+    display: inline-block;
+    width: 36px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 6px;
+    border: solid 1px;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  &[data-type="brief"] {
+    height: 60px;
+    & > div {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 20px 0;
+    }
+    :local(.title) {
+      margin-left: 10px;
+      font-size: 14px;
+      color: #4a4a4a;
+      white-space:nowrap;
+      text-overflow:ellipsis;
+      overflow:hidden;
+      max-width:300px;
+    }
+  }
+  &[data-type="default"] {
+    padding: 15px 0;
+    & > div {
+      display: inline-block;
+      vertical-align: top;
+    }
+    :local(.mainWrapper) {
+      width: calc(100% - 46px);
+      margin-left: 10px;
+      position: relative;
+      :local(.header) {
+        & > div {
+          display: inline-block;
+          vertical-align: middle;
+        }
+        :local(.title) {
+          font-size: 14px;
+          color: #4a4a4a;
+          font-weight: 500;
+          line-height: 20px;
+        }
+      }
+
+      :local(.optionGroup) {
+        margin-top: 8px;
+        :local(.option) {
+          display: inline-block;
+          & > div {
+            display: inline-block;
+          }
+          :local(.name) {
+            font-size: 14px;
+            color: #9b9b9b;
+          }
+          :local(.value) {
+            font-size: 14px;
+            color: #4a4a4a;
+          }
+        }
+        :local(.option):not(:last-of-type) {
+          margin-right: 20px
+        }
+      }
+
+      :local(.content) {
+        font-size: 12px;
+        color: #666;
+        margin-top: 8px;
+        :local(.body) {
+            width: 100%;
+            font-size: 12px;
+            color: #666666;
+            overflow: hidden;
+            white-space: pre-wrap;
+            display:flex;
+            > span {
+                color: $link-color;
+                user-select: none;
+                cursor: pointer;
+                margin-left: 8px;
+
+                > svg {
+                    margin-right: 4px;
+                }
+            }
+            :local(.left){
+                width:520px;
+                word-break:break-all;
+            }
+            :local(.right){
+                margin-left:24px;
+                width:230px;
+                height:130px;
+                video{
+                    width:100%;
+                    height:100%;
+                    border-radius:3px;
+                }
+                img{
+                    height:100%;
+                    width:100%;
+                    border-radius:3px;
+                }
+            }
+        }
+        :local(.imgList){
+            display:flex;
+            flex-wrap:wrap;
+            margin-top:15px;
+            img{
+                height:90px;
+                width:90px;
+                border-radius:3px;
+                margin-right:6px;
+                margin-bottom:10px;
+            }
+        }
+      }
+
+      :local(.tagGroup) {
+        margin-top: 8px;
+      }
+
+      :local(.stateGroup) {
+        margin-top: 8px;
+        :local(.state) {
+          margin-right: 20px;
+          font-size: 12px;
+          color: #9b9b9b;
+          line-height: 16px;
+          display: inline-block;
+          & > * {
+            vertical-align: middle;
+          }
+          & >  div {
+            display: inline-block;
+            padding-left: 5px;
+          }
+          svg {
+            fill: #cccccc;
+            width: 16px;
+          }
+        }
+        :local(.time) {
+          position: absolute;
+          right: 0;
+          font-size: 12px;
+          text-align: right;
+          color: #9b9b9b;
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+
+  :local(.avatarWrapper) {
+    position: absolute;
+    right: 0;
+    & > div, & > img {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    :local(.name) {
+      font-size: 12px;
+      color: #9b9b9b;
+      margin-right: 10px;
+    }
+    :local(.avatar) {
+      width: 21px;
+      height: 21px;
+      background-color: #eee;
+      border-radius: 50%;
+    }
+  }
+}

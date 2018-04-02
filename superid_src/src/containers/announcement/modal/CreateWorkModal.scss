@@ -1,0 +1,83 @@
+:local(.createWorkModal){
+
+  .ant-form-item-label label{
+    font-size: 14px
+  }
+  .ant-modal-header {
+    padding: 16px 24px;
+  }
+  .ant-modal-body {
+    padding-left: 60px;
+  }
+  .ant-modal-footer {
+    padding: 24px;
+  }
+
+  .ant-form-item-label label {
+    font-size: 14px;
+  }
+  .ant-row.ant-form-item {
+    & > div {
+      vertical-align: top;
+    }
+  }
+
+
+  .ant-form-item-label {
+    width: 78px;
+    text-align: left;
+    padding: 0;
+  }
+  .ant-form-item-control-wrapper {
+    width: 300px;
+    display: inline-block;
+  }
+
+  .ant-calendar-picker {
+    width: 100% !important;
+  }
+  .ant-input-group-addon {
+    padding: 4px 10px;
+    color: #9b9b9b;
+  }
+    :local(.textNum){
+
+      position: absolute;
+      right: 5px;
+      bottom: -6px;
+      color: #cccccc;
+    }
+
+  :local(.stateSelector){
+
+    :local(.icon){
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 5px;
+    }
+  }
+}
+
+:local(.roleSelector){
+  display: inline-block;
+  width: 300px;
+}
+
+:local(.typeIcon) {
+  margin-right: 8px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 3px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+
+  svg {
+    width: 10px;
+    height: 10px;
+    fill: white;
+  }
+}

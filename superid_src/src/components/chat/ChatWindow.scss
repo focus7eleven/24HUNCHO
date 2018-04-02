@@ -1,0 +1,75 @@
+@import "~theme.scss";
+
+:local(.chatContainer) {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  :local(.link) {
+    cursor: pointer;
+    color: #4990e2;
+    font-weight: 500;
+  }
+
+  :local(.header) {
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 8px 15px 15px;
+    font-size: 14px;
+    flex: 0 0 48px;
+
+    :local(.groupName) {
+      font-size: 14px;
+      max-width: 175px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    :local(.groupIcon) {
+      svg {
+        width: 20px;
+        height: 20px;
+        fill: #ccc;
+
+        &:hover {
+          fill: #666;
+        }
+      }
+    }
+  }
+
+  :local(.infiniteContainer) {
+    flex: 1 0 300px;
+    margin-top: 2px;
+    overflow: hidden;
+  }
+
+  :local(.chatBox) {
+    flex: 0 0 140px;
+  }
+}
+
+:local(.optionsPopover) {
+
+  .ant-popover-inner-content {
+    padding: 0;
+  }
+
+  :local(.optionsList) {
+
+    :local(.optionItem) {
+      font-size: 12px;
+      color: #4a4a4a;
+      cursor: pointer;
+      padding: 8px 16px;
+
+      &:hover {
+        background-color: #faf8fe;
+        font-weight: 500;
+      }
+    }
+  }
+}

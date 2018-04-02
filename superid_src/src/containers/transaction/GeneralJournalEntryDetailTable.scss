@@ -1,0 +1,192 @@
+:local(.wrapper){
+
+.ant-tabs-tab {
+  width: 88px;
+  .ant-tabs-tab-inner {
+    background-color: white;
+    border-radius: 6px 6px 0 0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #9b9b9b;
+  }
+}
+.ant-tabs-tab-active {
+  .ant-tabs-tab-inner {
+    background-color: #f7f7f7;
+    color: #666!important;
+  }
+}
+:local(.table){
+  font-size: 12px;
+  border-radius: 4px;
+  min-width: 700px;
+  margin-bottom: 20px;
+  :local(.tableHeader) {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    background-color: #f7f7f7;
+    color: #9b9b9b;
+    border-right: solid 1px #d9d9d9;
+    border-left: solid 1px #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+    &>div {
+      text-align: center;
+      width: 100%;
+    }
+    :local(.tableHeaderTime) {
+      width: 100%;
+      min-width: 150px;
+      max-width: 300px;
+      flex: 1;
+    }
+    :local(.tableHeaderName) {
+      width: 250px;
+      min-width: 215px;
+      flex-shrink: 3;
+    }
+    :local(.tableHeaderSummary) {
+      min-width: 120px;
+      flex: 1;
+      flex-shrink: 0;
+    }
+  }
+  :local(.tableContent) {
+    border-radius: 4px;
+    :local(.tableRow:first-child){
+      height: 40px;
+      &>div {
+        line-height: 40px;
+        color: #9b9b9b;
+      }
+      :local(.tableDataValue){
+        padding: 0 0 0 20px;
+      }
+    }
+    :local(.tableRow) {
+      height: 50px;
+      display: flex;
+      align-items: stretch;
+      font-size: 12px;
+      color: #666;
+      border-right: solid 1px #d9d9d9;
+      &>div {
+        line-height: 50px;
+        text-align: left;
+        padding-left: 20px;
+        border: 1px solid #d9d9d9;
+        border-right-width: 0px;
+        border-top-width: 0px;
+      }
+      :local(.tableDataTime) {
+        padding-left:0;
+        text-align: center;
+        width: 100%;
+        min-width: 150px;
+        max-width: 300px;
+        flex: 1;
+      }
+      :local(.tableDataType) {
+        padding-left:0;
+        text-align: center;
+        min-width: 50px;
+        width: 70px;
+        flex-shrink: 1;
+        border-right:dashed 1px #e9e9e9;
+      }
+      :local(.tableDataValue) {
+        min-width: 165px;
+        width: 180px;
+        flex-shrink: 2;
+        border-left: transparent;
+        padding: 5px 0 5px 20px;
+        &>div {
+          line-height: 20px;
+          text-align: left;
+        }
+        :local(.tableDataInfo) {
+          color: #9b9b9b;
+        }
+      }
+      :local(.tableDataRemain) {
+        min-width: 120px;
+        flex: 1;
+        flex-shrink: 0;
+        padding-left: 0;
+        &:hover{
+          :local(.card){
+            visibility: visible;
+          }
+        }
+        &>span{
+          padding-left: 20px;
+        }
+        :local(.card){
+          position: absolute;
+          margin-top: -56px;
+          margin-left: -10px;
+          background-color: #ffffff;
+          box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+          //transform: scaleY(1.2);
+          text-align: center;
+          visibility: hidden;
+          flex-shrink: 0;
+          :local(.cardContent){
+            display: flex;
+            flex-direction: row;
+            padding: 15px;
+            :local(.cardColumn:nth-child(2n)){
+              justify-content: flex-end;
+              width: auto;
+              flex-grow: 0;
+              flex-shrink: 0;
+            }
+            :local(.cardColumn){
+              display:flex;
+              flex-direction: column;
+              line-height: 40px;
+              flex-grow: 1;
+              flex-shrink: 1;
+              &>div{
+                line-height: 20px;
+                text-align: center;
+                //transform: scaleY(0.833);
+              }
+              :local(.cardHeader){
+                line-height: 14px;
+                font-size: 10px;
+                color: #9b9b9b;
+              }
+              :local(.cardData){
+                font-size: 12px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.5;
+                letter-spacing: normal;
+                color: rgba(0, 0, 0, 0.65);
+              }
+              :local(.cardSign){
+                font-size: 12px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.5;
+                letter-spacing: normal;
+                color: rgba(0, 0, 0, 0.65);
+              }
+            }
+            :local(.cardColumn:last-child){
+              :local(.cardData){
+                font-weight: 500;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+}

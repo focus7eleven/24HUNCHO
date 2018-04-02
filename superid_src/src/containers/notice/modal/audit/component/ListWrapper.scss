@@ -1,0 +1,17 @@
+:local(.listWrapper){
+  margin-top: 16px;
+  background: #fafcff;
+  border: 1px solid #cddced;
+  border-radius: 3px;
+  padding:10px 20px;
+  overflow:hidden;
+
+  &>div{
+    border-bottom: 1px dashed #cddced;
+    font-size: 12px;
+  }
+
+  &>div:last-child{
+    border: none;
+  }
+}

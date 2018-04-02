@@ -1,0 +1,12 @@
+.ant-btn-primary.ant-btn-secondary {
+  background-color: #90b5df;
+  border-color: #90b5df;
+  right: 0;
+  position: absolute;
+
+  &:hover, &:focus, &:visited {
+    background-color: #5794da;
+    border-color: #5794da;
+    color: #fff;
+  }
+}

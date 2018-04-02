@@ -1,0 +1,225 @@
+@import "~theme.scss";
+
+:local(.navigation) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 0 17px;
+
+    & > p {
+      font-size: 16px;
+      font-weight: $font-bold;
+      line-height: 1.2;
+      color: $normal-color;
+      display: flex;
+      align-items: center;
+
+      span {
+        cursor: pointer;
+
+        svg {
+          width: 14px;
+          height: 14px;
+          margin-left: 6px;
+          fill: #9b9b9b;
+        }
+      }
+    }
+
+    :local(.affairTab) {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        :local(.activeAffairTabBar) {
+            position: absolute;
+            top: 35px;
+            height: 2px;
+            background-color: $primary-color;
+            transition: left 0.6s cubic-bezier(0, 1, 0.68, 1)
+        }
+
+        :local(.activeAffairTab) {
+            color: $primary-color;
+            font-weight:500;
+        }
+
+        & > div {
+            flex-shrink: 0;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 13px;
+            color: $normal-color;
+            margin: 0 8px;
+        }
+    }
+
+    :local(.splitLine) {
+        height: 100%;
+        border: solid 0.5px #eeeeee;
+        margin: 0 6px;
+    }
+
+    :local(.position) {
+        padding:0px 10px 0px 10px;
+        font-size: 13px;
+        color: $text-color;
+        position: relative;
+        flex: 1 0 auto;
+        display:flex;
+        align-items:center;
+        cursor: pointer;
+
+        span {
+            color: $normal-color;
+        }
+
+        :local(.roleSelect) {
+            .ant-select-selection {
+                border: none;
+                box-shadow: none;
+
+                .ant-select-selection__rendered {
+                    padding-left: 0;
+                }
+
+              .ant-select-arrow:before {
+                content: '\E606';
+              }
+            }
+        }
+    }
+
+    :local(.setting) {
+        width: 60px;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
+
+:local(.rightPanel) {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+:local(.indexContainer) {
+    width: 100%;
+    height: 100%;
+}
+
+:local(.settingPanel) {
+    position: absolute;
+    border-radius: 3px;
+    box-shadow: 0 0 8px 0 rgba(96, 79, 113, 0.12);
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    z-index: 20;
+    overflow: auto;
+
+    :local(.settingTab) {
+        height: 40px;
+        display: flex;
+        border-bottom: solid 2px #eeeeee;
+        position: relative;
+        flex: 0 0 auto;
+
+        div {
+            cursor: pointer;
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-size: 13px;
+            color: $normal-color;
+        }
+
+        :local(.activeBar) {
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            height: 2px;
+            width: 100px;
+            background-color: #926dea;
+        }
+    }
+
+    :local(.settingContent) {
+        min-height: calc(100% - 40px);
+        flex: 1 1 auto;
+        display: flex;
+    }
+}
+
+:local(.selectorContent) {
+  // width: 152px;
+  overflow: auto;
+  height:500px;
+
+  :local(.selectorContent) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: left;
+    color: #9b9b9b;
+    margin: 8px 20px;
+  }
+
+  padding-bottom: 10px;
+}
+
+:local(.roleSelectorPopover) {
+  padding-top: 16px;
+
+  .ant-popover-arrow {
+    display: none;
+  }
+
+  .ant-popover-inner-content {
+    padding: 0px;
+  }
+}
+
+:local(.roleSelectorItem) {
+  cursor: pointer;
+  width: 100%;
+  height: 36px;
+  font-size: 14px;
+  line-height: 1.29;
+  color: #666666;
+  padding: 7px 20px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap ;
+  svg {
+    fill: rgb(245, 166, 35);
+    width: 16px;
+    position: relative;
+    top: 2px;
+    left: 7px;
+  }
+}
+
+:local(.activeRoleSelectorItem) {
+  font-weight: 500;
+  background-color: #faf8fe;
+}

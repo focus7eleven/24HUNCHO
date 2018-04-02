@@ -1,0 +1,144 @@
+:local(.container) {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+
+  :local(.description) {
+    padding: 8vw 5.8vw;
+    font-size: 3.7vw;
+    line-height: 1.71;
+    text-align: left;
+    color: #4a4a4a;
+  }
+
+  :local(.footer) {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 14vw;
+    background-color: rgba(0, 0, 0, 0.65);
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3.75vw;
+    padding-right: 3.75vw;
+
+    .ant-btn {
+      border-radius: 3px;
+    }
+    .ant-btn-ghost {
+      color: #fff;
+      margin-right: 2.6vw;
+
+      &:hover {
+        color: #926dea;
+      }
+    }
+
+    p {
+      font-size: 3.2vw;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .ant-btn {
+      width: 21.3vw;
+      height: 8.5vw;
+
+      span {
+        font-size: 3.7vw;
+      }
+    }
+
+    :local(.footerLeft) {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 13.3vw;
+        height: 13.3vw;
+      }
+    }
+  }
+
+  .ant-carousel {
+    flex-shrink: 0;
+    height: 37vh;
+    width: 100%;
+
+    .slick-slider {
+      padding-bottom: 8vw;
+    }
+
+    .slick-dots {
+      bottom: 1.35vw;
+
+      li {
+        width: 5.3vw;
+        height: 5.3vw;
+        margin: 0 1.3vw;
+      }
+    }
+
+    .slick-dots {
+      .slick-active {
+        button {
+          &:before {
+            color: #926dea;
+          }
+        }
+      }
+
+      li {
+        button {
+          &:before {
+            font-size: 6.67vw;
+            line-height: 5.3vw;
+          }
+        }
+      }
+    }
+  }
+
+  .slick-slide {
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    p {
+      padding: 2.6vw 2.6vw 1.3vw 2.6vw;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      font-size: 3.2vw;
+      color: #fff;
+      background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1) 25%, rgba(0, 0, 0, 0.2) 49%, rgba(0, 0, 0, 0.3) 74%, rgba(0, 0, 0, 0.4));
+    }
+  }
+}
+
+:local(.appliedPanel) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  :local(.invalidShareTitle) {
+    margin-top: 15vh;
+    display: flex;
+    align-items: center;
+    font-size: 4.27vw;
+    color: #f6a623;
+
+    .anticon {
+      font-size: 5vw;
+      margin-right: 2.6vw;
+    }
+  }
+}

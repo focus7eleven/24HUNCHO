@@ -1,0 +1,222 @@
+@import "~theme.scss";
+@import "~global.scss";
+
+:local(.container) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    min-width: 1200px;
+
+    & > * {
+        flex: 1 1 auto;
+    }
+}
+
+:local(.defaultHeader) {
+  position: fixed;
+  width: 100%;
+  height: 64px;
+	display: flex;
+	justify-content: center;
+		background-color: $primary-color;
+		box-shadow: 0 10px 14px 0 rgba(96, 79, 113, 0.2), 0 0 4px 0 rgba(96, 79, 113, 0.38);
+		z-index: 948;
+		overflow-y: hidden;
+		flex-shrink: 0;
+
+		:local(.headerContainer) {
+			width: calc(100% - 20px);
+			//max-width: 1400px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			:local(.logo) {
+				margin-left: 15px;
+				width: 120px;
+				height: 18px;
+			}
+
+			:local(.rightPanel) {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+
+				svg {
+					cursor: pointer;
+				}
+
+				:local(.item) {
+					margin-right: 30px;
+					float: left;
+				}
+
+
+				:local(.menkor) {
+					color: #fff;
+					font-size: 14px;
+					white-space: nowrap;
+					margin-right: 20px;
+					cursor: pointer;
+				}
+
+				:local(.line) {
+					border-right: 1px solid #ebebeb;
+					height: 27px;
+				}
+
+				:local(.mine) {
+					color: #fff;
+					font-size: 14px;
+					white-space: nowrap;
+					margin-right: 30px;
+					cursor: pointer;
+				}
+			}
+		}
+}
+
+:local(.profile) {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  :local(.avatar) {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #ebebeb;
+    background-size: contain;
+    margin-right: 8px;
+    cursor:pointer;
+  }
+
+  :local(.name) {
+    font-size: 14px;
+    white-space: nowrap;
+    color: #ffffff;
+    position: relative;
+    top: -1px;
+  }
+}
+
+:local(.extra) {
+  margin-left: 22px;
+
+  .ant-dropdown-menu-item {
+    padding: 0;
+  }
+  div {
+    padding: 7px 15px;
+  }
+}
+
+:local(.notifications) {
+  width: 280px;
+
+    .ant-popover-inner-content {
+        padding: 0;
+
+        :local(.msg) {
+            padding: 8px 14px;
+            @extend .u-text-13;
+            cursor: default;
+            border-bottom: 1px dotted #eeeeee;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: $bg-content;
+            }
+
+            &:local(.firstMsg) {
+                border-radius: $border-radius-base $border-radius-base 0 0;
+            }
+
+            a {
+                font-weight: $font-bold;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        :local(.popoverFooter) {
+            text-align: center;
+            padding: 8px 0;
+            cursor: pointer;
+            border-radius: 0 0 $border-radius-base $border-radius-base;
+            transition: $transition;
+
+            &:hover {
+                background-color: $bg-content;
+            }
+
+            svg {
+              width: 10px;
+              height: 10px;
+              fill: $normal-color;
+            }
+        }
+    }
+
+}
+
+
+@keyframes paperFadeInDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  70% {
+    transform: translateY(-2%);
+  }
+  80% {
+    transform: translateY(1%);
+  }
+  90% {
+    transform: translateY(-0.5%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes paperFadeOutUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+:local(.paperIn) {
+  animation: paperFadeInDown;
+  animation-timing-function: ease-in;
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+}
+:local(.paperOut) {
+  animation: paperFadeOutUp;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+:local(.paperHidden) {
+  transform: translateY(-100%);
+}
+
+:local(.paper) {
+  width: 100%;
+  height: calc(100% - 64px);
+  opacity: 0.98;
+  background-color: #ffffff;
+  box-shadow: $box-shadow;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  z-index: 928;
+  margin-top: 64px;
+}

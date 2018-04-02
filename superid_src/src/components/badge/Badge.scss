@@ -1,0 +1,46 @@
+:local(.badgeContainer){
+  position: relative;
+  display: inline-block;
+  // margin-top: 300px;
+  // margin-left: 300px;
+}
+// :local(.logo){
+//   width: 40px;
+//   height: 40px;
+//   display: inline-block;
+//   background-color: #9ecff7;
+// }
+:local(.badge){
+  min-width: 20px;
+  height: 20px;
+  position: absolute;
+  background: #f50;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+  top: -10px;
+  right: -10px;
+  border-radius: 10px;
+  padding: 0 5px;
+  font-family: tahoma;
+  box-shadow: 0 0 0 1px #fff;
+  transform: scale(0.8,0.8);
+  animation: scaleUp 0.2s;
+  -moz-animation: scaleUp 0.2s;  /* Firefox */
+  -webkit-animation: scaleUp 0.2s;  /* Safari 和 Chrome */
+}
+
+@keyframes scaleUp{
+  from {transform: scale(0.5,0.5)}
+  to {transform: scale(0.8,0.8)}
+}
+
+@-moz-keyframes scaleUp{
+  from {transform: scale(0.5,0.5)}
+  to {transform: scale(0.8,0.8)}
+}
+
+@-webkit-keyframes scaleUp{
+  from {transform: scale(0.5,0.5)}
+  to {transform: scale(0.8,0.8)}
+}

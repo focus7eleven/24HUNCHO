@@ -1,0 +1,23 @@
+@import "~theme.scss";
+
+:local(.groupSettingModal) {
+  .ant-modal-body {
+    padding-top: 6px;
+    padding-bottom: 0;
+
+    :local(.row) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin: 16px 24px;
+
+
+    }
+
+    .danger {
+      color: $danger-color;
+      margin-left: 85px;
+    }
+
+  }
+}

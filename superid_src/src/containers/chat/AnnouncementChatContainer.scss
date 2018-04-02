@@ -1,0 +1,35 @@
+
+:local(.announcementChatContainer) {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  :local(.scopeMenu) {
+    flex: 0 0 auto;
+    .ant-menu {
+      display: flex;
+
+      .ant-menu-item {
+        width: 74.6px;
+        font-size: 12px;
+        color: #9b9b9b;
+        flex: 1 0 auto;
+        cursor: pointer;
+      }
+
+      .ant-menu-item-selected, .ant-menu-item-active {
+        font-weight: 500;
+        border-bottom: 2px solid #926dea;
+        color: #926dea;
+      }
+    }
+  }
+
+  :local(.chatContainer) {
+    flex: 1 0 auto;
+    display: flex;
+    height: calc(100% - 48px);
+  }
+
+}

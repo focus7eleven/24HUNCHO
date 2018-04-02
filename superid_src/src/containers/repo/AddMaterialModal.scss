@@ -1,0 +1,381 @@
+@import "~theme.scss";
+@import "~mixins.scss";
+
+:local(.container) {
+  .ant-modal-header {
+    border-bottom: 1px solid #d9d9d9;
+  }
+
+  .ant-modal-body {
+    padding: 30px;
+  }
+  .ant-select{
+    .ant-select-selection{
+      .has-error,.ant-select-arrow{
+        color:rgba(0, 0, 0, 0.43);
+      }
+    }
+  }
+}
+
+:local(.title) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  :local(.public) {
+    display: flex;
+    font-size: 14px;
+    color: #4a4a4a;
+    font-weight: normal;
+
+    .ant-switch {
+      margin-left: 0;
+    }
+  }
+}
+
+:local(.basicInformation) {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+
+  :local(.unitLabel) {
+    font-size: 14px;
+    text-align: center;
+    padding-left: 20px;
+  }
+
+  :local(.image) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+
+    width: 262px;
+    height: 262px;
+    border-radius: 3px;
+    font-size: 14px;
+    overflow: hidden;
+    color: #ccc;
+
+    :local(.materialPicture) {
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      & > svg {
+        position: absolute;
+        top: 33px;
+        left: 46px;
+        width: 170px;
+        height: 196px;
+      }
+
+      :local(.uploadTip) {
+        opacity: 0;
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(29, 29, 29, 0.51);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.3s;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        :local(.uploadTipBox) {
+          width: 124px;
+          height: 40px;
+          border-radius: 3px;
+          background-color: rgba(255, 255, 255, 0.1);
+          border: 1px dashed #ffffff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 18px;
+          color: white;
+
+          svg {
+            fill: #ffffff;
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .ant-form {
+    width: 400px;
+
+    .ant-form-item-label {
+      text-align: left;
+      padding-left: 30px;
+
+      label {
+        font-size: 14px;
+        color: #4a4a4a;
+      }
+    }
+  }
+}
+
+:local(.tagsRow) {
+  display: flex;
+  flex-direction: row;
+  //margin-bottom: 20px;
+  flex-wrap:wrap;
+
+  :local(.tag){
+    position:relative;
+    margin-right: 8px;
+    margin-bottom:5px;
+    margin-top:8px;
+    :local(.hover){
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height:22px;
+      border-radius: 6px;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      text-align: center;
+      line-height: 22px;
+      font-weight: bold;
+      opacity: 0;
+      transition: 0.3s opacity;
+      cursor:pointer;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .ant-tag {
+      background: white;
+      cursor:default;
+      margin:0px 0px 0px 0px;
+    }
+  }
+  :local(.addTagInput){
+    margin-top:8px;
+    width:75px;
+    height:22px;
+    border:1px dashed $border-color-active;
+    &:focus{
+      box-shadow:none;
+    }
+  }
+  :local(.addBtn){
+    margin-top:8px;
+    height:22px!important;
+  }
+
+}
+
+:local(.attributes) {
+  margin-top: 10px;
+  width: 100%;
+  background-color: #fafafa;
+  padding: 0px 25px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+
+  :local(.addAttribute) {
+    color: #4a90e2;
+    font-size: 12px;
+    padding: 7px 0;
+    cursor: pointer;
+  }
+
+  :local(.attribute) {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    margin-right: 22px;
+
+    input.ant-input {
+      border: none;
+      height: 22px;
+      width: 100px;
+    }
+
+    span {
+      padding: 0 2px;
+    }
+
+    svg {
+      width: 12px;
+      height: 12px;
+      fill: #ccc;
+      margin-right: 3px;
+    }
+  }
+}
+
+:local(.useTemplate) {
+  margin-left: auto;
+  margin-right: 20px;
+  font-size: 14px;
+  color: #4a90e2;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+:local(.editor) {
+  margin-top: 10px;
+  height: 166px;
+
+  border-radius: 6px;
+  border: solid 1px #e9e9e9;
+}
+
+:local(.eidtorControl) {
+  border-radius: 6px 6px 0 0;
+  border-top: 0;
+}
+
+:local(.chooseTemplate) {
+  width: 509px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: white;
+  z-index: 1000;
+  border-radius: 6px;
+  box-shadow: 0 2px 33px 0 rgba(0, 0, 0, 0.12);
+  padding: 25px;
+  font-size: 14px;
+  color: #666;
+  display: flex;
+  flex-direction: column;
+
+  & > div.ant-select.ant-select {
+    width: 175px;
+    margin-top: 20px;
+  }
+
+  :local(.templateList) {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: auto;
+
+    :local(.addTemplate) {
+      width: 80px;
+      height: 80px;
+      border-radius: 6px;
+      border: 1px dashed #ccc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      svg {
+        fill: #ccc;
+      }
+    }
+  }
+
+  :local(.btnGroup) {
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-self: center;
+
+    button {
+      height: 31px;
+      font-size: 14px;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  }
+}
+
+:local(.material) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
+  margin-bottom: 20px;
+
+  :local(.selectedMaterial) {
+    border: solid 1px #926dea;
+  }
+
+  :local(.picture) {
+    overflow: hidden;
+    width: 80px;
+    cursor: pointer;
+    height: 80px;
+    border-radius: 6px;
+    background-color: #d8d8d8;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    & > svg {
+      width: 20px;
+      height: 40px;
+      fill: #926dea;
+      position: absolute;
+      right: 0px;
+      top: -5px;
+    }
+  }
+
+  :local(.name) {
+    margin-top: 5px;
+    width: 80px;
+    font-size: 12px;
+    color: #4a4a4a;
+    text-align: center;
+  }
+}
+
+:local(.footer) {
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  margin-bottom: 5px;
+
+  button {
+    &:first-child {
+      margin-left: auto!important;
+    }
+
+    height: 31px;
+  }
+}

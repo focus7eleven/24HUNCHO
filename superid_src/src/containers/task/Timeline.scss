@@ -1,0 +1,237 @@
+:local(.container) {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+}
+
+:local(.timeline) {
+  height: 260px;
+  border-bottom: 2px solid #e9e9e9;
+  background-color: white;
+  position: relative;
+  user-select: none;
+
+  :local(.tasksContainer) {
+    position: relative;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+  }
+
+  :local(.timelineType) {
+    position: absolute;
+    z-index: 999;
+    top: 9px;
+    right: 10px;
+    width: 150px;
+    height: 20px;
+    border-radius: 4px;
+    border: solid 1px #d9d9d9;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    :local(.grid) {
+      cursor: pointer;
+      width: 30px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      color: #9b9b9b;
+    }
+
+    :local(.activeGrid) {
+      background-color: #926dea;
+      color: white;
+    }
+
+    span {
+      height: 20px;
+      width: 1px;
+      background-color: #d9d9d9;
+    }
+  }
+
+  :local(.now) {
+    position: absolute;
+    border-left: 1px solid #fdd8b2;
+    height: 100%;
+    top: 0;
+    z-index: 1000;
+
+    :local(.tri) {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 8px 5.5px 0 5.5px;
+      border-color: #fdd7b2 transparent transparent transparent;
+      top: 0px;
+      left: -6px;
+    }
+  }
+
+  :local(.calibration) {
+    position: absolute;
+    border-left: 1px dashed #e9e9e9;
+    top: 0;
+    height: 100%;
+
+    :local(.dateLabel) {
+      position: absolute;
+      left: 10px;
+      bottom: 5px;
+      font-size: 12px;
+      font-weight: 300;
+      color: rgba(132, 148, 165, 0.5);
+    }
+  }
+
+  :local(.footer) {
+    position: absolute;
+    bottom: 0px;
+    left: -1.5px;
+    width: 2px;
+    height: 3px;
+    background-color: #e9e9e9;
+  }
+
+  :local(.label) {
+    position: absolute;
+    bottom: -17px;
+    white-space: nowrap;
+    transform: translate(-50%, 0px);
+    height: 14px;
+    font-size: 10px;
+    font-weight: 300;
+    color: #8494a5;
+  }
+}
+
+:local(.slider) {
+  height: 45px;
+  background-color: white;
+  padding: 0 10px;
+
+  :local(.groove) {
+    position: relative;
+    height: 12px;
+    width: 100%;
+    margin-top: 22px;
+    border-radius: 5px;
+    background-color: #f4f5f6;
+    border: solid 1px #e9e9e9;
+  }
+
+  :local(.handle) {
+    position: absolute;
+    border-radius: 5px;
+    cursor: pointer;
+    left: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #d1cfd3;
+
+    :local(.handleRight) {
+      flex-shrink: 0;
+      width: 10px;
+      height: 100%;
+      background-color: #95919e;
+      border-radius: 0 5px 5px 0;
+    }
+
+    :local(.handleLeft) {
+      flex-shrink: 0;
+      width: 10px;
+      height: 100%;
+      background-color: #95919e;
+      border-radius: 5px 0 0 5px;
+    }
+
+    svg {
+      height: 10px;
+      fill: #95919e;
+    }
+  }
+}
+
+:local(.task) {
+  z-index: 800;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  height: 20px;
+  background-color: #d6c7f6;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  color: #806fbd;
+}
+
+:local(.changeEndTime) {
+  cursor: pointer;
+  position: absolute;
+  transform: translate(9px, 6px);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 4px 0 4px 4.8px;
+  border-color: transparent transparent transparent rgba(146, 109, 234, 0.34);
+}
+
+:local(.changeStartTime) {
+  cursor: pointer;
+  position: absolute;
+  transform: translate(-9px, 6px);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 4px 4.8px 4px 0;
+  border-color: transparent rgba(146, 109, 234, 0.34) transparent transparent;
+}
+
+:local(.endlessTask) {
+  background: linear-gradient(to right, #926dea, #8f67ef 40%, white 90%, white);
+  color: white;
+  border: dashed 1px rgba(146, 109, 234, 0.29);
+}
+
+:local(.publish) {
+  position: absolute;
+  left: 10px;
+  top: 110px;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+
+  & > div {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: solid 1px #e2e5e9;
+    margin-right: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      fill: #b5bfc9;
+    }
+  }
+
+  line-height: 24px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 300;
+  color: #8494a5;
+}

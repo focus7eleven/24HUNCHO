@@ -1,0 +1,137 @@
+:local(.applyModal) {
+  .ant-modal {
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+    height: 413px;
+    .ant-modal-content {
+      height: 413px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .ant-modal-close {
+        right: 25px;
+        top: 25px;
+        .ant-modal-close-x {
+          display: inline;
+          font-size: 18px;
+        }
+      }
+      .ant-modal-header {
+        border-bottom: none;
+        padding: 0;
+        .ant-modal-title {
+          letter-spacing: 1px;
+          margin-left: 20px;
+          margin-top: 20px;
+          font-size: 18px;
+          font-weight: 500;
+          text-align: left;
+          color: #4a4a4a;
+        }
+      }
+      .ant-modal-body {
+        overflow: visible;
+        padding: 0;
+        .ant-form-item-control {
+          display: flex;
+          flex-wrap: wrap;
+          margin-left: 61px;
+        }
+        :local(.roleLabel) {
+          color: #4a4a4a;
+          line-height: 32px;
+          font-size: 14px;
+          display: inline-block;
+          width: 70px;
+        }
+        :local(.reasonLabel) {
+          color: #4a4a4a;
+          line-height: 1.71;
+          font-size: 14px;
+          display: inline-block;
+          width: 70px;
+        }
+        :local(.role) {
+          width: 300px;
+          height: 32px;
+          border-radius: 6px;
+          margin-left: 8px;
+          .ant-select-selection__rendered {
+            padding-left: 15px;
+          }
+          .ant-select-arrow {
+            font-size: 15px;
+            color: #9b9b9b;
+          }
+        }
+        :local(.reason) {
+          width: 300px !important;
+          height: 175px !important;
+          max-height: 175px !important;
+          padding: 10px 14px 14px 14px;
+          font-size: 14px;
+          margin-left: 8px;
+          resize: none;
+        }
+        :local(.span) {
+          position: absolute;
+          right: 66px;
+          top: 155px;
+          font-size: 12px;
+          color: #9b9b9b;
+          display: block;
+          width: 60px;
+          height: 17px;
+          line-height: 17px;
+          text-align: right;
+        }
+        .ant-form-explain {
+          margin-left: 78px;
+          margin-top: 5px;
+        }
+      }
+
+      .ant-modal-footer {
+        border-top: none;
+        padding: 0;
+        margin-bottom: 30px;
+        padding-right: 20px;
+      }
+    }
+  }
+}
+
+:local(.menkorModal) {
+  .ant-select-selection:focus,
+  .ant-select-selection:hover,
+  .ant-input:hover,
+  .ant-input:focus {
+    border-color: #f3bf55;
+  }
+
+  .ant-select-open .ant-select-selection,
+  .ant-input:focus {
+    box-shadow: 0 0 0 2px rgba(243, 191, 85, 0.2) !important;
+  }
+
+  .ant-btn {
+    border-radius: 100px !important;
+  }
+  .ant-btn-primary {
+    background-color: #fcbd39;
+    border-color: #fcbd39;
+  }
+  .ant-btn-primary:hover {
+    background-color: #f3a400;
+    border-color: #f3a400;
+  }
+  .ant-btn-ghost {
+    border-color: #d9d9d9;
+    color: #666;
+  }
+  .ant-btn-ghost:hover {
+    border-color: #fcbd39;
+    color: #fcbd39;
+  }
+}

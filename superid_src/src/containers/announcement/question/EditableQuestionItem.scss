@@ -1,0 +1,82 @@
+$grey: #9b9b9b;
+$blue: #4a90e2;
+$borderColor: #cedcee;
+$editFieldcolor: #fafdff;
+@mixin field-border {
+  border-radius: 3px;
+  background-color: $editFieldcolor;
+  border: solid 1px $borderColor;
+}
+
+:local(.editableQuestionItem) {
+  font-size: 14px;
+
+  .questionContent {
+    display: flex;
+    justify-content: space-between;
+    margin: 4px 0;
+    & > div {
+      display: flex;
+      align-items: center;
+    }
+    svg {
+      flex-shrink: 0;
+      fill: #ccc;
+      width: 15px;
+      height: 15px;
+    }
+    p {
+      line-height: 21px;
+      padding: 0 10px;
+    }
+    .control {
+      display: flex;
+      flex-shrink: 0;
+
+      span {
+        cursor: pointer;
+        color: $blue;
+        margin: 0 20px;
+      }
+      svg {
+        color: $grey;
+      }
+    }
+  }
+}
+
+:local(.editTable) {
+  @include field-border;
+  padding: 15px 10px 10px;
+  font-size: 14px;
+  margin: 10px -10px;
+
+  .confirm {
+    color: $blue;
+    font-size: 14px;
+    font-weight: normal;
+  }
+  .cancel {
+    color: $grey;
+    font-size: 14px;
+    font-weight: normal;
+  }
+  Button {
+    background-color: transparent;
+    border: none;
+    padding: 0 10px;
+  }
+  label {
+    font-size: 14px !important;
+    color: #666;
+    margin-right: 5px;
+  }
+  .ant-form-item {
+    margin-bottom: 10px;
+  }
+  .ant-row.ant-form-item:last-child {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+  }
+}

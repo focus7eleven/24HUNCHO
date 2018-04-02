@@ -1,0 +1,15 @@
+:local(.list) {
+  border-radius: 3px;
+  background-color: #fafcff;
+  border: solid 1px #cddced;
+  padding: 0 20px;
+
+  & > div:not(:last-of-type) {
+    border-bottom: solid 1px #cddced;
+  }
+
+  & > div {
+    padding: 10px 0;
+    box-sizing: content-box;
+  }
+}

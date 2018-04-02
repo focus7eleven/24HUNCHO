@@ -1,0 +1,48 @@
+:local(.operation) {
+  width: 80px;
+  height: 30px;
+
+  border-radius: 100px;
+  border: solid 1px #e9e9e9;
+  margin-left: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  :local(.starIcon) {
+    height: 15px;
+    fill: #fcbd39;
+  }
+  :local(.addPersonIcon) {
+    height: 18px;
+    fill: #7363cf;
+  }
+
+  :local(.name) {
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #666666;
+    margin-left: 5px;
+  }
+}
+:local(.operationDisabled) {
+  background-color: #ddd;
+  border: none;
+  cursor: not-allowed;
+
+  :local(.name) {
+    font-weight: 600;
+    color: #ffffff;
+  }
+}
+
+:local(.operation:hover) {
+  background-color: #FAFAFA;
+}
+:local(.operationDisabled:hover) {
+  background-color: #ddd;
+}

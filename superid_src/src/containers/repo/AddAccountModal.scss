@@ -1,0 +1,109 @@
+:local(.addAccountContainer){
+  .ant-modal{
+    width:500px!important;
+    .ant-modal-content{
+      .ant-modal-close{
+        right:23px;
+        top:23px;
+      }
+      .ant-modal-header{
+        padding-left:20px;
+        padding-top:20px;
+        padding-bottom:0px;
+        font-size:18px;
+        color:#4a4a4a;
+      }
+      .ant-modal-body{
+        padding:0px;
+        padding-left:25px;
+        padding-right:25px;
+        :local(.top){
+          height:69px;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          border-bottom:1px solid #e9e9e9;
+          .ant-radio-wrapper{
+            margin-right:25px;
+            cursor:pointer;
+            font-size:14px;
+            color:#4a4a4a;
+          }
+        }
+        :local(.bottom){
+          margin-top:25px;
+          margin-bottom:50px;
+          :local(.row){
+            height:54px;
+            display:flex;
+            align-items:center;
+            margin-bottom:0px;
+            justify-content:center;
+
+            .ant-form-item-label{
+              vertical-align: top;
+              height:54px;
+              padding: 7px 0;
+              width:60px;
+              text-align:left;
+            }
+            .ant-form-item-control{
+              height: 41px;
+              .ant-form-explain{
+                margin-left: 15px;
+              }
+            }
+
+            .ant-input{
+              height:32px;
+              width:300px;
+              margin-left:15px;
+            }
+            .ant-input-wrapper{
+              height:32px;
+              width:300px;
+              margin-left:15px;
+              .ant-input{
+                height:32px;
+                width:100%;
+                margin-left:0px;
+              }
+            }
+            :local(.select){
+              width:300px;
+              margin-left:15px;
+              .ant-select-selection--single{
+                height:32px;
+              }
+            }
+            //.ant-select-selection--single{
+            //  height:32px;
+            //  width:300px;
+            //  margin-left:15px;
+            //}
+            span{
+              color:#4a4a4a;
+              font-size:14px;
+            }
+          }
+          :local(.row):last-child{
+            margin-bottom:0px;
+          }
+        }
+      }
+      .ant-modal-footer{
+        padding-top:0px;
+        padding-right:30px;
+        padding-bottom:23px;
+        button{
+          padding:0px;
+          height:35px;
+          width:68px;
+        }
+        button+button{
+          margin-left:10px;
+        }
+      }
+    }
+  }
+}

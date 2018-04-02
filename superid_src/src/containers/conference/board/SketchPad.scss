@@ -1,0 +1,63 @@
+:local(.sketchPad) {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+  :local(.canvas) {
+    z-index: 2;
+    background: transparent;
+    position: relative;
+    cursor: 'crosshair';
+
+    &.suspensionMode {
+      transform: scale(0.17);
+      margin-left: -1490px;
+      margin-top: -1095px;
+    }
+  }
+
+  :local(.canvasBackground) {
+    background-color: #ffffff;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+
+    :local(.selectedRect) {
+      position: absolute;
+
+      .rect {
+        width: 100%;
+        height: 100%;
+        stroke: #3dc476;
+        stroke-width: 1px;
+        stroke-dasharray: 10;
+        fill: rgba(61,196,118,.05);
+        stroke-dashoffset: 600;
+        animation: dash 5s linear infinite;
+      }
+    }
+  }
+
+  :local(.canvasTextArea)
+  {
+    position: absolute;
+    display: none;
+    width: 200px;
+    height: 100px;
+    z-index: 10;
+  }
+
+  :local(.textareaShow) {
+
+  }
+
+
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

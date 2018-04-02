@@ -1,0 +1,14 @@
+:local(.rangeItem) {
+  &, & div {
+    display: inline-block;
+  }
+  :local(.label) {
+    color: #9b9b9b;
+  }
+  :local(.line) {
+    margin: 0 8px;
+  }
+  input {
+    width: 60px;
+  }
+}

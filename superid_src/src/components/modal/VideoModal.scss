@@ -1,0 +1,42 @@
+@media screen and (min-height: 650px) {
+
+  .ant-modal-wrap{
+    :local(.wrapper){
+      .ant-modal-content{
+        .ant-modal-close{
+          display:none;
+        }
+        .ant-modal-body{
+          max-height: 1000px;
+          padding:0;
+        }
+        .ant-modal-footer{
+          display: none;
+        }
+
+      }
+
+    }
+  }
+}
+@media screen and (min-height: 350px) {
+
+  .ant-modal-wrap{
+    :local(.wrapper){
+      .ant-modal-content{
+        .ant-modal-close{
+          display:none;
+        }
+        .ant-modal-body{
+          max-height: 1000px;
+          padding:0;
+        }
+        .ant-modal-footer{
+          display: none;
+        }
+
+      }
+
+    }
+  }
+}

@@ -1,0 +1,37 @@
+
+:local(.select) {
+  width: 180px;
+  margin-right: 10px;
+  display: inline-block;
+  position: relative;
+
+  & > span {
+    width: 180px;
+  }
+  ul {
+    display: none;
+  }
+
+  :local(.selectedAffair) {
+    width: 180px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    line-height: 28px;
+    padding-left: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+}
+
+.ant-select-tree-checkbox-checked .ant-select-tree-checkbox-inner,
+.ant-select-tree-checkbox-indeterminate .ant-select-tree-checkbox-inner {
+  border-color: #926dea;
+  background-color: #926dea;
+}
+
+.ant-select-tree-checkbox-checked:hover .ant-select-tree-checkbox-inner {
+  border-color: #926dea;
+}

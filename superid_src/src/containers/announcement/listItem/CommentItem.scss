@@ -1,0 +1,88 @@
+
+:local(.commentContainer){
+  position: relative;
+
+  color: #4a4a4a;
+  padding: 15px 0;
+  border-top: solid 1px #eeeeee;
+
+  &:first-child {
+    border-top: none;
+  }
+
+  :local(.avatar){
+    float:left;
+    vertical-align: top;
+    margin-top: 5px;
+
+    //background: #9b9b9b;
+
+    >img{
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+    }
+  }
+
+  :local(.right){
+    margin-left:24px;
+    padding-left: 5px;
+    overflow: hidden;
+
+    > div {
+      margin: 5px;
+    }
+
+    :local(.content) {
+      position: relative;
+
+      :local(.time){
+        color: #9b9b9b;
+        display: block;
+        margin-top: 3px;
+      }
+
+      :local(.actionGroup) {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        & > div {
+          vertical-align: middle;
+        }
+      }
+
+      :local(.reply){
+        color: #9b9b9b;
+        cursor: pointer;
+        display: none;
+        margin-right: 10px;
+        transition: all .3s;
+
+        &:hover {
+          color: #926dea;
+        }
+      }
+
+      :local(.delete){
+        cursor: pointer;
+        display: none;
+        svg {
+          fill: #cccccc;
+          width: 14px;
+          height: 14px;
+          transition: all .3s;
+        }
+        &:hover svg {
+          fill: #926dea;
+        }
+      }
+
+      &:hover {
+        :local(.reply),
+        :local(.delete) {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

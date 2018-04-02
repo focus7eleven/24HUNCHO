@@ -1,0 +1,42 @@
+@import "~theme.scss";
+
+:local(.container) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    :local(.backdoor) {
+        width: 100%;
+        height: 20px;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+
+        > svg {
+            transform: rotate(180deg);
+            margin-top: 5px;
+        }
+
+        > span {
+            cursor: pointer;
+            line-height: 20px;
+            margin-left: 7px;
+            font-size: 14px;
+            color: $normal-color;
+        }
+    }
+
+    :local(.editorContainer) {
+        border-radius: 3px;
+        flex-shrink: 0;
+        box-shadow: 0 0 8px 0 rgba(96, 79, 113, 0.12);
+        background-color: #ffffff;
+        width: 100%;
+        height: calc( 100% - 30px );
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+}

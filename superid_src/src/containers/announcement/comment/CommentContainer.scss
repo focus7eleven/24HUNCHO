@@ -1,0 +1,49 @@
+:local(.container){
+  color: #9b9b9b;
+
+  :local(.cmtTitle){
+    position: relative;
+    overflow: hidden;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    :local(.cmtPermission){
+      float:right;
+
+      :local(.select){
+        .ant-select-selection {
+          border-color: transparent;
+          box-shadow: none;
+        }
+        .ant-select-selection-selected-value {
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+
+  :local(.input){
+
+    .ant-input {
+      height: 40px;
+      //border-right: none;
+    }
+
+    .ant-input-group-addon {
+      background: #ffffff;
+      //border-left:none;
+
+      :local(.btnAfterContainer){
+        > svg {
+          vertical-align: middle;
+          width: 20px;
+          height: 20px;
+          margin-right: 10px;
+        }
+      }
+
+    }
+  }
+}

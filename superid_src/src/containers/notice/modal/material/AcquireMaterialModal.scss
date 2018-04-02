@@ -1,0 +1,84 @@
+:local(.listWrapper){
+  margin-top: 16px;
+  background: #fafcff;
+  border: 1px solid #cddced;
+  border-radius: 3px;
+  padding:10px 20px;
+  overflow:hidden;
+
+  &>div{
+    border-bottom: 1px dashed #cddced;
+    font-size: 12px;
+  }
+
+  &>div:last-child{
+    border: none;
+  }
+}
+
+:local(.row){
+  position: relative;
+  color: #666666;
+  overflow: hidden;
+
+  :local(.left){
+    float: left;
+    display:inline-block;
+    vertical-align: middle;
+     &>div{
+       display: inline-block;
+       margin-right: 5px;
+       vertical-align: middle;
+     }
+    :local(.image){
+
+      border-radius: 2px;
+      background: #e9e9e9;
+
+      &>img{
+        width:30px;
+        height: 30px;
+      }
+    }
+
+    :local(.amount){
+      color: #9b9b9b;
+    }
+
+  }
+
+  :local(.right){
+    float: right;
+    display: inline-block;
+    margin-top:6px;
+    vertical-align: middle;
+  }
+}
+
+:local(.modal) {
+  .ant-modal-body {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  :local(.labelControl) {
+    padding-left: 20px;
+    & > div {
+      display: inline-block;
+      font-size: 14px;
+      color: #4a4a4a;
+      line-height: 30px
+    }
+    :local(.label) {
+      width: 80px;
+    }
+  }
+}
+
+:local(.hideFooter) {
+  .ant-modal-body {
+    padding-bottom: 30px;
+  }
+  .ant-modal-footer {
+    display: none;
+  }
+}

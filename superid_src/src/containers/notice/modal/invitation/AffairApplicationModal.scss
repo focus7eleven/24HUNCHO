@@ -1,0 +1,22 @@
+:local(.main) {
+  font-size: 13px;
+  line-height: 1.62;
+  color: #4a4a4a;
+  padding-left: 25px;
+}
+
+:local(.addition) {
+  padding-left: 45px;
+  :local(.title) {
+    font-size: 12px;
+    line-height: 1.75;
+    color: #9b9b9b;
+    margin-top: 10px;
+  }
+
+  :local(.content) {
+    font-size: 13px;
+    line-height: 2.08;
+    color: #4a4a4a;
+  }
+}

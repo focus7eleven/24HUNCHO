@@ -1,0 +1,41 @@
+:local(.container) {
+  font-size: 14px;
+
+  .ant-modal-body {
+    font-size: 13px;
+    padding-left: 38px;
+    padding-right: 38px;
+    padding-top: 30px;
+
+    :local(.label){
+      font-size: 14px;
+      height: 30px;
+      line-height: 30px;
+      width: 130px;
+      color: #4a4a4a;
+    }
+  }
+
+  .ant-modal-footer {
+    padding-bottom: 30px;
+    padding-right: 30px;
+  }
+}
+
+:local(.innerAffair) {
+  display: flex;
+  flex-direction: row;
+  margin-left: 34px;
+  align-items: flex-start;
+
+  &>span {
+    flex-shrink: 0;
+  }
+}
+
+:local(.redirect) {
+  display: flex;
+  margin-top: 10px;
+  margin-left: 34px;
+  align-items: center;
+}

@@ -1,0 +1,118 @@
+:local(.addApproveRole){
+    .ant-modal-content{
+      .ant-modal-close-x{
+        top:22px;
+        right:22px;
+      }
+      .ant-modal-header{
+        padding:20px 0px 0px 20px;
+      }
+      .ant-modal-body{
+        padding:0px 30px;
+        display:flex;
+        flex-direction:column;
+        :local(.title){
+          margin-top:25px;
+          margin-bottom:10px;
+          font-size:14px;
+          color:#4a4a4a;
+        }
+        :local(.choosePanel){
+          display:flex;
+          border:1px solid #e9e9e9;
+          background-color:#fafafa;
+          margin-bottom:15px;
+          :local(.left){
+            display:flex;
+            flex-direction:column;
+            width:239px;
+            height:287px;
+            border-right:1px solid #e9e9e9;
+            overflow:auto;
+            padding-left:10px;
+            padding-top:10px;
+            flex-shrink:0;
+            :local(.search){
+              width:175px;
+              margin-bottom:10px;
+                          position: relative;
+
+                          svg {
+                              position: absolute;
+                              fill: #ccc;
+                              right: 4px;
+                              width: 18px;
+                              height: 26px;
+                          }
+            }
+            :local(.memberList){
+              display:flex;
+              flex-direction:column;
+              :local(.row){
+                margin-bottom:5px;
+                .ant-checkbox-wrapper{
+                  display:flex;
+                  align-items:center;
+                  span:last-child{
+                    display:flex;
+                    align-items:center;
+                  }
+                }
+                :local(.avatar){
+                  height:24px;
+                  width:24px;
+                  border-radius:100%;
+                  margin-right:8px;
+                }
+              }
+            }
+          }
+          :local(.right){
+            display:flex;
+            flex-direction:column;
+            height:287px;
+            overflow:auto;
+            padding-top:12px;
+            padding-left:11px;
+            width:100%;
+            :local(.span){
+              font-size:12px;
+              color:#9b9b9b;
+              margin-bottom:10px;
+            }
+            :local(.chosenList){
+              display:flex;
+              flex-direction:column;
+              :local(.row){
+                margin-bottom:5px;
+                .ant-checkbox-wrapper{
+                  display:flex;
+                  align-items:center;
+                  span:last-child{
+                    display:flex;
+                    align-items:center;
+                  }
+                }
+                :local(.avatar){
+                  height:24px;
+                  width:24px;
+                  border-radius:100%;
+                  margin-right:8px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .ant-modal-footer{
+        padding:17px 30px 30px 0px;
+        .ant-btn{
+          height:35px;
+          width:68px;
+          padding:0px!important;
+          margin-left:10px;
+        }
+      }
+    }
+  }
+  

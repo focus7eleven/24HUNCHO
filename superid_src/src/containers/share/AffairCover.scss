@@ -1,0 +1,105 @@
+:local(.container) {
+  width: 480px;
+  padding-bottom:30px;
+}
+
+:local(.cover) {
+  height: 300px;
+  width: 480px;
+  border-radius: 5px;
+  background-color: #eeeeee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+
+  :local(.videoDiv) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    :local(.videoPic) {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      border-radius: 5px;
+    }
+  }
+
+  & > img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  :local(.coverDescription) {
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: -0.3px;
+    color: #ffffff;
+    padding: 24px 20px 12px 20px;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1) 25%, rgba(0, 0, 0, 0.2) 49%, rgba(0, 0, 0, 0.3) 74%, rgba(0, 0, 0, 0.4));
+  }
+}
+
+:local(.coverSlider) {
+  width: 478px;
+  height: 62px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  :local(.nextIcon) {
+    height: 23px;
+    width: 23px;
+    flex-shrink: 0;
+  }
+
+  :local(.prevIcon) {
+    transform: rotate(180deg);
+    height: 23px;
+    width: 23px;
+    flex-shrink: 0;
+  }
+
+  :local(.sliderContent) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: auto;
+
+    :local(.sliderCover) {
+      cursor: pointer;
+      flex-shrink: 0;
+      width: 98px;
+      height: 62px;
+      border-radius: 5px;
+      background-color: #eeeeee;
+      margin-right: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(0, 0, 0, 0);
+
+      img, video {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    :local(.activeSliderCover) {
+      border: solid 1px #b499dc;
+      box-shadow: 0 0 0 2px #f0ebf8;
+    }
+  }
+}

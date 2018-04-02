@@ -1,0 +1,188 @@
+:local(.assetListContainer){
+  display:flex;
+  flex-direction:column;
+
+  :local(.topHeader) {
+    height: 60px;
+    border-bottom: 1px solid #e9e9e9;
+    padding: 0 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 1.29;
+    color: #666666;
+    flex-shrink:0;
+
+    :local(.navigateBar) {
+      color: #9b9b9b;
+      cursor:pointer;
+    }
+
+    :local(.link) {
+      color: #4990e2;
+      cursor: pointer;
+    }
+  }
+  :local(.topContent){
+    display:flex;
+    flex-direction:column;
+    padding:0px 20px 20px 20px;
+    :local(.header){
+      position: relative;
+      height:45px;
+      display:flex;
+      flex-direction:row;
+      align-items:center;
+      flex-shrink:0;
+      .ant-input{
+        height:28px;
+        width:166px;
+        border-radius:4px;
+      }
+      .ant-btn{
+        width:125px;
+        height:28px;
+        border-radius:3px;
+        margin-left:10px;
+      }
+      svg{
+        fill: #9b9b9b;
+        left: 140px;
+        position: absolute;
+      }
+    }
+    :local(.content){
+      border:1px solid #e9e9e9;
+      border-bottom:none;
+      display:flex;
+      flex-direction:column;
+      overflow:auto;
+      :local(.warehouseContainer){
+        display:flex;
+        flex-direction:column;
+        flex-shrink:0;
+        :local(.title){
+          padding-left:20px;
+          padding-right:20px;
+          height:50px;
+          display:flex;
+          align-items:center;
+          justify-content:space-between;
+          border-bottom:1px solid #e9e9e9;
+          :local(.left){
+            display:flex;
+            align-items:center;
+            :local(.avatar){
+              height:24px;
+              width:24px;
+              border-radius:3px;
+            }
+            :local(.name){
+              color:#666666;
+              font-size:12px;
+              font-weight:500;
+              margin-left:8px;
+            }
+          }
+        }
+        :local(.table){
+          display:flex;
+          flex-direction:column;
+          :local(.tableHeader){
+            height:30px;
+            background-color:#fafafa;
+            display:flex;
+            flex-shrink:0;
+          }
+          :local(.tableRow){
+            height:40px;
+            background-color:#fafafa;
+            display:flex;
+            flex-shrink:0;
+          }
+
+          :local(.tableRow),:local(.tableHeader){
+            border-bottom:1px solid #e9e9e9;
+
+            :local(.assetName){
+              width:300px;
+              padding-left:20px;
+              flex-shrink:3;
+              border-right:1px solid #e9e9e9;
+              height:100%;
+              display:flex;
+              align-items:center;
+            }
+            :local(.assetCode){
+              width:150px;
+              padding-left:20px;
+              flex-shrink:2;
+              border-right:1px solid #e9e9e9;
+              height:100%;
+              display:flex;
+              align-items:center;
+            }
+            :local(.assetNumber){
+              width:100px;
+              padding-left:20px;
+              flex-shrink:1;
+              border-right:1px solid #e9e9e9;
+              height:100%;
+              display:flex;
+              align-items:center;
+            }
+            :local(.assetUnit){
+              width:100px;
+              padding-left:20px;
+              flex-shrink:1;
+              border-right:1px solid #e9e9e9;
+              height:100%;
+              display:flex;
+              align-items:center;
+            }
+            :local(.assetType){
+              width:100px;
+              padding-left:20px;
+              flex-shrink:1;
+              height:100%;
+              display:flex;
+              align-items:center;
+            }
+          }
+        }
+      }
+      :local(.childAffair){
+        margin-top:5px;
+        flex-shrink:0;
+        display:flex;
+        flex-direction:column;
+        :local(.header){
+          position:relative;
+          border-top:1px solid #e9e9e9;
+          border-bottom:1px solid #e9e9e9;
+          height:30px;
+          flex-shrink:0;
+          background-color:#fafafa;
+          color:#9b9a9b;
+          cursor:pointer;
+          padding-left:20px;
+          :local(.affairName){
+            margin-left:10px;
+          }
+          :local(.leftBord){
+            position:absolute;
+            height:30px;
+            width:3px;
+            left:0px;
+          }
+        }
+        :local(.content){
+          border:none;
+        }
+      }
+    }
+  }
+
+}

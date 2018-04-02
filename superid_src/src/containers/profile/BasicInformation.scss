@@ -1,0 +1,164 @@
+:local(.container){
+
+  :local(.imageWrapper) {
+    position: relative;
+    margin-bottom: 35px;
+    &, img, img + div {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+
+      cursor: pointer;
+    }
+    img + div {
+      display: inline;
+      position: absolute;
+      left: 0;
+      opacity: 0;
+      z-index: 2;
+      line-height: 100px;
+      text-align: center;
+      font-size: 14px;
+      color: #ffffff;
+      background-color: rgba(55, 55, 55, 0.8);
+    }
+    img + div:hover {
+      opacity: 1;
+      transition: opacity 0.3s;
+    }
+  }
+
+  :local(.nameInputWrapper) {
+    .anticon {
+      color: rgba(0, 0, 0, 0.43);
+      position: absolute;
+      right: 8px;
+      top: 10px;
+    }
+    input {
+      cursor: pointer;
+      caret-color: #fff;
+    }
+  }
+
+  :local(.labelGroupItem) {
+    margin-top: 3px;
+  }
+}
+
+:local(.nameMenuWrapper){
+  width: 300px;
+  max-height: 200px;
+  border-radius: 6px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 2px;
+  overflow-y: auto;
+}
+
+:local(.nameMenu) {
+
+  display: flex;
+  flex-direction: column;
+
+  :local(.group) {
+    display: flex;
+    flex-direction: column;
+
+    :local(.titleGroup) {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5px;
+    }
+
+    :local(.valueGroup) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  :local(.linkButton) {
+    height: 34px;
+    line-height: 34px;
+    margin-right: 10px;
+  }
+  :local(.title) {
+    height: 34px;
+    line-height: 34px;
+    font-size: 12px;
+    color: #9b9b9b;
+    padding-left: 15px;
+  }
+  :local(.value) {
+    height: 34px;
+    line-height: 34px;
+    font-size: 14px;
+    color: #4a4a4a;
+    padding-left: 25px;
+    position: relative;
+    & svg {
+      display: none;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      fill: #ccc;
+      width: 14px;
+      height: 14px;
+    }
+
+    & > span {
+      display: inline-block;
+      width: 250px;
+    }
+
+  }
+  :local(.value:hover) {
+    background-color: #f7f7f7;
+
+    & svg {
+      display: inline;
+    }
+  }
+
+  :local(.noValue) {
+    height: 34px;
+    line-height: 34px;
+    font-size: 14px;
+    color: #c3c3c3;
+    padding-left: 25px;
+  }
+
+  :local(.inputGroup) {
+    margin: 0 15px 0 15px;
+    width: 270px;
+    position: relative;
+    input {
+      border-color: #b499dc;
+      margin: 3px 0 3px 0;
+    }
+    button {
+      border-radius: 0 6px 6px 0;
+      position: absolute;
+      right: 0;
+      margin: 3px 0 3px 0;
+    }
+
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+:local(.linkButton) {
+  font-size: 12px;
+  color: #4990e2;
+  cursor: pointer;
+  display: inline;
+  margin-left: 10px;
+}
+
+:local(.genderRadioGroup) {
+  .ant-radio-wrapper {
+    margin-right: 22px;
+  }
+}

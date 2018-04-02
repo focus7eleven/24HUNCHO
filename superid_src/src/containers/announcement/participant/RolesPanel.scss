@@ -1,0 +1,79 @@
+:local(.partiContainer){
+  width: 100%;
+  color: #9b9b9b;
+  margin: 10px;
+  >div {
+    display: inline-block;
+  }
+
+  :local(.roleWrapper){
+    margin: 5px 30px 5px 0;
+    position: relative;
+
+    >span{
+      display: inline-block;
+    }
+
+    :local(.avatar){
+      //background: #9b9b9b;
+      vertical-align: middle;
+      margin-right: 5px;
+
+      >img {
+        width: 21px;
+        height: 21px;
+        border-radius: 50%;
+      }
+    }
+
+    :local(.text){
+      width: 128px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      vertical-align: middle;
+      color: #666666;
+    }
+
+    :local(.cover){
+      position: absolute;
+      left: -2px;
+      top: -2px;
+      width:24px;
+      height: 24px;
+      border-radius: 50%;
+
+
+      svg {
+        opacity: 0;
+        fill: #000000;
+
+        &:hover {
+          opacity: .5;
+        }
+      }
+    }
+  }
+
+  :local(.add){
+    margin-top: 5px;
+    margin-bottom: 5px;
+    >span {
+      display: inline-block;
+    }
+
+    svg {
+      width: 21px;
+      height: 21px;
+      fill: #9b9b9b;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+  }
+}
+
+:local(.addOfficialPopover) {
+  .ant-popover-inner-content {
+    padding: 0;
+  }
+}

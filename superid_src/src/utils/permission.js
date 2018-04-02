@@ -1,0 +1,265 @@
+export const PERMISSION_MAP = {
+  AFFAIR: 0,
+  CREATE_AFFAIR: 13, //创建事务
+  MOVE_AFFAIR: 26, //移动事务
+  INVALID_AFFAIR: 39, //失效事务
+  ACCEPT_MOVED_AFFAIR: 52, //接收别人移动的事务
+  VALID_AFFAIR: 65, //恢复事务
+  CHECK_SUB_AFFAIR: 78, //查看子事务首页
+    JOIN_SUB_AFFAIR:91,//自由加入子事务
+  ADD_ROLE: 1, //添加事务角色
+  REMOVE_ROLE: 14, //移除事务角色
+  CHANGE_DIRECTOR: 27, //转移负责人
+    CHECK_MEMBER:53,//查看当前事务成员与角色
+    MODIFY_AUTHORITY:66,//分配权限
+    CHECK_SUB_MEMBER:79,//查看子事务成员与角色
+  // CHILD_AFFAIR: 2, //子事务权限
+  // CREATE_CHILD_AFFAIR: 15, //创建子事务
+  // GENERATE_CHILD_AFFAIR_PERMISSION: 28, //分配子事务权限
+  //
+  // MEMBER: 3, //成员
+  // ADD_AFFAIR_MEMBER: 16, // 添加事务成员
+  // REMOVE_AFFAIR_MEMBER: 29, // 移除事务成员
+  // TRANSFER_OWNER: 42, //转移负责人
+  // SET_ADMINISTRATOR: 55, //设置管理员
+  // CHECK_AFFAIR_MEMBER: 68, //查看事务成员
+  // ALLOCATE_PERMISSION: 81, //分配权限
+  //
+  PUBLISH_ANNOUNCEMENT: 2, //发布发布
+  EDIT_ANNOUNCEMENT: 15, //编辑发布
+    CHECK_SUB_AFFAIR_ANNOUNCEMENT:28,//查看所有子事务发布
+
+  INVALID_ANNOUNCEMENT: 41, //失效发布
+    APPLY_ANNOUNCEMENT: 54, //回复发布
+
+  // TASK: 5, //任务
+  // CHECK_TASK_LIST: 18, //查看任务列表
+  // ADD_TASK: 31, //添加任务
+  // ADD_TASK_MEMBER: 44, //添加任务成员
+  // REMOVE_TASK_MEMBER: 57, //移除任务成员
+  // EDIT_TASK: 70, //编辑任务
+  // ADD_TASK_CONTENT: 83, //添加任务内容
+  //
+  FILE: 6, //文件
+  CHECK_FILE: 19, //查看文件
+  UPLOAD_FILE: 32, //上传文件
+  MOVE_FILE: 45, //移动文件
+  DELETE_FILE: 58, //删除文件
+  DOWNLOAD_FILE: 71, //下载文件
+  UPDATE_FILE_VERSION: 84, //更新文件版本
+  MANAGE_FOLDER: 97, //管理文件夹
+  //
+  // TRADE: 7, //交易
+  // ADD_TRADE: 20, //发起交易
+  // CHECK_TRADE_FLOW: 33, //查看交易流水表
+  // CHECK_TRADE_TO_AND_FROM: 46, //查看交易往来表
+  //
+  // CONTRACT: 8, //合同
+  // CHECK_CONTRACT: 21, //查看合同
+  // ADD_CONTRACT: 34, //发起合同
+  // EDIT_CONTRACT: 47, //编辑合同
+}
+const Default = 0
+export const ALLIANCE_PERMISSION = {
+  '盟信息':0,
+  '查看盟主页':1,
+  '修改盟信息':9,
+  '转移总负责人':-1,
+  '合同':0,
+  '签字权限':2,
+  '管理合同模板':10,
+  '查看所有合同':18,
+  '资金':0,
+  '查看所有资金信息':3,
+  '资产':0,
+  '查看所有资产信息':4,
+  '管理合成模板':12,
+  '管理商标库':20,
+  '角色':0,
+  '管理盟成员/角色':5,
+  '分配权限':6,
+}
+
+
+export class AlliancePermission {
+  formatForSave(permissions){
+    console.log(permissions.toArray())
+
+  }
+  formatForDisplay(){
+
+  }
+}
+
+
+
+const PERMISSION = {
+  CHECK_ALLIANCE_INFO:
+  101,
+  SET_ALLIANCE_INFO:
+  102,
+  APPLY_ALLIANCE_AUTH:
+  103,
+  ABANDON_ALLIANCE:
+  104,
+  MODIFY_AUTH_ROLE:
+  105,
+  CREATE_AUTH_ROLE:
+  106,
+  CREATE_AFFAIR:
+  201,
+  ENTER_AFFAIR_SETTING:
+  202,
+  CHECK_AFFAIR_INFO:
+  203,
+  SET_AFFAIR_INFO:
+  204,
+  SET_AFFAIR_HOME:
+  205,
+  SET_APPROVAL:
+  206,
+  MOVE_AFFAIR:
+  207,
+  ABANDON_AFFAIR:
+  208,
+  SHARE_AFFAIR:
+  209,
+  ENTER_MEMBER_STORE:
+  301,
+  CHECK_CHILD_AFFAIR_MEMBER:
+  302,
+  ADD_MEMBER:
+  303,
+  REMOVE_MEMBER:
+  304,
+  CHECK_HISTORY_MEMBER:
+  305,
+  AGREE_ENTER:
+  306,
+  REJECT_ENTER:
+  307,
+  ENTER_ROLE_STORE:
+  401,
+  CHECK_CHILD_AFFAIR_ROLE:
+  402,
+  CHECK_HISTORY_ROLE:
+  403,
+  CREATE_ROLE:
+  404,
+  REMOVE_ROLE:
+  405,
+  STOP_ROLE:
+  406,
+  RECOVER_ROLE:
+  407,
+  DELETE_ROLE:
+  408,
+  SET_ROLE_UNDERTAKER:
+  409,
+  MODIFY_ROLE_AUTH:
+  410,
+  CHECK_ROLE_INFO:
+  411,
+  CREATE_SESSION_TO_ROLE:
+  412,
+  EDIT_ROLE_INFO:
+  413,
+  ENTER_PUBLISH_STORE:
+  501,
+  CREATE_PUBLISH:
+  502,
+  EDIT_PUBLISH:
+  503,
+  MODIFY_PUBLISH_OFFICIAL:
+  504,
+  MODIFY_PUBLISH_GUEST:
+  505,
+  DELETE_PUBLISH:
+  506,
+  CREATE_WORK:
+  507,
+  MODIFY_WORK:
+  508,
+  CANCEL_WORK:
+  509,
+  RECOVER_WORK:
+  510,
+  ACCESS_PUBLISH:
+  511,
+  COMMENT_PUBLISH:
+  512,
+  DELETE_PUBLISH_COMMENT:
+  513,
+  UPLOAD_PUBLISH_FILE:
+  514,
+  SERCH_MOVED_PUBLISH:
+  515,
+  MOVE_PUBLISH:
+  516,
+  RECEIVE_PUBLISH:
+  517,
+  INVITE_JOIN_PUBLISH:
+  518,
+  ENTER_MATERIAL_STORE:
+  601,
+  ACCESS_PUBLIC_MATERIAL_WAREHOUSE:
+  602,
+  MANAGE_PUBLIC_MATERIAL_WAREHOUSE:
+  603,
+  MANAGE_ROLE_MATERIAL_WAREHOUSE:
+  604,
+  ACCESS_SCENE_MATERIAL_WAREHOUSE:
+  605,
+  MANAGE_SCENE_MATERIAL_WAREHOUSE:
+  606,
+  CREATE_SCENE_MATERIAL_WAREHOUSE:
+  607,
+  CHECK_MATERIAL_TOTAL:
+  608,
+  CHECK_CHILD_MATERIAL_TOTAL:
+  609,
+  ACCESS_MATERIAL:
+  610,
+  MANAGE_MATERIAL:
+  611,
+  ENTER_FUND_STORE:
+  701,
+  ACCESS_PUBLIC_FUND_POOL:
+  702,
+  MANAGE_PUBLIC_FUND_POOL:
+  703,
+  MANAGE_ROLE_FUND_POOL:
+  704,
+  ENTER_FUND_MANAGER_VIEW:
+  705,
+  CHECK_CHILD_AFFAIR_FUND:
+  706,
+  ACCESS_FUND:
+  707,
+  MANAGE_FUND:
+  708,
+  ENTER_FILE_STORE:
+  801,
+  CHECK_FILE:
+  802,
+  DOWNLOAD_FILE:
+  803,
+  UPLOAD_FILE:
+  804,
+  UPDATE_FILE:
+  805,
+  MOVE_FILE:
+  806,
+  DELETE_FILE:
+  807,
+  CHECK_FILE_BIN:
+  808,
+  DELETE_FILE_FROM_BIN:
+  809,
+  RECOVER_FILE:
+  810,
+  MANAGE_FILE:
+  811,
+}
+
+export default PERMISSION

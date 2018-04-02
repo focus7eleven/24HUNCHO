@@ -1,0 +1,175 @@
+@import "~theme.scss";
+@import "~search.scss";
+@import "~global.scss";
+
+:local(.container) {
+    //overflow:auto;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+    :local(.header) {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        font-size: 14px;
+        font-weight: $font-normal;
+        flex-shrink: 0;
+        width: 100%;
+        height: 56px;
+        border-bottom: 1px solid #e9e9e9;
+
+        & > div {
+            display: flex;
+            align-items: center;
+        }
+
+        :local(.mySelectContainer) {
+            .ant-select-selection-selected-value {
+                width: 70px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                text-align: center;
+                white-space: nowrap;
+            }
+        }
+
+        :local(.funcBtn) {
+            width: 96px;
+            margin-right: 18px;
+            border-radius: 3px;
+            font-size: 14px;
+            color: #ffffff;
+        }
+    }
+
+    :local(.content){
+        margin: 20px 0px 25px 25px;
+        overflow:auto;
+        position:relative;
+        :local(.cardContainer) {
+            margin-top: 10px;
+            display:flex;
+            flex-wrap:wrap;
+            & > div {
+                margin-bottom: 20px;
+                margin-right: 20px;
+            }
+        }
+
+        :local(.loadMore) {
+            @extend .u-text-l-12;
+            display: flex;
+            justify-content: center;
+
+            & > div {
+                cursor: pointer;
+            }
+
+            svg {
+                transform: rotate(90deg);
+                fill: $normal-color;
+                width: 10px;
+                height: 10px;
+                margin-left: 4px;
+            }
+        }
+    }
+
+    :local(.searchContainer){
+        margin:20px 0px 25px 25px;
+        display:flex;
+        flex-direction:row;
+        justify-content:flex-start;
+        flex-wrap:wrap;
+        overflow:auto;
+        & > div {
+            margin-bottom: 20px;
+            margin-right: 20px;
+        }
+
+    }
+
+    :local(.noRole){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        letter-spacing: -0.4px;
+        text-align: center;
+        color: #9b9b9b;
+        width: 100%;
+        margin-top: 60px;
+
+        img {
+          width: 300px;
+          height: 300px;
+          margin-bottom: 30px;
+        }
+    }
+
+    :local(.childrenBox){
+        flex-shrink:0;
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        :local(.childrenTitle){
+            flex-shrink:0;
+            width:100%;
+            height:50px;
+            background-color:#fafafa;
+            display:flex;
+            padding-right:45px;
+            align-items:center;
+            justify-content:space-between;
+            margin-bottom:20px;
+
+            :local(.titleContainer){
+                display:flex;
+                align-items:center;
+                :local(.affairName){
+                    margin-left:9px;
+                    font-size:14px;
+                    font-weight:500;
+                    color:#666666;
+                }
+            }
+
+        }
+        :local(.childContent){
+            :local(.show){
+                margin-left:15px;
+            }
+            :local(.cardContainer) {
+                margin-top: 10px;
+                display:flex;
+                flex-wrap:wrap;
+                & > div {
+                    margin-bottom: 20px;
+                    margin-right: 20px;
+                }
+            }
+
+            :local(.loadMore) {
+                @extend .u-text-l-12;
+                display: flex;
+                justify-content: center;
+                & > div {
+                    cursor: pointer;
+                }
+                svg {
+                    transform: rotate(90deg);
+                    fill: $normal-color;
+                    width: 10px;
+                    height: 10px;
+                    margin-left: 4px;
+                }
+            }
+        }
+    }
+
+}

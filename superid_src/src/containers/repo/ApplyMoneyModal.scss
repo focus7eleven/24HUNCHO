@@ -1,0 +1,225 @@
+:local(.applyMoneyModal){
+    .ant-form-item-label {
+        label {
+            font-size: 14px !important;
+            line-height: 1.71 !important;
+            color: #4a4a4a !important;
+        }
+    }
+
+    .ant-input-group-addon {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+
+    :local(.currencyTitle) {
+        margin-left: 45px;
+        margin-bottom: 16px;
+        > span {
+          position: relative;
+          top: -7px;
+          margin-left: 4px;
+          margin-right: 8px;
+        }
+
+        :local(.text) {
+            font-size: 12px;
+            line-height: 1.5;
+            color: #666666;
+            margin-left: 10px;
+        }
+
+        :local(.money) {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.29;
+            color: #666666;
+        }
+    }
+
+    :local(.currencyOlList) {
+        padding: 0 20px;
+
+        :local(.currencyLi) {
+            height: 33px;
+
+            transition: height 0.5s ease-out;
+            padding-top: 12px;
+            overflow: hidden;
+            margin-bottom: 10px;
+
+
+            &:local(.currencyLiSelected) {
+                height: 200px;
+                border-radius: 3px;
+                background-color: #fafdff;
+                border: solid 1px #cedcee;
+
+                :local(.applyBtn) {
+                    display: none;
+                }
+            }
+
+            &:local(.currencyLiModified) {
+                height: 65px;
+                border-radius: 3px;
+                background-color: #fafafa;
+                border: solid 1px #eeeeee;
+
+            }
+
+
+            :local(.currencyItem) {
+                margin-left: 25px;
+                display: flex;
+                align-items: center;
+
+                :local(.text) {
+                    font-size: 12px;
+                    line-height: 1.5;
+                    color: #666666;
+                    width: 140px;
+                    margin-left: 16px;
+                }
+
+                :local(.money) {
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 1.29;
+                    color: #666666;
+                    width: 150px;
+                }
+
+                :local(.applyBtn) {
+                    cursor: pointer;
+                    color: #4990e2;
+                }
+            }
+
+            :local(.modifyInfo) {
+                margin-top: 5px;
+                margin-left: 28px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                :local(.money) {
+                    margin-right: 16px;
+                }
+            }
+        }
+    }
+
+    :local(.applyMoneyForm) {
+        padding-left: 48px;
+        padding-top: 10px;
+
+        .ant-form-item {
+            margin-bottom: 11px;
+
+            .ant-col-3 {
+                width: 14.5%;
+            }
+
+            .ant-col-12 {
+                width: 250px;
+            }
+
+            .ant-form-item-control {
+                .ant-input-lg {
+                    height: 26px !important;
+                }
+            }
+
+
+
+            .ant-form-item-label {
+                label {
+                    line-height: 1.51 !important;
+                }
+            }
+
+            .ant-select-lg .ant-select-selection--single {
+                height: 26px;
+
+                .ant-select-selection__rendered {
+                    line-height: 26px;
+                }
+            }
+        }
+
+        :local(.buttonBar) {
+            display: flex;
+            flex-direction: row-reverse;
+            padding-right: 20px;
+
+            :local(.cancelBtn) {
+                cursor: pointer;
+                margin-right: 20px;
+            }
+
+            :local(.confirmBtn) {
+                cursor: pointer;
+                color: #4990e2;
+            }
+        }
+    }
+
+    :local(.accountOption) {
+        display: flex;
+        align-items: center;
+
+        .account-option-icon {
+            margin-right: 10px;
+        }
+
+        .account-option-subName {
+            margin-right: 8px;
+        }
+
+        .account-option-number {
+
+        }
+    }
+
+    .small-form {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+
+        .account-option-icon {
+            margin-right: 10px;
+        }
+
+        .account-option-subName {
+            margin-right: 8px;
+        }
+
+        .account-option-number {
+
+        }
+    }
+  }
+
+  .applymoneyform-account-option {
+      display: flex;
+      align-items: center;
+      .account-option-icon {
+          margin-right: 10px;
+      }
+
+      .account-option-subName {
+          margin-right: 8px;
+      }
+
+      .account-option-number {
+
+      }
+  }
+
+  .small-form {
+      overflow: hidden;
+  }
+
+  .ant-select-dropdown-menu-item  {
+      padding: 7px 8px;
+  }

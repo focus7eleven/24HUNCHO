@@ -1,0 +1,49 @@
+:local(.container) {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-radius: 3px;
+  box-shadow: 0 0 8px 0 rgba(96, 79, 114, 0.12);
+  
+  :local(.left) {
+    width: 300px;
+    height: 100%;
+    background-color: #fafafa;
+    padding-top: 11px;
+    position: relative;
+    border-right: 1px solid #e9e9e9;
+  }
+
+  :local(.right) {
+    width: calc(100% - 300px);
+    height: 100%;
+    background-color: #ffffff;
+    overflow: hidden;
+
+    :local(.panelContainer) {
+      position: absolute;
+      width: 300px;
+      height: 100%;
+      background: #fafafa;
+      top: 0;
+      right: -300px;
+      transition: all .5s ease-out;
+      border-radius: 2px;
+      opacity: 0;
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+
+      &.visible {
+        right: 0;
+        z-index: 100;
+        opacity: 1;
+      }      
+    }
+  }
+
+}
+
+:local(.affairChatConfrim) {
+  .ant-modal-body .ant-confirm-body > i {
+    display: inline-block;
+  }
+}

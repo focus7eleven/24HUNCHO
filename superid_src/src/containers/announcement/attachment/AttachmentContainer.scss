@@ -1,0 +1,93 @@
+:local(.container) {
+  :local(.fileList) {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    letter-spacing: -0.4px;
+    text-align: center;
+    color: #9b9b9b;
+    width: 100%;
+  }
+
+  :local(.fileItem) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 49px;
+    width: 100%;
+    border-bottom: 1px solid #d9d9d9;
+
+    &:last-of-type {
+      border-bottom: 0px;
+    }
+
+    & > * {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-align: left;
+    }
+
+    & > svg {
+      margin-left: 20px;
+      margin-right: 10px;
+      width: 15px;
+    }
+
+    &:hover {
+      :local(.trashIcon) {
+        opacity: 1 !important;
+      }
+    }
+
+    :local(.filename) {
+      color: #666;
+      font-size: 14px;
+      width: 35%;
+      margin-right: 10px;
+    }
+
+    :local(.creator) {
+      width: 21.5%;
+      font-size: 12px;
+      color: #666;
+      text-align: left;
+      margin-right: 10px;
+    }
+
+    :local(.timestamp) {
+      width: 28%;
+      font-size: 12px;
+      color: #666;
+    }
+
+    :local(.buttonGroup) {
+      width: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-right: 15px;
+      margin-left: 25px;
+
+      :local(.trashIcon) {
+        opacity: 0;
+      }
+
+      svg {
+        height: 15px;
+        fill: #ccc;
+
+        &:hover {
+          fill: #666;
+        }
+      }
+    }
+
+    &:hover {
+      background-color: #fbf8ff;
+    }
+  }
+}

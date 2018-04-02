@@ -1,0 +1,89 @@
+@import "~theme.scss";
+
+:local(.imageCard) {
+  width: 165px;
+  min-height: 90px;
+  border-radius: $border-radius-base;
+  background-color: #f7f7f7;
+  border: 1px solid #f7f7f7;
+  position: relative;
+  cursor: default;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+
+  &:local(.bulgeLeft):after, &:local(.bulgeRight):after {
+    content: '';
+    position: absolute;
+    border: 5px solid transparent;
+    width: 0;
+    height: 0;
+    top: 10px;
+  }
+
+  &:local(.bulgeLeft):after {
+    left: -10px;
+    border-color: transparent #f7f7f7 transparent transparent;
+  }
+
+  &:local(.bulgeRight):after {
+    right: -10px;
+    border-color: transparent transparent transparent #f7f7f7;
+  }
+
+  :local(.opt) {
+    position: absolute;
+    top: 50%;
+
+    &.left {
+      right: -20px;
+    }
+
+    &.right {
+      left: -20px;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  svg {
+    width: 32px;
+    height: 38px;
+  }
+
+  :local(.imageViewer) {
+    width: 100%;
+    border-radius: $border-radius-base;
+  }
+
+  :local(.loadingImage) {
+    .ant-spin-dot i {
+      background-color: #926dea;
+    }
+  }
+}
+
+:local(.imageModal) {
+  width: 800px !important;
+
+  .ant-confirm-btns {
+    display: none;
+  }
+
+  .ant-confirm-body .ant-confirm-content {
+    margin-left: 0px; 
+    margin-top: 0px; 
+  }
+
+  > .ant-modal-content > .ant-modal-body {
+    padding: 16px !important;
+  }
+
+  :local(.imagePreviewer) {
+    width: 100%;
+  }
+}

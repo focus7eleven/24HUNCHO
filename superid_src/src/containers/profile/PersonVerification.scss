@@ -1,0 +1,99 @@
+:local(.container) {
+  form {
+    .ant-form-item:last-of-type {
+      margin-bottom: 0;
+      .ant-form-item-control {
+        width: 100%;
+      }
+      display: flex;
+
+      :local(.photo) {
+        width: 210px;
+        height: 132.5px;
+        border-radius: 3px;
+        background-color: #fafafa;
+      }
+      :local(.textWrapper) {
+        font-size: 13px;
+        line-height: 1.38;
+        color: #ccc;
+      }
+      :local(.firstPhotographArea) {
+        display: flex;
+        flex-direction: column;
+
+        :local(.textWrapper) {
+          color: #9b9b9b;
+          margin-top: 10px;
+        }
+      }
+      :local(.secondPhotographArea) {
+
+        margin-top: 15px;
+
+        display: flex;
+        :local(.textWrapper) {
+          margin-left: 15px;
+          width: 340px;
+        }
+      }
+    }
+    button {
+      width: 115px;
+      height: 35px;
+      margin-top: 40px;
+    }
+  }
+}
+
+:local(.photoGroup) {
+  display: flex;
+  :local(.uploadImg){
+    width:210px;
+    height:130px;
+  }
+  & > img, & > div {
+    margin-right: 10px;
+  }
+
+}
+
+:local(.defaultImg){
+  cursor: pointer;
+  width: 210px;
+  height: 130px;
+  background: #fafafa;
+  color: #9b9b9b;
+	border: dashed 1px #d9d9d9;
+  border-radius: 3px;
+  vertical-align: middle;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  font-size: 14px;
+  margin-right: 10px;
+
+  :local(.iconWrapper){
+    height: 40px;
+    width:70px;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    left: 50%;
+    margin-left: -35px;
+    text-align:center;
+  }
+
+  svg{
+    fill:#9b9b9b;
+    width:14px;
+    height: 14px;
+    vertical-align: middle;
+
+  }
+
+  div{
+    vertical-align: middle;
+  }
+
+}

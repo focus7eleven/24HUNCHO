@@ -1,0 +1,184 @@
+@import "~theme.scss";
+
+:local(.container) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    :local(.header) {
+        width: 100%;
+        height: 25px;
+        font-size: 18px;
+        font-weight: $font-bold;
+        color: #4a4a4a;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 6px;
+        align-items:center;
+        line-height:14px;
+
+        :local(.fixedToTopContainer) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-right: 8px;
+
+            :local(.fixedToTop) {
+                width: 34px;
+                height: 20px;
+                line-height: 20px;
+                border-radius: 6px;
+                background-color: $primary-color;
+                font-size: 12px;
+                font-weight: $font-bold;
+                color: #ffffff;
+                text-align: center;
+            }
+        }
+        :local(.sprig){
+            border-radius:50%;
+            height:14px;
+            width:14px;
+            margin-left:16px;
+            position:relative;
+            svg {
+                width: 75%;
+                height: 75%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                fill: white;
+            }
+        }
+        :local(.titleIcon){
+            height:20px;
+            width:34px;
+            font-size:12px;
+            color:#2b90e9;
+            border:1px solid #2b90e9;
+            border-radius:6px;
+            margin-right:8px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+    }
+
+    :local(.announcer) {
+        width: 100%;
+        height: 24px;
+        display: flex;
+        margin-bottom: 6px;
+
+        :local(.avatar) {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            margin-right: 8px;
+            background-color: #ebebeb;
+            overflow: hidden;
+
+            & > img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        :local(.name) {
+            line-height: 24px;
+            //margin-right: 8px;
+            color: #4a4a4a;
+        }
+
+        :local(.role) {
+            line-height: 24px;
+            color: #4a4a4a;
+        }
+    }
+
+    :local(.body) {
+        width: 100%;
+        font-size: 14px;
+        color: $text-color;
+        overflow: hidden;
+        white-space: pre-wrap;
+        display:flex;
+        > span {
+            color: $link-color;
+            user-select: none;
+            cursor: pointer;
+            margin-left: 8px;
+
+            > svg {
+                margin-right: 4px;
+            }
+        }
+        :local(.left){
+            width:520px;
+            word-break:break-all;
+        }
+        :local(.right){
+            margin-left:24px;
+            width:230px;
+            height:130px;
+            video{
+                width:100%;
+                height:100%;
+                border-radius:3px;
+            }
+            img{
+                height:100%;
+                width:100%;
+                border-radius:3px;
+            }
+        }
+    }
+    :local(.imgList){
+        display:flex;
+        flex-wrap:wrap;
+        margin-top:15px;
+        img{
+            height:90px;
+            width:90px;
+            border-radius:3px;
+            margin-right:6px;
+            margin-bottom:10px;
+        }
+    }
+
+    :local(.footer) {
+        width: 100%;
+        height: 17px;
+        font-size: 12px;
+        color: $normal-color;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 4px;
+
+        :local(.leftFoot) {
+            > span:first-child {
+                margin-right: 16px;
+            }
+
+            > span:nth-child(2) {
+                margin-right: 16px;
+
+                > svg {
+                    margin-right: 5px;
+                    margin-bottom: -2px;
+                }
+            }
+
+            > span:nth-child(3) {
+                > svg {
+                    margin-right: 5px;
+                    margin-bottom: -2px;
+                }
+            }
+        }
+    }
+}

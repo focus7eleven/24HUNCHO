@@ -1,0 +1,122 @@
+@import "~theme.scss";
+
+:local(.assetCard) {
+  width: 150px;
+  min-height: 70px;
+  border-radius: $border-radius-base;
+  background-color: #f7f7f7;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+
+  &:local(.gray) {
+    cursor: default;
+  }
+
+  &:local(.bulgeLeft):after, &:local(.bulgeRight):after {
+    content: '';
+    position: absolute;
+    border: 5px solid transparent;
+    width: 0;
+    height: 0;
+    top: 10px;
+  }
+
+  &:local(.bulgeLeft):after {
+    left: -10px;
+    border-color: transparent #6CA2F3 transparent transparent;
+  }
+
+  &:local(.gray):local(.bulgeLeft):after {
+    border-color: transparent $content-color transparent transparent;
+  }
+
+  &:local(.bulgeRight):after {
+    right: -10px;
+    border-color: transparent transparent transparent #6CA2F3;
+  }
+
+  &:local(.gray):local(.bulgeRight):after {
+    border-color: transparent transparent transparent $content-color;
+  }
+
+  :local(.description) {
+    background-color: #6CA2F3;
+    color: #ffffff;
+    min-height: 50px;
+    font-size: 12px;
+    border-radius: $border-radius-base $border-radius-base 0 0;
+    display: flex;
+    align-items: center;
+    text-align: left;
+
+    :local(.number) {
+      font-size: 14px;
+      font-weight: $font-bold;
+    }
+
+    :local(.remark) {
+      width: 90px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  &:local(.gray) :local(.description) {
+    background-color: $content-color;
+  }
+
+  :local(.footer) {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    transform: scale(0.85);
+
+    :local(.state) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $normal-color;
+
+      img {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        margin-right: 4px;
+      }
+
+      :local(.roleName) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 90%;
+        white-space: nowrap;
+      }
+    }
+
+    :local(.opt) {
+
+    }
+  }
+}
+
+:local(.modalConfirm) {
+  .ant-confirm-body {
+    display: flex;
+    justify-content: center;
+
+    .ant-confirm-content {
+      margin-left: 0;
+
+      :local(.confirmContent) {
+        font-size: 16px;
+        margin: 25px 0;
+
+        i {
+          color: #ffaa00;
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+}

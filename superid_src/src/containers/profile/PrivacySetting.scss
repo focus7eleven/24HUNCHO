@@ -1,0 +1,35 @@
+:local(.container) {
+  display: flex;
+  flex-direction: column;
+
+  :local(.title) {
+    font-size: 14px;
+    color: #9a989f;
+    margin-bottom: 30px;
+  }
+
+  :local(.switchGroup) {
+
+    display: flex;
+    flex-direction: column;
+    :local(.row) {
+      margin-bottom: 20px;
+      display: flex;
+
+      :local(.label) {
+        width: 70px;
+        margin-right: 10px;
+        font-size: 14px;
+        color: #4a4a4a;
+      }
+      :local(.content){
+        width: 200px;
+        margin-right:10px;
+        font-size: 14px;
+        color: #4a4a4a;
+      }
+    }
+
+
+  }
+}

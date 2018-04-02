@@ -1,0 +1,81 @@
+@import "~theme.scss";
+@import "~global.scss";
+
+:local(.inviteMemberModal) {
+  .ant-modal {
+    width: 500px;
+    height: 500px;
+
+    .ant-modal-content {
+      width: 100%;
+      height: 100%;
+
+      .ant-modal-title {
+        font-size: 18px;
+        font-weight: $font-bold;
+        color: $text-color;
+        font-family: $font-family;
+      }
+
+      .ant-modal-body {
+        height: 354px;
+        overflow: auto;
+        padding: 0;
+        border: 1px solid $border-color-base;
+        display: flex;
+
+        :local(.leftPanel) {
+          width: 314px;
+          border-right: 1px solid $border-color-base;
+          padding: 30px 40px 30px 40px;
+
+          :local(.user) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+
+            img {
+              width: 56px;
+              height: 56px;
+              border-radius: 50%;
+              border: 1px solid #ebebeb;
+              margin-right: 10px;
+            }
+
+            :local(.userName) {
+              @extend .u-text-14;
+
+              svg {
+                width: 10px;
+                margin-left: 5px;
+              }
+
+              :local(.male) {
+                fill: #2db7f5;
+              }
+
+              :local(.female) {
+                fill: #f55b6c;
+              }
+            }
+
+            :local(.superId) {
+              @extend .u-text-l-12;
+            }
+          }
+
+
+        }
+
+        :local(.rightPanel) {
+          width: 186px;
+        }
+      }
+
+      .ant-modal-footer {
+        padding: 20px 30px 20px 30px;
+      }
+    }
+  }
+}

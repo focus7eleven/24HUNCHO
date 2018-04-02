@@ -1,0 +1,258 @@
+:local(.table) {
+  font-size: 12px;
+  margin-bottom: 100px;
+
+  :local(.tableHeader) {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    background-color: #f7f7f7;
+    color: #9b9b9b;
+    border-right: solid 1px #e9e9e9;
+    border-left: solid 1px #e9e9e9;
+    border-bottom: 1px solid #e9e9e9;
+
+    &>div {
+      text-align: center;
+    }
+
+    :local(.flowNumber) {
+      width: 150px;
+      flex-shrink: 1;
+    }
+    :local(.receiver) {
+      width: 120px;
+      flex-shrink: 1;
+    }
+    :local(.operator) {
+      width: 200px;
+      flex-shrink: 2;
+    }
+    :local(.amount) {
+      width: 100px;
+      flex-shrink: 1;
+      flex-grow: 1;
+    }
+
+    :local(.icons) {
+      height:100%;
+      display:flex;
+      align-items: center;
+      flex-direction: row-reverse;
+      &>div{
+        display:inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%
+      }
+      :local(.arrowIcon){
+        width: 9px;
+        &>svg{
+          fill:#926dea;
+        }
+      }
+      :local(.clockIcon){
+        width: 12px;
+        &>svg{
+          fill:#bdbdbd;
+        }
+      }
+    }
+
+    :local(.headerType){
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      :local(.arrowDropDown){
+        &>svg{
+          fill:#ccc;
+          width: 15px;
+          padding-top: 5px;
+        }
+      }
+      :local(.chooseTypeBox){
+        width: 72px;
+        height: 95px;
+        border-radius: 4px;
+        background-color: #ffffff;
+        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+        padding-top: 2px;
+        position: absolute;
+        left: 29px;
+        top: 27px;
+        &>div{
+          width: 100%;
+          height: 30px;
+          line-height: 30px;
+          font-size: 12px;
+          color: #666666;
+        }
+        &>div:hover{
+          background-color: #fbf8ff;
+        }
+      }
+    }
+  }
+
+  :local(.tableContent) {
+
+
+    :local(.subTable){
+      :local(.subHeader){
+        border-left:3px solid #f89219;
+      }
+      :local(.subTable){
+        :local(.subHeader){
+          border-left:3px solid #4aaaff;
+        }
+      }
+    }
+
+    :local(.subHeader){
+      height: 30px;
+      line-height: 30px;
+      background-color: #f7f7f7;
+      border: solid 1px #d9d9d9;
+      border-top-width: 0;
+      display: flex;
+      align-items: center;
+
+
+      &>div:first-child{
+        cursor: pointer;
+        display: inline-block;
+        width: 11px;
+        height: 11px;
+        text-align: center;
+        line-height: 14px;
+        border: 1px solid rgba(155, 155, 155, 0.68);
+        user-select: none;
+        background: transparent;
+        margin-left: 20px;
+      }
+      :local(.icon:after){
+        content: '+';
+        font-size: 12px;
+        position: relative;
+        top: -3.5px;
+        left: 0.5px;
+        color: #9b9b9b;
+
+      }
+      :local(.iconMinus:after){
+        content: '-';
+        font-size: 12px;
+        position: relative;
+        top: -3.5px;
+        left: 0.5px;
+        color: #9b9b9b;
+
+      }
+
+      :local(.text){
+        font-size: 12px;
+        color: #9b9b9b;
+        display: inline-block;
+        padding-left: 10px;
+      }
+    }
+
+    :local(.tableRow) {
+      height: 40px;
+      display: flex;
+      align-items: stretch;
+      font-size: 12px;
+      color: #666;
+      cursor: pointer;
+
+      :local(.specialLeft){
+        width:30px;
+        flex-shrink:0;
+        background-color: #f7f7f7;
+        cursor:default;
+        color:#9b9a9b;
+      }
+      :local(.specialMiddle){
+        width:590px;
+        flex-shrink:0;
+        text-align:left;
+        padding-left:22px;
+        cursor:default;
+      }
+      :local(.specialRight){
+        width:100%;
+        border-right-width: 1px;
+        cursor:default;
+      }
+      &>div {
+        line-height: 40px;
+        text-align: center;
+        border: 1px solid #d9d9d9;
+        border-right-width: 0px;
+        border-top-width: 0px;
+      }
+
+
+
+      :local(.tableDataIndex) {
+        width: 30px;
+        flex-shrink: 0;
+        background-color: #f7f7f7;
+        color: #9b9b9b;
+      }
+
+      :local(.tableDataType) {
+        width: 70px;
+        flex-shrink: 0;
+      }
+
+      :local(.tableDataId) {
+        width: 150px;
+        flex-shrink: 1;
+      }
+
+      :local(.tableDataReceiver) {
+        width: 120px;
+        flex-shrink:1;
+      }
+
+      :local(.tableDataOperator) {
+        //width: 100%;
+        display: flex;
+        align-items: center;
+        width:200px;
+        flex-shrink:2;
+
+        :local(.avatar) {
+          width: 24px;
+          height: 24px;
+          border-radius: 12px;
+          background-color: gray;
+          margin-left: 20px;
+          margin-right: 7px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      :local(.tableDataCount) {
+        width: 100px;
+        flex-shrink: 1;
+        flex-grow: 1;
+      }
+      :local(.tableDataAddup) {
+        width: 100px;
+        flex-shrink: 1;
+        flex-grow: 1;
+        border-right-width: 1px;
+      }
+    }
+  }
+
+
+}

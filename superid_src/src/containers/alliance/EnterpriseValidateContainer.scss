@@ -1,0 +1,198 @@
+@import "~theme.scss";
+
+$inputWidth: 300px;
+$labelWidth: 112px;
+$formItemWidth: $inputWidth + $labelWidth;
+$submitButtonWidth: 82px;
+
+:local(.logo){
+  line-height: 55px;
+  text-align: center;
+  color: #cccccc;
+  background-color: #fafafa;
+  font-size: 16px;
+  font-weight: $font-bold;
+}
+
+:local(.nav) {
+  font-size: 16px;
+  font-weight: $font-bold;
+  line-height: 55px;
+  color: #9b9b9b;
+  padding-left: 17px;
+}
+
+:local(.resultContainer){
+  width: 100%;
+  height: 100%;
+  padding-top: 152px;
+  text-align: center;
+  >div:first-child{
+    font-size: 20px;
+    color: #2c9300;
+    margin-bottom: 20px;
+    >i{
+      margin-right: 10px;
+    }
+  }
+
+  >div:nth-child(n+2){
+    font-size: 14px;
+    color: #9b9b9b;
+  }
+
+  >button{
+    margin-top: 20px;
+    width: 96px;
+  }
+}
+
+:local(.container){
+  width: 100%;
+  height: 100%;
+  padding-top: 40px;
+  border-radius: 3px;
+  box-shadow: 0 0 8px 0 rgba(96, 79, 113, 0.12);
+  background-color: #ffffff;
+  overflow:auto;
+
+  :local(.form){
+    width: $formItemWidth;
+    margin-left: calc((100% - #{$formItemWidth}) / 2);
+
+    .ant-col-7{
+      text-align: left;
+      width: $labelWidth;
+    }
+    .ant-col-17{
+      width: $inputWidth;
+    }
+    label{
+      font-size: 14px;
+    }
+
+    :local(.imageZone){
+      margin-bottom: 0px;
+
+      .ant-col-11{
+        text-align: left;
+        width: 179px;
+      }
+      div{
+        display: flex;
+        flex-direction: column;
+        >span:nth-child(2){
+          font-size: 12px;
+        }
+      }
+      label::after{
+        content:"";
+      }
+    }
+
+    :local(.uploadAgain){
+      display: flex;
+      flex-direction: column;
+      >span{
+        // padding:5px;
+        text-align: right;
+        button{
+          border: 0px;
+        }
+      }
+      :local(.reload) {
+        position: relative;
+        z-index: 0;
+        width: 100%;
+        height: 32px;
+        &:hover{
+          >span{
+            color: $primary-hover-color;
+          }
+        }
+        >span{
+          width: 100%;
+          height: 100%;
+          text-align: right;
+          font-size: 12px;
+          color: #9b9b9b;
+          >i{
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+    :local(.imageContainer){
+      max-width: 220px;
+      position: relative;
+      line-height: 0;
+
+      :local(.image){
+        max-width: 220px;
+        display: inline-block;
+        line-height: 0;
+        >img{
+          width: 100%;
+          height: auto;
+        }
+        &:hover{
+          cursor: pointer;
+          &:before{
+            opacity: 0.3;
+          }
+        }
+        &:before{
+          content: "\E690";
+          color: white;
+          text-align: center;
+          font-size: 30px;
+          font-family: "anticon" !important;
+          position: absolute;
+          z-index: 1;
+          background-color: rgb(54,54,54);
+          opacity: 0;
+          width: 100%;
+          height: 100%;
+          transition: opacity 0.7s ease;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+        }
+      }
+    }
+
+    :local(.submitButton){
+      //border-radius: 3px;
+      width: $submitButtonWidth;
+      margin-left: calc((#{$formItemWidth} - #{$submitButtonWidth}) / 2);
+    }
+  }
+
+  :local(.photoAddStyle) {
+    position: relative;
+    z-index: 0;
+    width: 96px;
+    height: 32px;
+    border-radius: 3px;
+    border: solid 1px #d9d9d9;
+    &:hover{
+      border: solid 1px $primary-color;
+      color: $primary-hover-color;
+    }
+    >div{
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+  }
+  :local(.invisibleInput) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+}

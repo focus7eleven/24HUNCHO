@@ -1,0 +1,14 @@
+:local(.container) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  :local(.dot) {
+    width: 8px;
+    height: 8px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background-color: black;
+  }
+}

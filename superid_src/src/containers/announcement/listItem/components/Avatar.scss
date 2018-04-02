@@ -1,0 +1,12 @@
+:local(.avatar) {
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  display: inline-block;
+}
+:local(.text) {
+  font-size: 14px;
+  color: #666666;
+  padding-left: 8px;
+  display: inline-block;
+}

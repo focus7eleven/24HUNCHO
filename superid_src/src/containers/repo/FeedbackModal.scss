@@ -1,0 +1,110 @@
+:local(.feedbackContainer){
+  .ant-modal-content{
+    width:500px!important;
+    .ant-modal-close{
+      right:23px;
+      top:23px;
+    }
+    .ant-modal-header{
+      padding:20px 0px 0px 20px;
+    }
+    .ant-modal-body{
+      padding:0px;
+      :local(.top){
+        padding:40px 0px 5px 64px;
+        :local(.row){
+          margin-bottom:10px;
+          height:25px;
+          line-height:25px;
+          display:flex;
+          flex-direction:row;
+          align-items:center;
+          :local(.key){
+            color:#4a4a4a;
+            font-size:14px;
+            width:70px;
+          }
+          :local(.value){
+            color:#666666;
+            font-size:14px;
+          }
+        }
+      }
+      :local(.bottom){
+        margin:0px 40px 30px 40px;
+        padding:20px 0px 20px 20px;
+        display:flex;
+        flex-direction: column;
+        background-color:#fafdff;
+        height:113px;
+        border:1px solid #cedcee;
+        border-radius:3px;
+        overflow:auto;
+
+        :local(.assetItem) {
+          display: flex;
+        }
+
+        :local(.avatar){
+          height:30px;
+          width:30px;
+          border-radius:2px;
+          margin-right:5px;
+        }
+        :local(.detail){
+          display:flex;
+          flex-direction:column;
+          :local(.info){
+            display: flex;
+            flex-shrink: 0;
+            & > div {
+              width: 178px;
+            }
+            :local(.name){
+              color:#666666;
+              font-size:12px;
+              margin-right:8px;
+            }
+            :local(.quantity){
+              color:#9b9b9b;
+              font-size:12px;
+            }
+            :local(.price){
+              flex-shrink:0;
+              width:80px;
+              font-size:12px;
+              color:#666666;
+              font-weight:500;
+            }
+          }
+          :local(.log){
+            margin-bottom:5px;
+            color:#9b9b9b;
+            font-size:12px;
+            :local(.operate){
+              display:flex;
+              align-items:center;
+              :local(.refuse){
+                color:#f55b6c;
+                font-size:12px;
+                width:245px;
+                margin-right:10px;
+              }
+              .ant-btn-ghost{
+                width:40px;
+                //height:20px;
+                padding:0px;
+                border-radius:3px;
+                margin-right:8px;
+              }
+            }
+
+          }
+        }
+      }
+    }
+    .ant-modal-footer{
+      padding:0px;
+    }
+  }
+}

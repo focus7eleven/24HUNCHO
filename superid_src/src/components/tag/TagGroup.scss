@@ -1,0 +1,55 @@
+@import "~theme.scss";
+@import "~mixins.scss";
+
+:local(.addtagContainer){
+  flex-shrink: 0;
+  display:inline-block;
+  margin-right:8px;
+  position:relative;
+
+  :local(.tagInput){
+    width:75px;
+    height:22px;
+    border:1px dashed $border-color-active;
+    padding-right:12px;
+    &:focus{
+      box-shadow:none;
+    }
+  }
+  :local(.addIcon) {
+    position: absolute;
+    top: 0;
+    right: 6px;
+  }
+}
+
+:local(.addIcon){
+
+  line-height: 22px;
+  font-size: 14px;
+  font-style: normal;
+  height: 22px;
+  width: 22px;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+:local(.addtagBlank) {
+  &:hover > :local(.addIcon) {
+    color: $primary-hover-color !important;
+  }
+}
+
+:local(.tag){
+  position: relative;
+  :local(.tagCover){
+    position: absolute;
+    left: 0;
+    background: rgba(52,52,52,0.5);
+    color: white;
+    text-align:center;
+    width:100%;
+    display:none;
+  }
+
+}

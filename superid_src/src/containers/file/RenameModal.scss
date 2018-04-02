@@ -1,0 +1,30 @@
+@import "~theme.scss";
+
+:local(.renameModal) {
+  .ant-modal-body {
+    font-size: 16px;
+    padding: 0 60px;
+
+    i {
+      color: #ffaa00;
+      margin-right: 4px;
+    }
+
+    :local(.bold) {
+      font-weight: $font-bold;
+    }
+
+    :local(.inputContainer) {
+      display: flex;
+      margin: 30px 0;
+    }
+
+    :local(.error) {
+      color: $danger-color;
+      position: absolute;
+      left: 140px;
+      bottom: 60px;
+      font-size: 14px;
+    }
+  }
+}

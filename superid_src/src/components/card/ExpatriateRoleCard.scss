@@ -1,0 +1,50 @@
+@import "~theme.scss";
+@import "~global.scss";
+
+:local(.card) {
+  width: 240px;
+  height: 65px;
+  position: relative;
+  border: 1px solid #ebebeb;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+
+  :local(.left) {
+    float: left;
+    div {
+      vertical-align: middle;
+    }
+
+    :local(.role) {
+      font-size:13px;
+      font-weight: bold;
+    }
+
+    :local(.affair){
+      white-space: nowrap;
+      overflow:hidden;
+      width:150px;
+      text-overflow: ellipsis;
+    }
+  }
+
+  :local(.right) {
+    float: right;
+    text-align: center;
+    padding-top: 10px;
+
+    *{
+      vertical-align: middle;
+    }
+
+    svg {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+    }
+
+    span {
+      margin-left: 5px;
+    }
+  }
+}

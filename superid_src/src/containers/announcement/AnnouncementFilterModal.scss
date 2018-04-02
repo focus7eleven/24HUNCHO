@@ -1,0 +1,29 @@
+:local(.modal) {
+  .ant-modal-body {
+    padding-left: 60px;
+    overflow-y: visible !important;
+  }
+
+  :local(.controlWrapper) {
+    & > div {
+      display: inline-block;
+      vertical-align: top;
+      font-size: 14px;
+      color: #4a4a4a;
+      line-height: 32px;
+    }
+    & > div:first-of-type {
+      margin-right: 10px;
+
+    }
+  }
+
+  :local(.controlWrapper):not(:first-of-type) {
+    margin-top: 15px;
+  }
+}
+
+:local(.roleSelector) {
+  display: inline-block;
+  width: 300px;
+}

@@ -1,0 +1,156 @@
+:local(.container) {
+  .ant-modal-body {
+    padding: 20px;
+  }
+
+  .ant-tabs-nav {
+    height: 45px;
+    font-size: 14px;
+    width: 100%;
+
+    .ant-tabs-ink-bar {
+      background-color: #926dea;
+    }
+    .ant-tabs-tab {
+      width: 33.33%;
+      margin-right: 0;
+
+      .ant-tabs-tab-inner {
+        text-align: center;
+      }
+    }
+  }
+
+  .ant-tabs-tab-active {
+    svg {
+      fill: #926dea;
+    }
+
+    span {
+      color: #926dea;
+    }
+  }
+}
+
+:local(.linkInvitation) {
+  height: 174px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  :local(.createLink) {
+    font-size: 14px;
+    color: #4a4a4a;
+  }
+}
+
+:local(.tabIcon) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #9b9b9b;
+
+  svg {
+    margin-right: 3px;
+    width: 20px;
+    height: 20px;
+    fill: #ccc;
+  }
+
+  &:hover {
+    color: #926dea;
+    svg {
+      fill: #926dea;
+    }
+  }
+}
+
+:local(.showLinkUrl) {
+  height: 174px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  :local(.showLinkToast) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #2b9300;
+    margin-bottom: 20px;
+
+    .anticon-check-circle {
+      color: #66b966;
+      font-size: 20px;
+      margin-right: 10px;
+    }
+  }
+
+  :local(.copyLink) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4a4a4a;
+    & > span {
+      font-size: 14px;
+    }
+
+    .ant-input-wrapper {
+      margin-right: 10px;
+    }
+
+    input {
+      width: 250px;
+    }
+  }
+}
+
+:local(.shareQRCode) {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  :local(.QRCode) {
+    width: 200px;
+    height: 200px;
+    padding: 15px;
+    border-radius: 6px;
+    border: solid 1px #d9d9d9;
+    margin-bottom: 10px;
+  }
+
+  & > p {
+    font-size: 14px;
+    text-align: center;
+    color: #bdbdbd;
+    margin-bottom: 10px;
+  }
+
+  :local(.buttonGroup) {
+    .ant-btn {
+      margin: 0 5px;
+    }
+  }
+}
+
+:local(.emailInvitation) {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .ant-form-item-label {
+    padding: 0;
+    label {
+      font-size: 14px;
+    }
+  }
+
+  & > button.ant-btn {
+    align-self: flex-end;
+    margin-right: 14px;
+  }
+}

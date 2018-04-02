@@ -1,0 +1,98 @@
+@import "~theme.scss";
+@import "~global.scss";
+
+:local(.container) {
+  display: flex;
+  flex-direction: column;
+
+  :local(.groupWrapper) {
+
+    display: flex;
+    flex-direction: column;
+
+    :local(.mainItem) {
+      position: relative;
+
+      height: 40px;
+      line-height: 40px;
+      @extend .u-text-14;
+      cursor: default;
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px dashed #eee;
+
+      &:hover {
+        background-color: $bg-content;
+      }
+
+
+      svg {
+        width: 16px;
+        height: 16px;
+        fill: $primary-color;
+        position: relative;
+        margin-right: 6px;
+        cursor: default;
+        flex: 0 0 auto;
+      }
+
+      :local(.treeIcon) {
+        fill: #fff;
+        background-color: $primary-color;
+        padding: 2px;
+        border-radius: 50%;
+      }
+
+      :local(.dropDownIcon) {
+        margin-left: 5px;
+        fill: #aaa;
+        transition: all 0.2s ease-in;
+        cursor: pointer;
+      }
+
+      :local(.basic) {
+        margin-right: 10px;
+      }
+      :local(.extra) {
+        margin-right: 10px;
+      }
+      :local(.time) {
+        font-size: 14px;
+        color: #9b9b9b;
+        flex: 0 0 auto;
+        text-align: right;
+        position: absolute;
+        right: 0;
+      }
+    }
+
+    :local(.subItem) {
+      & > div {
+        padding-left: 20px;
+      }
+    }
+  }
+}
+
+:local(.loadMore) {
+    font-size: $font-size-base;
+    font-family: $font-family;
+    color: $normal-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 40px;
+    line-height: 40px;
+
+    svg {
+        width: 16px;
+        height: 16px;
+        margin-right: 6px;
+        fill: $normal-color;
+        animation: loading 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+}

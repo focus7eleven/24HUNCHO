@@ -1,0 +1,66 @@
+:local(.fundModal) {
+  img {
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+  .ant-modal-footer {
+    padding-right: 30px;
+    padding-bottom: 30px;
+  }
+  .ant-modal-body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  :local(.form) {
+    padding-left: 60px;
+    padding-bottom: 4px;
+    :local(.row) {
+      margin-bottom: 12px;
+      & div {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 14px;
+      }
+      :local(.label) {
+        color: #4a4a4a;
+        width: 75px;
+      }
+      :local(.control) {
+        color: #666;
+        img {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+  :local(.accountList) {
+    margin: 0 40px;
+    :local(.account) {
+      position: relative;
+      height: 30px;
+      & > div {
+        display: inline-block;
+      }
+      :local(.icon) {
+        width: 30px;
+      }
+      :local(.detail) {
+        & > div {
+          line-height: 15px;
+        }
+      }
+
+      :local(.amount) {
+        position: absolute;
+        right: 0;
+        top: 10px;
+        line-height: 30px;
+        font-weight: 500;
+        color: #666;
+      }
+    }
+  }
+
+}

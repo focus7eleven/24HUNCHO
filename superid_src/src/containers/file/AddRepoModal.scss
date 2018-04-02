@@ -1,0 +1,143 @@
+:local(.addRepoContainer){
+  .ant-modal-header{
+    padding-left:20px;
+    padding-top:17px;
+    padding-bottom:0px;
+    border-bottom:none;
+  }
+  .ant-modal-body{
+    padding:0px;
+    :local(.content){
+      margin-top:46px;
+      margin-bottom:41px;
+      display:flex;
+      flex-direction:column;
+      padding-left:38px;
+      :local(.row){
+        height:32px;
+        display:flex;
+        align-items:center;
+        margin-bottom:20px;
+        :local(.property){
+          font-size:12px;
+          color:#4a4a4a;
+          width:103px;
+        }
+        .ant-input{
+          width:300px;
+          height:32px;
+          border-radius:6px;
+        }
+        :local(.selectedRole){
+          width:300px;
+          height:32px;
+          border:1px solid #d9d9d9;
+          position:relative;
+          border-radius:6px;
+          cursor:pointer;
+          svg{
+            position:absolute;
+            right:6px;
+            top:0px;
+          }
+        }
+      }
+    }
+  }
+  .ant-modal-footer{
+    padding:0px 30px 30px 0px;
+    .ant-btn{
+      height:35px!important;
+      width:68px;
+      padding:0px;
+    }
+  }
+}
+
+:local(.roleListContainer){
+  width:300px;
+  padding-left:10px;
+  padding-right:10px;
+  display:flex;
+  flex-direction:column;
+  background-color:#ffffff;
+  box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.2);
+  border-radius:6px;
+  max-height:300px;
+  :local(.search){
+    position:relative;
+    margin-top:10px;
+    margin-bottom:10px;
+    .ant-input{
+      height:26px;
+      width:280px;
+    }
+    svg{
+      position:absolute;
+      right:2px;
+      top:5px;
+    }
+  }
+  :local(.selected){
+    display:flex;
+    flex-direction:column;
+    padding-bottom:14px;
+    :local(.header){
+      display:flex;
+      justify-content:space-between;
+      :local(.text){
+        font-size:12px;
+        color:#9b9b9b;
+      }
+      :local(.clearAll){
+        font-size:12px;
+        color:#4a90e2;
+        cursor:pointer;
+      }
+    }
+    :local(.content){
+      display:flex;
+      flex-direction:column;
+      overflow:auto;
+      :local(.selectedList){
+        margin-top:2px;
+        padding-bottom:14px;
+        border-bottom:1px solid #e9e9e9;
+        display:flex;
+        flex-direction:column;
+        flex-shrink:0;
+        .ant-checkbox-wrapper{
+          display:flex;
+          align-items:center;
+          margin:5px 0px 0px 0px;
+          :local(.avatar){
+            height:24px;
+            width:24px;
+            border-radius:100%;
+            margin-right:8px;
+          }
+        }
+      }
+      :local(.unSelected){
+        margin-top:5px;
+        display:flex;
+        flex-direction:column;
+        flex-shrink:0;
+        .ant-checkbox-wrapper{
+          display:flex;
+          align-items:center;
+          margin:5px 0px 0px 0px;
+          :local(.avatar){
+            height:24px;
+            width:24px;
+            border-radius:100%;
+            background-color:#e9e9e9;
+            margin-right:8px;
+
+          }
+        }
+      }
+    }
+
+  }
+}

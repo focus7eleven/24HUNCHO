@@ -1,0 +1,40 @@
+:local(.modal) {
+
+  .ant-modal-header {
+    padding: 16px 24px;
+  }
+  .ant-modal-body {
+    padding-left: 60px;
+  }
+  .ant-modal-footer {
+    padding: 24px;
+  }
+
+  .ant-form-item-label label {
+    font-size: 14px;
+  }
+  .ant-row.ant-form-item {
+    & > div {
+      vertical-align: top;
+    }
+  }
+
+
+  .ant-form-item-label {
+    width: 78px;
+    text-align: left;
+    padding: 0;
+  }
+  .ant-form-item-control-wrapper {
+    width: 300px;
+    display: inline-block;
+  }
+
+  .ant-calendar-picker {
+    width: 100% !important;
+  }
+  .ant-input-group-addon {
+    padding: 4px 10px;
+    color: #9b9b9b;
+  }
+}

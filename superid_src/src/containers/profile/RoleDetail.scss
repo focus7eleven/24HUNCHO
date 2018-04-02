@@ -1,0 +1,193 @@
+@import "~theme.scss";
+@import "~global.scss";
+
+:local(.container) {
+  padding-top: 64px;
+  padding-bottom: 20px;
+  height: 100%;
+
+  :local(.sidebar) {
+    float: left;
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background-color: #ffffff;
+    padding: 30px 10px 100px 30px;
+    border-right: 1px solid #e9e9e9;
+    z-index: 10;
+    overflow-y: auto;
+
+    & > div {
+      margin-bottom: 20px;
+    }
+
+    :local(.title) {
+      margin-bottom: 30px;
+    }
+
+    :local(.user) {
+      :local(.userContent) {
+        vertical-align: middle;
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          cursor: pointer;
+          vertical-align: middle;
+        }
+        span {
+          vertical-align: middle;
+          margin-left: 10px;
+        }
+      }
+
+    }
+
+    :local(.partTitle) {
+      margin-bottom: 10px;
+      color: #9b9b9b;
+    }
+  }
+
+  :local(.content) {
+    margin-left: 300px;
+    height: 100%;
+    overflow: auto;
+    background-color: #fafafa;
+    position: relative;
+
+    :local(.title) {
+      overflow: hidden;
+      padding: 20px 30px;
+      border-bottom: solid 1px #e9e9e9;
+      position: fixed;
+      width: 80%;
+      z-index: 100;
+      background: #fafafa;
+
+      :local(.actTypes) {
+        float: right;
+        width: 140px;
+      }
+    }
+
+    :local(.details) {
+      padding-top: 20px;
+      margin-top: 70px;
+
+
+      :local(.timeLineContainer){
+        //overflow: auto;
+      }
+
+      :local(.detailCover) {
+
+        width: 42px;
+        height: 100%;
+        z-index: 1;
+        position: fixed;
+        background: #fafafa;
+        overflow: auto;
+      }
+
+      .ant-timeline {
+        margin-top: 50px;
+        margin-left: 20px;
+
+      }
+
+      .ant-timeline-item-head {
+        background: transparent;
+        z-index: 2;
+      }
+
+      .ant-timeline-item-tail {
+        position: absolute;
+        z-index: 2;
+      }
+
+      .ant-timeline-item-last .ant-timeline-item-tail {
+        display:inline-block;
+        border-left: 2px solid #e9e9e9;
+      }
+
+      :local(.backgrounds){
+
+        :local(.background) {
+          width: 320px;
+          height: 100%;
+          display: inline-block;
+          position: absolute;
+          top: 90px;
+          border-right: solid 4px #ffffff;
+          text-align: center;
+          font-size: 16px;
+          color: #9b9b9b;
+        }
+
+        :local(.bgTitle){
+          z-index:5;
+          height:60px;
+          padding-top:20px;
+          background: #fafafa;
+          width:321px;
+          display:inline-block;
+          position:absolute;
+          top:67px;
+          border-right: solid 4px #ffffff;
+          text-align: center;
+          font-size: 16px;
+          color: #9b9b9b;
+
+        }
+
+
+      }
+
+
+      :local(.lineDots) {
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        border-radius: 100px;
+        background-color: #926dea;
+        box-shadow: 0 0 0 2px rgba(146, 109, 234, 0.24);
+      }
+
+      //:local(.time){
+      //  position: absolute;
+      //  font-size: 12px;
+      //  margin-bottom: 20px;
+      //}
+
+      :local(.itemContent) {
+        //overflow-y: auto;
+        //margin-top: 20px;
+        padding-top: 15px;
+
+        p {
+          display: inline-block;
+          background-color: #ffffff;
+          border-radius: 3px;
+          border: solid 1px #e9e9e9;
+          padding: 13px 20px;
+          margin: 5px;
+
+          :local(.actType) {
+            float: left;
+            span {
+              color: white;
+            }
+          }
+
+          :local(.actContent) {
+
+          }
+        }
+
+      }
+
+    }
+
+  }
+}

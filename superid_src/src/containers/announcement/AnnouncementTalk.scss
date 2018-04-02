@@ -1,0 +1,181 @@
+:local(.container){
+  width:100%;
+  height:100%;
+  padding-top:30px;
+
+  :local(.guestContainer){
+    display:flex;
+    height:100%;
+    :local(.guestList){
+      position:relative;
+      flex-shrink:0;
+      width:160px;
+      height:100%;
+      overflow-y:auto;
+      margin-right:20px;
+      border-right:1px solid #eeeeee;
+      :local(.slide){
+        position:absolute;
+        width:2px;
+        height:34px;
+        background-color:#926dea;
+        left:157px;
+        border-radius:6px;
+      }
+      :local(.box){
+        margin-bottom: 10px;
+        width: 100%;
+        height: 34px;
+        :local(.radius) {
+          cursor: pointer;
+          width: 100%;
+          height: 100%;
+          border-radius: 6px;
+          &:hover {
+            background: #f7f7f7;
+          }
+
+
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          :local(.avatar) {
+            margin-left:2px;
+            height: 24px;
+            > img {
+              width: 24px;
+              height: 24px;
+              border-radius: 100px;
+            }
+          }
+          :local(.content) {
+            display: flex;
+            flex-direction: column;
+            margin-left: 8px;
+
+            :local(.name) {
+              color: #4a4a4a;
+              font-weight: 500;
+              display: inline-block;
+              height: 17px;
+            }
+            :local(.msg) {
+              display: inline-block;
+              width: 118px;
+              height: 17px;
+              color: #9b9b9b;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+    }
+    :local(.rightContainer){
+      height:100%;
+      width:calc(100% - 170px);
+    }
+  }
+
+  //聊天信息面板
+  :local(.chatContainer){
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    :local(.content){
+      height:calc(100% - 130px);
+      overflow:auto;
+      margin-bottom:10px;
+      padding-left:10px;
+      padding-right:10px;
+      :local(.right){
+        text-align:right;
+        :local(.title){
+          margin-right:35px;
+          >span{
+            font-size:10px;
+            color:#cccccc;
+          }
+        }
+        :local(.msg){
+          height:auto;
+          max-width:280px;
+          display:inline-block;
+          position:relative;
+          background-color:#b8e986;
+          border-radius:6px;
+          padding:10px 10px 10px 10px;
+          :local(.bulge){
+            height:0px;
+            width:0px;
+            border-width:5px;
+            border-style:solid;
+            border-color:transparent transparent transparent #b8e986;
+            position:absolute;
+            right:-10px;
+            top:8px;
+          }
+        }
+        :local(.avatar){
+          display:inline-block;
+          vertical-align:top;
+          margin-left:10px;
+          >img{
+            height:24px;
+            width:24px;
+            border-radius:100px;
+          }
+
+        }
+      }
+
+      :local(.left){
+        text-align:left;
+        :local(.title){
+          margin-left:35px;
+          >span{
+            font-size:10px;
+            color:#cccccc;
+          }
+        }
+        :local(.msg){
+          height:auto;
+          max-width:280px;
+          display:inline-block;
+          position:relative;
+          background-color:#f7f7f7;
+          border-radius:6px;
+          padding:8px 10px 10px 8px;
+          color:#4a4a4a;
+          :local(.bulge){
+            height:0px;
+            width:0px;
+            border-width:5px;
+            border-style:solid;
+            border-color:transparent #f7f7f7 transparent transparent;
+            position:absolute;
+            left:-10px;
+            top:8px;
+          }
+        }
+        :local(.avatar){
+          display:inline-block;
+          vertical-align:top;
+          margin-right:10px;
+          >img{
+            height:24px;
+            width:24px;
+            border-radius:100px;
+          }
+
+        }
+      }
+    }
+    :local(.chatBox){
+    }
+  }
+}

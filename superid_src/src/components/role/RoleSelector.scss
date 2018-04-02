@@ -1,0 +1,233 @@
+:local(.redBorder){
+  border-color:red;
+}
+:local(.selector) {
+  min-height: 32px;
+  border-radius: 6px;
+  border: solid 1px #d9d9d9;
+  cursor: pointer;
+  position: relative;
+  padding-right: 40px;
+  background: white;
+
+  i.anticon.anticon-down, i.anticon.anticon-up {
+    color: rgba(0, 0, 0, 0.43);
+    font-size: 10px;
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+:local(.openPanel) {
+  position: absolute;
+  bottom: -207px;
+  border-radius: 6px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+  height: 200px;
+  z-index: 1000;
+  padding: 10px;
+  overflow: auto;
+}
+
+:local(.seg) {
+  font-size: 12px;
+  color: #9b9b9b;
+  height: 27px;
+  margin-top: 12px;
+  margin-left: 8px;
+}
+
+:local(.searchInput) {
+  height: 26px;
+
+  i {
+    color: #ccc;
+  }
+}
+
+:local(.selectedList) {
+
+}
+
+:local(.roleGroup) {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+
+  & > * {
+    width: 200px;
+    flex-shrink: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .ant-checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+}
+
+:local(.roleList) {
+  display: flex;
+  flex-direction: column;
+
+  .ant-checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+
+  & > * {
+    cursor: pointer;
+  }
+}
+
+:local(.roleItem) {
+  display: flex;
+  align-items: center;
+  height: 30px;
+
+  :local(.avatar) {
+    width: 23px;
+    height: 23px;
+    margin-right: 5px;
+    background-color: #ddd;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    :local(.mask) {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      i {
+        color: white;
+      }
+    }
+  }
+}
+
+:local(.selectedRoleGroup) {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0px 10px;
+
+  & > div {
+    margin-right: 15px;
+  }
+}
+:local(.briefRoleSelector) {
+  display: inline-block;
+  vertical-align: middle;
+
+  :local(.addCircleIcon) {
+    display: inline-block;
+    svg {
+      fill: #ccc;
+      transition: fill .3s;
+      width: 24px;
+      height: 24px;
+      vertical-align: middle;
+    }
+    svg:hover {
+      fill: #926dea;
+    }
+  }
+  :local(.selectedRoleGroup) {
+    display: inline-flex;
+    vertical-align: middle;
+    padding: 0;
+    :local(.roleItem) {
+      height: inherit;
+      margin-right: 0;
+
+      p {
+        display: none;
+      }
+    }
+  }
+}
+
+:local(.overlay) {
+  :local(.blank){
+    height: 32px;
+  }
+  :local(.bottomNavbar) {
+    position: absolute;
+    bottom: 0;
+    height: 32px;
+    background-color: #fafafa;
+    width: 100%;
+    left: 0;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    line-height: 32px;
+    padding-left: 16px;
+    color: #666;
+    & > div {
+      display: inline-block;
+    }
+  }
+}
+
+:local(.selectAllRoles) {
+  padding: 5px 10px;
+  height: 100%;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+:local(.boxContent){
+    display:inline-flex;
+    align-items:center;
+    vertical-align: middle;
+    margin: 0 8px;
+
+    :local(.noAvatar){
+        width:21px;
+        height:21px;
+        background-color:#d8d8d8;
+        border-radius:5px;
+    }
+    :local(.noRoleAvatar){
+        width:21px;
+        height:21px;
+        background-color:#d8d8d8;
+        border-radius:100px;
+    }
+    :local(.roleAvatar){
+        width:21px;
+        height:21px;
+        border-radius:100px;
+    }
+    :local(.name){
+        margin-left:5px;
+    }
+}

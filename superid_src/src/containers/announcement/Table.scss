@@ -1,0 +1,252 @@
+:local(.container) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+:local(.tableContainer){
+  border-collapse: collapse;
+  margin: 20px;
+  margin-bottom: 5px;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+
+  :local(.tableRow) {
+    display: flex;
+    border-top: 1px solid #ccc;
+
+    &:last-child {
+      border-bottom: 1px solid #ccc;
+    }
+
+    & > div {
+      flex-shrink: 0;
+    }
+  }
+
+  :local(.grid){
+    border-left: 1px solid #ccc;
+    min-height: 40px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:last-child {
+      border-right: 1px solid #ccc;
+    }
+
+    textarea.ant-input{
+      width: 100%;
+      height: 100%;
+      border-width: 0;
+      text-align: left;
+      border-radius: 0;
+      background: rgba(0, 0, 0, 0);
+      color: black;
+      box-shadow: none;
+      resize: none;
+
+      &:focus{
+        outline-width: 0;
+      }
+    }
+  }
+}
+
+:local(.rowOperator) {
+  position: absolute;
+  height: 100%;
+  width: 16px;
+  left: -20px;
+  top: 0;
+	border-radius: 5px;
+	background-color: #fafafa;
+	border: solid 1px #dddddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  :local(.row) {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    color: #9b9b9b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: solid 1px #dddddd;
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+
+  :local(.addRow) {
+    cursor: pointer;
+    position: absolute;
+    left: 0px;
+    bottom: -22px;
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+    border-radius: 50%;
+    background-color: #fafafa;
+    border: solid 1px #d9d9d9;
+    color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+:local(.columnOperator) {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  height: 16px;
+	border-radius: 5px;
+	background-color: #fafafa;
+	border: solid 1px #dddddd;
+  display: flex;
+
+  :local(.column) {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    color: #9b9b9b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: solid 1px #dddddd;
+    position: relative;
+
+    :local(.widthAdjustHandle) {
+      position: absolute;
+      top: 0;
+      right: -3px;
+      width: 5px;
+      height: 100%;
+      background-color: black;
+      opacity: 0;
+      cursor: move;
+    }
+
+    &:first-child {
+      border-left: none;
+    }
+  }
+
+  :local(.addCol) {
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right: -22px;
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+    border-radius: 50%;
+    background-color: #fafafa;
+    border: solid 1px #d9d9d9;
+    color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+:local(.columnDeleteOperator) {
+  position: absolute;
+  width: 100%;
+  bottom: -20px;
+  left: 0;
+  height: 16px;
+  display: flex;
+  justify-content: space-between;
+
+  :local(.column) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  :local(.deleteIcon) {
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #fafafa;
+    border: solid 1px #d9d9d9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 9px;
+      height: 9px;
+      fill: #ccc;
+    }
+
+    &:hover {
+      border-color: #926dea;
+
+      svg {
+        fill: #926dea;
+      }
+    }
+  }
+}
+
+:local(.rowDeleteOperator) {
+  position: absolute;
+  height: 100%;
+  right: -20px;
+  top: 0;
+  width: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  :local(.row) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  :local(.deleteIcon) {
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #fafafa;
+    border: solid 1px #d9d9d9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 9px;
+      height: 9px;
+      fill: #ccc;
+    }
+
+    &:hover {
+      border-color: #926dea;
+
+      svg {
+        fill: #926dea;
+      }
+    }
+  }
+}

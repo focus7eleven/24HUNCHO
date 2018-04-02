@@ -1,0 +1,47 @@
+:local(.tagGroup) {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .ant-input {
+    border: 1px dashed #926dea;
+    border-radius: 6px;
+  }
+
+  .ant-tag {
+    border-radius: 6px;
+    border: 1px solid #d9d9d9;
+    background-color: #fafafa;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+
+    .ant-tag-text {
+      color: #666;
+    }
+
+    .anticon-cross {
+      font-weight: lighter;
+      font-size: 16px;
+      color: #9b9b9b;
+      display: none;
+    }
+
+    &:hover {
+      .anticon-cross {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+:local(.addTagButton) {
+  padding: 0 4px;
+  border-radius: 6px !important;
+  color: #ccc;
+
+  &:hover {
+    color: #926dea;
+    border-color: #926dea;
+  }
+}

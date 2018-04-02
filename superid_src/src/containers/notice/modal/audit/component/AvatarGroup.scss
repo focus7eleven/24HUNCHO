@@ -1,0 +1,17 @@
+
+
+:local(.usersWrapper){
+  display: inline-block;
+  position: relative;
+  height:24px;
+  width:40px;
+  vertical-align: middle;
+
+  &>img{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+
+  }
+}

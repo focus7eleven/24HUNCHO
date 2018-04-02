@@ -1,0 +1,47 @@
+@import "~theme.scss";
+
+:local(.uploadFilesModal) {
+  :local(.fileList) {
+    :local(.file) {
+      padding: 0 40px;
+      margin: 10px 0;
+
+      :local(.progress) {
+        display: flex;
+
+        .ant-progress {
+          width: 300px;
+
+        }
+
+        :local(.secretOption) {
+          display: flex;
+          padding-left: 6px;
+        }
+
+        :local(.complete) {
+          padding-left: 8px;
+          color: $primary-color;
+        }
+
+        :local(.percentContainer) {
+          padding: 0 8px;
+          position: relative;
+          width: 70px;
+
+          :local(.percent) {
+            color: $primary-color;
+            margin-right: 20px;
+          }
+
+          .u-link-12 {
+            cursor: pointer;
+            position: absolute;
+            right: -12px;
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+}

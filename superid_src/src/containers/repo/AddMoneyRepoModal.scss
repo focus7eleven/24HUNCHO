@@ -1,0 +1,30 @@
+:local(.addMoneyRepoContainer){
+    .ant-form-item-label {
+        label {
+        font-size: 14px !important;
+        line-height: 1.71 !important;
+        color: #4a4a4a !important;
+        }
+    }
+    
+    :local(.checkBoxList) {
+        width: 385px;
+
+        .ant-checkbox-wrapper {
+            margin-left: 0;
+            position: relative;
+            top: -3px;
+            width: 116px;
+
+            .ant-checkbox {
+                top: -2px;
+            }
+
+            svg {
+                position: relative;
+                top: 7px;
+            }
+        }
+    }
+  }
+  

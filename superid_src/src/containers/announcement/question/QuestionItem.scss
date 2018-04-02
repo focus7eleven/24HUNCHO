@@ -1,0 +1,20 @@
+$grey: #9b9b9b;
+:local(.questionItem) {
+  display: flex;
+  font-size: 14px;
+
+  .answer {
+    font-size: 12px;
+    color: $grey;
+  }
+  p.question {
+    line-height: 28px;
+    cursor: pointer;
+  }
+  svg {
+    width: 27px;
+    height: 27px;
+    fill: #f55b6c;
+    flex: 0 0 auto;
+  }
+}

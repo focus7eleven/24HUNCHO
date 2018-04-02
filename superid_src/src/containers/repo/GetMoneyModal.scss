@@ -1,0 +1,202 @@
+
+
+@mixin avatar{
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background: #d8d8d8;
+  vertical-align: middle;
+}
+
+$cardWidth: 580px;
+$inputBorderRadius: 6px;
+$inputHeight: 32px;//用于设置同行元素的lineheight使其垂直居中
+
+@mixin fundBtn{
+  width: 58px;
+  height: 28px;
+  font-size: 12px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+@mixin blueBtn {
+  @include fundBtn;
+  background: #90b5df;
+  color: #ffffff;
+
+  &:hover {
+    border: 1px solid #90b5df;
+    color: #90b5df;
+    background: #ffffff;
+  }
+}
+
+
+:local(.container){
+  .ant-modal {
+    width: 900px !important ;
+    .ant-modal-content {
+      .ant-modal-header{
+        border-bottom:solid 1px #d9d9d9;
+        padding: 14px 16px;
+
+      }
+
+      .ant-modal-body {
+        padding: 0px;
+      }
+
+      .ant-modal-footer{
+        border-top:solid 1px #d9d9d9;
+        padding:20px;
+        .ant-btn{
+          height:35px;
+          width:68px;
+          padding:0px;
+        }
+      }
+
+    }
+  }
+
+
+}
+
+:local(.content){
+  height:600px;
+  position: relative;
+  overflow:hidden;
+  :local(.leftContainer){
+    margin-right:250px;
+
+    :local(.search){
+      display: flex;
+      align-items: center;
+      height:60px;
+      padding: 15px 10px 10px 10px;
+
+      :local(.moneyType){
+        display: inline-block;
+
+        .ant-select-selection{
+          border:none;
+          width: 130px;
+          color: #4a4a4a;
+        }
+
+        .ant-select-open .ant-select-selection{
+          border:none;
+          box-shadow: none;
+        }
+
+        .ant-select-focused .ant-select-selection, .ant-select-selection:active, .ant-select-selection:focus {
+          border: none;
+          box-shadow: none;
+        }
+        .ant-select-selection:hover{
+          border: none;
+        }
+      }
+
+      :local(.affairSelector) {
+        display: inline-block;
+        margin-left:18px;
+      }
+
+      :local(.moneyRange) {
+        display: inline-block;
+        color: #666666;
+        display: flex;
+        align-items: center;
+        .ant-form-item{
+          margin-right:0px;
+        }
+        input {
+          width: 80px;
+          height: 28px;
+        }
+      }
+    }
+
+    :local(.tabPaneContainer) {
+      overflow: hidden;
+
+      .ant-tabs-nav{
+        padding-left:20px;
+        .ant-tabs-tab{
+          height: 37px;
+        }
+        .ant-tabs-ink-bar {
+          background-color: #926dea;
+          width: 50px !important;
+          left: 20px;
+        }
+        .ant-tabs-tab-active{
+          font-weight:500;
+        }
+
+      }
+
+      .ant-tabs-content {
+        height: 500px;
+      }
+      :local(.tabPane){
+        overflow: auto;
+        padding: 25px 10px 0px 30px
+      }
+    }
+
+  }
+  :local(.rightContainer) {
+    width:250px;
+    height:100%;
+    background: #fafafa;
+    float:right;
+    overflow: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-left:solid 1px #d9d9d9;
+
+    p{
+      padding-left:20px;
+      padding-right:20px;
+    }
+
+    :local(.recordPanel) {
+      padding-top: 15px;
+    }
+
+  }
+
+  :local(.btnPanel){
+    overflow:hidden;
+    border: none;
+    :local(.okBtn){
+      @include blueBtn;
+      float:right;
+      margin-left:10px;
+    }
+
+    :local(.cancelBtn){
+      @include fundBtn;
+      float:right;
+      margin-left:10px;
+    }
+  }
+}
+
+:local(.moneyItem) {
+  svg {
+    width: 27px;
+    height: 27px;
+    //border-radius: 50%;
+    vertical-align: middle;
+  }
+  :local(.moneyName){
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+}

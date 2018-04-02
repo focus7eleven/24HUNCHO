@@ -1,0 +1,105 @@
+:local(.container) {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 8px 0 rgba(96, 79, 114, 0.12);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+:local(.header) {
+  height: 80px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 8px 20px;
+
+  :local(.headerRow) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .ant-calendar-picker {
+      width: 240px;
+    }
+
+    :local(.level) {
+      font-size: 17px;
+      color: #f7c924;
+    }
+  }
+
+  :local(.headerLabel) {
+    font-size: 12px;
+    line-height: 18px;
+    height: 18px;
+    color: #9b9b9b;
+  }
+}
+
+:local(.tabs) {
+  height: 40px;
+  border: 1px solid #e9e9e9;
+  background: white;
+  border-left-width: 0;
+  border-right-width: 0;
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  line-height: 40px;
+  text-align: center;
+  color: #9b9b9b;
+  padding: 0 15px;
+
+  & > div {
+    cursor: pointer;
+    padding: 0 10px;
+  }
+}
+
+:local(.activeTab) {
+  color: #926dea;
+  border-bottom: 2px solid #926dea;
+}
+
+:local(.bottomPanel) {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  :local(.bottomPanelRow) {
+    &:nth-child(odd) {
+      background: #fafafa;
+    }
+    &:nth-child(even) {
+      background: white;
+    }
+
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 300;
+    color: #8494a5;
+
+    :local(.icon) {
+      width: 24px;
+      height: 24px;
+      border-radius: 100px;
+      background-color: white;
+      border: solid 1px #e2e5e9;
+      margin-left: 10px;
+      margin-right: 10px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        fill: #b5bfc9;
+      }
+    }
+  }
+}

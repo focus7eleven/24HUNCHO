@@ -1,0 +1,256 @@
+@import "~theme.scss";
+@import "~global.scss";
+
+:local(.editModal) {
+    .ant-modal-close {
+        top: 22px;
+        right: 25px;
+    }
+
+    .ant-modal-content {
+      width: 540px;
+    }
+
+    .ant-modal-header {
+        border: none;
+        padding: 20px 20px 14px;
+
+        .ant-modal-title {
+            font-family: $font-family;
+            font-size: 18px;
+            font-weight: $font-bold;
+            color: $text-color;
+        }
+    }
+
+    .ant-modal-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+        padding: 16px 30px 6px 30px;
+
+        textarea {
+          font-size: 14px;
+          padding: 6px 8px;
+          margin-bottom: 10px;
+        }
+    }
+
+    .ant-modal-footer {
+        padding: 14px 30px 30px 30px;
+        border: none;
+    }
+
+    :local(.container) {
+        display: flex;
+        flex-direction: column;
+
+        :local(.avatar) {
+            display: flex;
+            width: 480px;
+            height: 300px;
+
+            :local(.wrapper) {
+                position: relative;
+
+                &:hover {
+                    :local(.avatarMask) {
+                        position: absolute;
+                        border-radius: 5px;
+                        background-color: rgba(0, 0, 0, 0.4);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-family: $font-family;
+                        color: #ffffff;
+                        font-size: 24px;
+                        width: 100%;
+                        height: 300px;
+                        z-index: 1;
+                        cursor: pointer;
+                    }
+                }
+
+                :local(.avatarMask) {
+                    display: none;
+                }
+
+                > img {
+                    border-radius: 5px;
+                    width: 480px;
+                    height: 300px;
+                    min-width: 480px;
+                    min-height: 300px;
+                }
+
+                > video {
+                    object-fit: fill;
+                    border-radius: 5px;
+                    width: 480px;
+                    height: 300px;
+                    min-width: 480px;
+                    min-height: 300px;
+                }
+            }
+        }
+
+        :local(.editBody) {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+
+            :local(.editPicName) {
+                display: flex;
+                justify-content: flex-start;
+                margin-bottom: 20px;
+                width: 100%;
+
+                > span:nth-child(1) {
+                    display: inline-block;
+                    height: 25px;
+                    line-height: 25px;
+                    font-size: 16px;
+                    color: #4a4a4a;
+                    width: 80px;
+                }
+
+                .ant-input-wrapper {
+                    width: 100%;
+                }
+            }
+
+            :local(.editAvatar) {
+                :local(.tips) {
+                    font-size: 14px;
+                    text-align: left;
+                    color: #9b9b9b;
+                }
+            }
+
+            :local(.slider) {
+                width: 100%;
+                margin-top: 15px;
+
+                .ant-slider {
+                  margin: 10px 11px;
+                }
+                .ant-slider-track {
+                  background-color: #926dea;
+
+                }
+                .ant-slider-handle {
+                  background-color: #926dea;
+                  border: none;
+                  margin-top: -8px;
+                  margin-left: -10px;
+                  width: 20px;
+                  height: 20px;
+
+                }
+
+                :local(.iconwrapper) {
+                    position: relative;
+                    padding: 0 20px;
+                }
+
+                :local(.front) {
+                    position: absolute;
+                    display: inline-block;
+                    left: 0;
+                    top: -6px;
+                }
+
+                :local(.backend) {
+                    position: absolute;
+                    display: inline-block;
+                    right: 0;
+                    top: -6px;
+                }
+            }
+        }
+
+        :local(.description) {
+            margin-top: 22.4px;
+            position: relative;
+
+            :local(.wordCount) {
+                position: absolute;
+                right: 16px;
+                bottom: 12px;
+            }
+        }
+    }
+
+    :local(.videoContainer) {
+        :local(.nameDiv) {
+            :local(.nameSpan) {
+                font-size: 16px;
+                line-height: 1.5;
+                text-align: right;
+                color: #4a4a4a;
+                width: 80px;
+                height: 25px;
+                display: inline-block;
+                text-align: left;
+            }
+
+            .ant-input-wrapper {
+                :local(.nameInput) {
+                    width: 350px;
+                    height: 32px;
+                    border-radius: 6px;
+                    background-color: #ffffff;
+                    border: solid 1px #d9d9d9;
+                    margin-left: 4px;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        :local(.Progress) {
+            width: 438px;
+            margin-top: 22px;
+
+            .ant-progress-text {
+                width: 31px;
+                height: 17px;
+                line-height: 17px;
+                text-align: center;
+                font-size: 14px;
+                text-align: right;
+                color: #926dea;
+                margin-left: 8px;
+            }
+
+            .ant-progress-bg {
+                background-color: #926dea;
+            }
+        }
+
+        :local(.failureProgressBar) {
+            .ant-progress-bg {
+                background-color: #9b9b9b;
+            }
+
+            .ant-progress-text {
+                color: #9b9b9b;
+            }
+        }
+
+        :local(.uploadVedioFailureTips) {
+            margin-top: 7px;
+            margin-left: 62px;
+            @extend .u-text-l-14;
+
+            span {
+                color: $link-color;
+                cursor: pointer;
+            }
+        }
+    }
+
+    :local(.button) {
+        //border-radius: 3px;
+    }
+}

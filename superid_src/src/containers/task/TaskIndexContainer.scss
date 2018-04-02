@@ -1,0 +1,33 @@
+:local(.taskContainer){
+  background-color:#ffffff;
+  height:100%;
+  box-shadow: 0 0 8px 0 rgba(96, 79, 114, 0.12);
+  border-radius:3px;
+
+  :local(.header){
+    height:68px;
+    border-bottom:1px solid #e9e9e9;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+    padding-left:21px;
+    padding-right:25px;
+    :local(.left){
+      display:flex;
+      flex-direction:row;
+      align-items:center;
+      :local(.text){
+        font-size:14px;
+        color:#4a4a4a;
+        margin-right:2px;
+      }
+    }
+    :local(.right){
+      display:flex;
+      flex-direction:row;
+      align-items:center;
+    }
+  }
+
+}

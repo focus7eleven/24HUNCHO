@@ -1,0 +1,64 @@
+:local(.container) {
+  font-size: 14px;
+
+  .ant-modal-body {
+    font-size: 13px;
+    padding-left: 38px;
+    padding-right: 38px;
+    padding-top: 30px;
+
+    :local(.label){
+      font-size: 14px;
+      height: 30px;
+      line-height: 30px;
+      width: 130px;
+      color: #4a4a4a;
+    }
+  }
+
+  .ant-modal-footer {
+    padding-bottom: 30px;
+    padding-right: 30px;
+  }
+}
+
+:local(.info) {
+  margin-left: 34px;
+  margin-bottom: 12px;
+  & > * {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 20px;
+  }
+  i {
+    color: #66b966;
+    font-size: 20px;
+  }
+  span {
+    margin-left: 8px;
+    font-size: 14px;
+    color: #2b9300;
+  }
+}
+
+:local(.innerAffair) {
+  display: flex;
+  flex-direction: row;
+  margin-left: 34px;
+  align-items: center;
+
+  &>span {
+    flex-shrink: 0;
+  }
+}
+
+:local(.redirect) {
+  display: flex;
+  margin-top: 10px;
+  margin-left: 34px;
+  align-items: center;
+}
+:local(.main) {
+  font-size: 14px;
+  padding: 0 15px;
+}

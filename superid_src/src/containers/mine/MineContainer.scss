@@ -1,0 +1,103 @@
+@import "~theme.scss";
+@import "~global.scss";
+
+:local(.container) {
+  width: 100%;
+  height: 100%;
+	opacity: 0.98;
+  background-color: #ffffff;
+  box-shadow: $box-shadow;
+	display: flex;
+	flex-direction: row;
+	position: fixed;
+	z-index: 18;
+	padding-top: 0;
+}
+
+:local(.leftPanel) {
+  width: 250px;
+  height: 100%;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  background-color: #fafafa;
+  border-right: 1px solid #e9e9e9;
+  overflow: auto;
+
+  :local(.label) {
+    height: 95px;
+    line-height: 95px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    color: #4a4a4a;
+  }
+}
+
+:local(.filterItem) {
+  height: 40px;
+  width: 100%;
+  opacity: 0.9;
+  padding: 10px 0 10px 55px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #4a4a4a;
+  cursor: pointer;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  flex-shrink:0;
+
+  :local(.text) {
+    max-width: 195px;
+    display: inline-block;
+  }
+}
+
+:local(.activeFilterItem) {
+  font-weight: 500;
+  color: #926dea;
+  background-color: #ffffff;
+  opacity: 0.9;
+  border-right: 3px solid #926dea;
+}
+
+:local(.rightPanel) {
+  overflow: auto;
+  width: 100%;
+  padding: 20px 100px 20px 50px;
+  background-color: #fff;
+}
+
+:local(.tabList) {
+  width: 100%;
+  border-bottom: 1px solid #e9e9e9;
+  display: flex;
+
+  :local(.tabItem) {
+    margin: 0 30px 0 20px;
+    font-size: 14px;
+    color: #9b9b9b;
+    padding-bottom: 10px;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+  }
+
+  :local(.activeTabItem) {
+    font-weight: 500;
+    color: #666666;
+    border-bottom: 2px solid #926dea;
+    cursor: pointer;
+  }
+}
+
+:local(.closeButton) {
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 18px;
+  font-weight: bolder;
+  opacity: 0.35;
+}

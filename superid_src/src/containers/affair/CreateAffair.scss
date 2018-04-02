@@ -1,0 +1,306 @@
+@import '~theme.scss';
+
+:local(.createAffairModal) {
+    .ant-modal {
+      width: 500px;
+        .ant-modal-content {
+            width: 500px;
+
+
+            .ant-modal-header {
+                border: none;
+
+                .ant-modal-title {
+                    font-size: 18px;
+                    font-weight: $font-bold;
+                    color: $text-color;
+                    font-family: $font-family;
+                }
+            }
+
+            .ant-modal-body {
+              max-height:600px;
+              overflow:auto;
+                .ant-form-item-label {
+                    text-align: left;
+                  :local(.require){
+                    color:#f55b6c;
+                    font-weight:500;
+                  }
+               }
+
+                .ant-form-item{
+                  margin-bottom:25px;
+                }
+                .ant-form-item-with-help{
+                  .ant-form-explain{
+                    position:absolute;
+                  }
+                }
+
+                :local(.affairLogo) {
+                    .ant-form-item {
+                        margin-bottom: 0;
+                    }
+
+                    :local(.affairAvatar) {
+                        float: right;
+                        margin-right: 80px;
+                    }
+                }
+
+                :local(.official){
+                  height:60px;
+                  margin-bottom:7px;
+                  width:367px;
+                  border:1.5px dashed #d9d9d9;
+                  border-radius:6px;
+                  display:flex;
+                  justify-content:space-between;
+                  :local(.left){
+                    display:flex;
+                    flex-direction:column;
+                    padding-left:16px;
+                    line-height:14px;
+                    :local(.rolename){
+                      font-size:14px;
+                      color:#4a4a4a;
+                      font-weight:500;
+                      margin-top:10px;
+                      margin-bottom:5px;
+                      height:17px;
+                    }
+                    :local(.affairname){
+                      font-size:12px;
+                      color:#9b9b9b;
+                      height:14px;
+                    }
+                  }
+                  :local(.right){
+                    display:flex;
+                    align-items:center;
+                    padding-right:20px;
+                    .ant-btn{
+                      margin-left:10px;
+                      height:28px;
+                      width:80px;
+                      border-radius:3px;
+                      padding:0px;
+                    }
+                    :local(.owner){
+                      display:flex;
+                      align-items:center;
+                      :local(.avatarContainer){
+                        width:24px;
+                        height:24px;
+                        border-radius:100px;
+                        margin-left:5px;
+                        position:relative;
+                        :local(.avatar){
+                          width:24px;
+                          height:24px;
+                          border-radius:100%;
+                        }
+                        :local(.mask){
+                          width: 100%;
+                          height: 100%;
+                          position: absolute;
+                          top: 0;
+                          left: 0;
+                          opacity: 0;
+                          background-color: rgba(0, 0, 0, .5);
+                          border-radius:100px;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+
+                          &:hover {
+                            opacity: 1;
+                          }
+
+                          svg {
+                            width: 18px;
+                            height: 18px;
+                            transform: rotate(45deg);
+                          }
+                        }
+                      }
+
+                    }
+                  }
+                }
+                :local(.add){
+                  color:#4990e2;
+                  font-size:12px;
+                  cursor:pointer;
+                }
+                :local(.select) {
+                  height:32px;
+                    //width: auto;
+                    // .ant-select-selection--single {
+                    //     height: 50px;
+                    //     width: auto;
+                    // }
+                    //.ant-select-selection {
+                    //    border: none;
+                    //    box-shadow: none;
+                    //
+                    //    .ant-select-selection__rendered {
+                    //        padding-left: 0;
+                    //        height: 100%;
+                    //    }
+                    //
+                    //    .ant-select-arrow {
+                    //        top: 12px;
+                    //        left: 58px;
+                    //        width: 10px;
+                    //    }
+                    //}
+                    //
+                    //:local(.publicityName) {
+                    //    line-height: 29px;
+                    //}
+                }
+
+                :local(.tagInput) {
+                    display: inline-block;
+
+                    input {
+                        width: 75px;
+                        border: 1px dashed $border-color-active;
+                        padding-right: 12px;
+                        top: 1px;
+
+                        &:focus {
+                            box-shadow: none;
+                        }
+                    }
+
+                    i {
+                        position: relative;
+                        right: 12px;
+                        color: $primary-color;
+                        font-style: normal;
+
+                        &:hover {
+                            color: $primary-hover-color;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                :local(.tagContainer) {
+                    display: inline-block;
+                    position: relative;
+                    cursor: pointer;
+
+                    &:hover {
+                        &:after {
+                            content: '移除';
+                            width: 100%;
+                            position: absolute;
+                            border-radius: $border-radius-base;
+                            color: #ffffff;
+                            right: 0;
+                            top: 4px;
+                            height: 22px;
+                            line-height: 25px;
+                            margin-right: 2px;
+                            background-color: rgba(0, 0, 0, 0.6);
+                            text-align: center;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                :local(.affairDescription) {
+                    width: 300px;
+                    height: 100px!important;
+                    max-height: 100px!important;
+                    min-height: 100px!important;
+                    padding-bottom: 25px;
+                }
+
+                :local(.wordsNumTips) {
+                    display: inline-block;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    font-family: $font-family;
+                    font-size: 12px;
+                    color: $normal-color;
+                    padding-left: 9px;
+                    line-height: 17px;
+                    margin-bottom: 5px;
+                }
+
+                :local(.tagErrorTips) {
+                    position: absolute;
+                    top: 22px;
+                    left: 0;
+                    color: $danger-color;
+                }
+            }
+
+            .ant-modal-footer {
+                border: none;
+                padding-bottom: 30px;
+                padding-right:30px;
+            }
+        }
+
+        label {
+            font-size: 14px;
+            font-family: $font-family;
+            color: $text-color;
+            line-height: 1.7;
+        }
+    }
+}
+
+:local(.officialPopover) {
+  .ant-popover-arrow {
+    display: none;
+  }
+
+  :local(.mainRolePanel) {
+    min-width: 160px;
+    height: 200px;
+    padding: 7px 0;
+    overflow:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    .ant-input-wrapper {
+      margin: 0 8px 13px 8px;
+    }
+
+    :local(.mainRole) {
+      padding: 5px 10px 5px 10px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      flex-shrink:0;
+
+      &:hover {
+        background-color: #fbf8ff;
+      }
+
+      :local(.mainRoleAvatar) {
+        border-radius: 50%;
+        margin-right: 8px;
+        width: 21px;
+        height: 21px;
+        background-color: #d8d8d8;
+        overflow: hidden;
+
+        img {
+          width: 21px;
+          height: 21px;
+        }
+      }
+    }
+  }
+}
+

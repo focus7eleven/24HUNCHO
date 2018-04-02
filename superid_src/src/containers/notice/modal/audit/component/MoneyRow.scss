@@ -1,0 +1,39 @@
+:local(.row){
+  position: relative;
+  color: #666666;
+  overflow: hidden;
+
+  :local(.left){
+    display: inline-block;
+    vertical-align: middle;
+    & > div {
+     display: inline-block;
+     margin-right: 5px;
+     vertical-align: top;
+    }
+    img {
+      border-radius: 50%;
+      width:21px;
+      height: 21px;
+      margin-right: 8px;
+    }
+
+    :local(.title) {
+      color: #666;
+      font-size: 14px;
+    }
+
+    :local(.subTitle) {
+      color: #9b9b9b;
+      font-size: 12px;
+    }
+  }
+
+  :local(.right){
+    position: absolute;
+    right: 0px;
+    top: 6px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

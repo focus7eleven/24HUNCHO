@@ -1,0 +1,28 @@
+@import "~theme.scss";
+:local(.container){
+  padding: 84px 20px 20px 20px;
+  background-color: $body-background;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  overflow: hidden;
+
+  :local(.affairManangement){
+    align-self: stretch;
+    width: calc(25%);
+    min-width: 300px;
+    max-width: 360px;
+    flex: 0 0 auto;
+    height: 100%;
+  }
+  :local(.affairIndex){
+    align-self: stretch;
+
+    width: calc(75% - 60px);
+    min-width: 855px;
+    max-width: 1035px;
+    padding-left: 20px;
+    height: 100%;
+    flex: 1 1 auto;
+  }
+}

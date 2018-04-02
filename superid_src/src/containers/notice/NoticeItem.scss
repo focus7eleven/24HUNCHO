@@ -1,0 +1,92 @@
+@import "~theme.scss";
+@import "~global.scss";
+
+:local(.noticeItem) {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-bottom: 1px dashed #eee;
+  width: 100%;
+
+  @extend .u-text-14;
+  display: flex;
+  border-bottom: 1px dashed #eee;
+  cursor: default;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: $bg-content;
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+    fill: $primary-color;
+    position: relative;
+    margin-right: 6px;
+    cursor: default;
+    flex: 0 0 auto;
+    align-self: flex-start;
+    margin-top: 12px;
+  }
+  :local(.noticeText) {
+    width: calc(100% - 115px);
+    margin: 9px 0;
+  }
+
+  :local(.dropDownIcon) {
+    top: 3px;
+    margin-left: 5px;
+    fill: #aaa;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+  }
+
+  a {
+    font-weight: $font-bold;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  & > div {
+    display:flex;
+    position: relative;
+    align-items: center;
+  }
+  :local(.mainItem) {
+    &:hover {
+    }
+  }
+  :local(.subItem) {
+    padding-left: 22px;
+  }
+  :local(.subItem::before) {
+    content: '-';
+    margin-right: 5px;
+  }
+  .disabled {
+    color: $normal-color;
+    font-weight: $font-normal;
+
+    a {
+      font-weight: 500;
+      color: #9b9b9b;
+    }
+
+    svg {
+      fill: #cccccc;
+    }
+  }
+  :local(.time) {
+    font-size: 14px;
+    color: #9b9b9b;
+    flex: 0 0 auto;
+    text-align: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 9px 0;
+  }
+}

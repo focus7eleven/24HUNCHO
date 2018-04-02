@@ -1,0 +1,678 @@
+@import "~theme.scss";
+
+:local(.moneyRepoContainer) {
+  height: 100%;
+  width: 100%;
+
+  :local(.top) {
+    height: 60px;
+    border-bottom: solid 1px #e9e9e9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 18px;
+    font-size: 14px;
+    color: #666666;
+
+    :local(.left) {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      :local(.accountTop) {
+         display: flex;
+         align-items: center;
+         width: 100%;
+         :local(.accountName) {
+             margin-left: 5px;
+             flex: 1 0 auto;
+
+         }
+         :local(.changeTitle){
+            flex: 1 0 auto;
+            :local(.accountName){
+              margin-left:5px;
+              margin-right:5px;
+            }
+         }
+
+         :local(.accountOwnerList) {
+             margin-right:20px;
+             display: flex;
+             align-items:center;
+         }
+
+         :local(.accountVisiblity) {
+             margin-right: 10px;
+
+             .ant-select-selection--single {
+               width: 90px;
+             }
+         }
+
+         :local(.addCurrency) {
+             margin-left: 10px;
+             :local(.btn) {
+                width: 95px;
+            	height: 31px;
+            	border-radius: 3px;
+            	background-color: #926dea;
+             }
+         }
+      }
+    }
+
+    :local(.switch) {
+      display: flex;
+
+      .ant-switch {
+        margin-left: 10px;
+      }
+    }
+
+    :local(.right) {
+      color: $normal-color;
+      cursor: pointer;
+      flex: 0 0 auto;
+
+      .ant-btn {
+        color: #666666;
+        height: 31px;
+        width: 122px;
+        padding: 0;
+        border-radius: 3px;
+        margin-left: 9px;
+        font-size: 14px;
+      }
+    }
+  }//top end
+
+  :local(.content) {
+    height: calc(100% - 58px);
+    overflow: auto;
+
+    :local(.notManager) {
+      padding: 18px 20px 0 20px;
+      display: flex;
+      flex-direction: column;
+
+
+
+      :local(.accountContainer){
+
+        :local(.accountItem) {
+          width: 100%;
+          border: solid 1px #e9e9e9;
+          border-top-left-radius: 4px;
+          border-top-right-radius: 4px;
+          padding-bottom: 16px;
+          margin-bottom: 20px;
+
+          :local(.accountItemHeader) {
+            width: 100%;
+            height: 40px;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            background-color: #fafafa;
+            border-bottom: solid 1px #e9e9e9;
+            color: #4a4a4a;
+            display: flex;
+            align-items: center;
+            padding-left: 21px;
+            padding-right: 19px;
+
+            :local(.title) {
+              opacity: 0.8;
+              font-size: 12px;
+              letter-spacing: 0.5px;
+              text-align: left;
+              flex: 1 0 auto;
+            }
+
+            :local(.amount) {
+              font-size: 16px;
+              font-weight: 500;
+              text-align: right;
+              line-height: 1.12;
+              margin-right:10px;
+            }
+
+            :local(.locked) {
+              font-size: 12px;
+              text-align: left;
+              color: #9b9b9b;
+              margin: 0 10px 0 0;
+              cursor:pointer;
+            }
+
+            :local(.change) {
+              cursor: pointer;
+              width: 12px;
+              height: 12px;
+              svg {
+                  fill: #bdbdbd;
+                  transition: fill .4s;
+              }
+              &:hover {
+                  svg {
+                      fill: #4990e2;
+                  }
+              }
+            }
+          }
+
+          :local(.accountOl) {
+            width: 100%;
+            height: auto;
+            padding: 15px 30px;
+
+            :local(.accountLi) {
+              height: 48px;
+              display: flex;
+              align-items: center;
+              border-bottom: solid 1px #e9e9e9;
+
+              &:local(.accountLiInvalid) {
+                  opacity: 0.3;
+              }
+
+              :local(.icon) {
+              }
+
+              :local(.accountName) {
+                font-size: 14px;
+                color: #4a4a4a;
+                margin-right: 15px;
+              }
+
+              :local(.typeName) {
+                color: #9b9b9b;
+                font-size: 12px;
+
+                &:local(.typeNameGrow) {
+                    flex: 1 0 auto;
+                }
+              }
+
+              :local(.initBtn) {
+                  margin-left: 10px;
+                  flex: 1 0 auto;
+                  font-size: 14px;
+                  color: #4a90e2;
+                  cursor: pointer;
+              }
+
+              :local(.invalidBtn) {
+                  margin-left: 10px;
+                  flex: 1 0 auto;
+                  font-size: 14px;
+                  color: #4a90e2;
+                  cursor: pointer;
+              }
+
+              :local(.money) {
+                font-size: 16px;
+                color: #4a4a4a;
+                margin-right: 8px;
+              }
+            }
+
+          }
+
+          :local(.buttonBar) {
+            display: flex;
+            padding: 0 30px;
+            padding-left: 30px;
+            padding-right: 20px;
+            align-items: center;
+
+            :local(.addAccountBtn) {
+              font-size: 14px;
+              color: #4990e2;
+              flex: 1 0 auto;
+              cursor: pointer;
+            }
+
+            :local(.getBtn) {
+              margin-right: 14px;
+            }
+          }
+
+        }
+      }
+
+
+
+
+
+      :local(.moneyChangeContainer){
+        display:flex;
+        flex-direction:column;
+        border:1px solid #e9e9e9;
+        :local(.row){
+          height:90px;
+          border-bottom:1px solid #e9e9e9;
+          padding-top:15px;
+          padding-bottom:18px;
+          display:flex;
+          align-items:center;
+          &:last-child{
+            border-bottom:none;
+          }
+          :local(.detail){
+            margin-left:23px;
+            width:280px;
+            display:flex;
+            flex-direction:column;
+            :local(.title){
+              color:#4a4a4a;
+              font-size:14px;
+              margin-bottom:4px;
+            }
+            :local(.time){
+              color:#9b9b9b;
+              font-size:12px;
+            }
+            :local(.place){
+              color:#9b9b9b;
+              font-size:12px;
+            }
+          }
+          :local(.count){
+            margin-left:33px;
+            width:250px;
+            display:flex;
+            align-items:center;
+            :local(.avatar){
+              width:20px;
+              height:20px;
+              background-color:#9b9b9b;
+            }
+            :local(.type){
+              margin-left:7px;
+              margin-right:8px;
+              font-size:14px;
+              color:#666666;
+            }
+            :local(.number){
+              color:#f45b6c;
+              font-size:14px;
+              font-weight:500;
+            }
+          }
+          :local(.leftCount){
+            margin-left:50px;
+            :local(.text){
+              color:#9b9b9b;
+              font-size:14px;
+              margin-right:8px;
+            }
+            :local(.number){
+              font-size:14px;
+              color:#4a4a4a;
+            }
+          }
+        }
+      }
+      .ant-collapse {
+        border:1px solid #e9e9e9;
+        .ant-collapse-content-box {
+          padding: 0;
+        }
+
+        .ant-collapse-item-active > .ant-collapse-header {
+          border-bottom: 1px solid #e9e9e9;
+        }
+        .ant-collapse-item{
+          border-color:#e9e9e9;
+        }
+        .ant-collapse-header{
+          display:flex;
+          align-items:center;
+          padding-left:13px;
+          .arrow{
+            top:-1px;
+            right:1px;
+            left:auto;
+            color:#cccccc;
+          }
+        }
+        :local(.title){
+          :local(.name){
+            color:#39393a;
+            font-size:12px;
+          }
+          :local(.type){
+            color:#898989;
+            font-size:12px;
+            margin-left:10px;
+          }
+        }
+
+        :local(.block) {
+          padding: 20px 14px;
+          display: flex;
+          flex-direction: column;
+          :local(.addBtn){
+            margin-top:10px;
+
+            .ant-btn{
+              padding:0px;
+              width:85px;
+              margin-left: 10px;
+              border-radius:3px;
+              float: right;
+            }
+          }
+          :local(.title) {
+            padding-left: 2px;
+            color: #9b9b9b;
+            font-size: 12px;
+          }
+
+          :local(.table) {
+            margin-top: 6px;
+
+            :local(.row) {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              border-bottom: 1px solid #e9e9e9;
+              padding: 4px 0;
+
+              :local(.name) {
+                width: 140px;
+                display: flex;
+                align-items: center;
+                font-size: 12px;
+                flex-shrink:0;
+
+                span {
+                  margin-left: 2px;
+                }
+              }
+
+              :local(.number) {
+                margin-bottom: 3px;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+
+                :local(.mark) {
+                  color: $content-color;
+                  margin-right: 2px;
+                }
+
+                :local(.big) {
+                  font-size: 18px;
+                  color: $text-color;
+                }
+                :local(.lock){
+                  font-size:14px;
+                  color:#9b9b9b;
+                  margin-left:10px;
+                }
+              }
+
+              :local(.btn) {
+                display: flex;
+                align-items: center;
+                white-space: nowrap;
+
+
+                span {
+                  margin-right: 46px;
+                  color: $link-color;
+                  cursor: pointer;
+                  display:flex;
+                  align-items:center;
+                }
+
+                span:last-child {
+                  margin: 0;
+                }
+              }
+            }
+          }
+        }
+      }//collapse end
+    }//notManager end
+  }//content end
+}
+
+:local(.canUseRepo) {
+  padding: 10px 0 0 0;
+
+  :local(.title) {
+    font-size: 12px;
+    color: #9b9b9b;
+    line-height: 1.5;
+  }
+
+  :local(.repoList) {
+    display: flex;
+    padding: 8px 0;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+ }
+
+:local(.publicMoneyRepo) {
+  :local(.title) {
+    font-size: 12px;
+    color: #9b9b9b;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+  :local(.table) {
+    width: 100%;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    padding-bottom: 20px;
+    :local(.tableTh) {
+      width: 100%;
+      height: 40px;
+      background-color: #f7f7f7;
+      border: 1px solid #e9e9e9;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      display: flex;
+      color:#9b9b9b;
+      span {
+        height: 100%;
+        display: inline-block;
+        line-height: 40px;
+        padding-left: 21px;
+      }
+      :local(.name) {
+        flex: 0 0 auto;
+        width: 249px;
+        border-right: 1px solid #e9e9e9;
+      }
+      :local(.type) {
+        flex: 0 0 auto;
+        width: 95px;
+        border-right: 1px solid #e9e9e9;
+      }
+    }
+
+    :local(.listItem) {
+      height: 40px;
+      border-left: 1px solid #e9e9e9;
+      border-bottom: 1px solid #e9e9e9;
+      display: flex;
+      > span {
+        height: 100%;
+        display: inline-block;
+        line-height: 40px;
+        padding-left: 21px;
+        border-right: 1px solid #e9e9e9;
+      }
+      :local(.itemName) {
+        width: 249px;
+        border-right: 1px solid #e9e9e9;
+        display: flex;
+        align-items: center;
+
+        :local(.defaultLogo) {
+          border: solid 1px #f4f4f4;
+          border-radius: 3px;
+          margin-right: 5px;
+          padding: 3px;
+          svg {
+            fill: #9b9b9b;
+            width: 12px;
+          }
+        }
+
+        :local(.logo) {
+            margin-right: 5px;
+            width: 21px;
+            height: 21px;
+            border-radius: 3px;
+            background-color: #ffffff;
+            border: solid 1px #eeeeee;
+        }
+
+        > span {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+      }
+      :local(.itemType) {
+        width: 95px;
+        border-right: 1px solid #e9e9e9;
+      }
+      :local(.itemMoney) {
+        flex: 1 0 auto;
+        display: flex;
+        border-right: 1px solid #e9e9e9;
+        :local(.moneyList) {
+          flex: 1 0 auto;
+          display: flex;
+          padding-top: 8px;
+          padding-left: 20px;
+
+          :local(.currencyItem) {
+            > span {
+              position: relative;
+              top: -7px;
+              margin-left: 4px;
+              margin-right: 8px;
+            }
+          }
+
+          :local(.hoverPop) {
+            margin-left: 10px;
+            cursor: pointer;
+          }
+        }
+
+        :local(.buttonWrapper) {
+          flex: 0 0 auto;
+          padding-top: 6px;
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+:local(.moneyPopover) {
+  :local(.currencyItem) {
+    > span {
+      position: relative;
+      top: -7px;
+      margin-left: 4px;
+      margin-right: 8px;
+    }
+  }
+}
+
+
+:local(.noPermission){
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  letter-spacing: -0.4px;
+  text-align: center;
+  color: #9b9b9b;
+  width: 100%;
+  margin-top: 60px;
+
+  img {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 30px;
+  }
+}
+:local(.moneyRepoPanelHeader) {
+  color: #39393a;
+
+  span {
+    color: #898989;
+  }
+}
+
+:local(.popover) {
+  .ant-popover-inner{
+    .ant-popover-inner-content{
+      padding:0px;
+      :local(.sendMoneyContent){
+        :local(.row){
+          width:78px;
+          height:32px;
+          cursor:pointer;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          &:hover{
+            background-color:#fbf8ff;
+          }
+        }
+      }
+    }
+  }
+}
+
+:local(.addMoneyRepo) {
+  width: 242px;
+  height: 111px;
+  cursor: pointer;
+  border: dashed 1px #d9d9d9;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+	font-weight: 500;
+	color: #d9d9d9;
+	transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+  svg {
+    fill: #e9e9e9;
+    margin-right: 5px;
+		transition: fill 0.2s ease-in-out;
+  }
+}
+:local(.addMoneyRepo:hover) {
+	box-shadow: none;
+	border-color: #926DEA;
+	color: #926DEA;
+	svg {
+		fill: #926DEA;
+	}
+}
+
+:local(.moneyChangeTooltip) {
+    .ant-tooltip-inner {
+        padding: 3px 6px;
+        min-height: 0;
+        font-size: 12px;
+        border-radius: 4px;
+    }
+}

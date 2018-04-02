@@ -1,0 +1,251 @@
+:local(.picModalWrap) {
+    > .ant-modal {
+        width: 500px;
+        height: 525px;
+
+        .ant-modal-content {
+            .ant-modal-header {
+                border-bottom: 1px solid white;
+
+                .ant-modal-title {
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: #4a4a4a;
+                }
+            }
+
+            .ant-modal-body {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+            .ant-modal-footer {
+                border-top: 0;
+                padding: 10px 20px 30px 10px;
+            }
+        }
+
+        .ant-slider {
+            .ant-slider-track {
+                background-color: #926dea;
+            }
+
+            .ant-slider-handle {
+                border: none;
+                background-color: #926dea;
+                width: 20px;
+                height: 20px;
+                margin-top: -7px;
+            }
+        }
+    }
+
+    :local(.editBody) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        :local(.editPicName) {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            width: 100%;
+
+            > span:nth-child(1) {
+                display: inline-block;
+                height: 25px;
+                line-height: 25px;
+                font-size: 16px;
+                color: #4a4a4a;
+                width: 80px;
+            }
+
+            .ant-input {
+                width: 300px;
+            }
+
+            // >input{
+            //   width:300px;
+            //   height:32px;
+            //   border-radius: 6px;
+            //  background-color: #ffffff;
+            //  border: solid 1px #d9d9d9;
+            // }
+
+        }
+
+        :local(.editAvatar) {
+            :local(.tips) {
+                font-size: 14px;
+                text-align: left;
+                color: #9b9b9b;
+            }
+        }
+
+        :local(.slider) {
+            width: 400px;
+            margin-top: 10px;
+
+            :local(.iconwrapper) {
+                position: relative;
+                padding: 0 20px;
+            }
+
+            :local(.front) {
+                position: absolute;
+                display: inline-block;
+                left: 0;
+                top: -6px;
+            }
+
+            :local(.backend) {
+                position: absolute;
+                display: inline-block;
+                right: 0;
+                top: -6px;
+            }
+        }
+    }
+}
+
+:local(.videoModalWrap) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > .ant-modal {
+        top: 0;
+        padding: 0;
+        width: 500px !important;
+
+        .ant-modal-content {
+            width: 500px !important;
+            border-radius: 6px;
+            background-color: #ffffff;
+            box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.2), 0 0 24px 0 rgba(0, 0, 0, 0.12);
+            border-style: solid;
+            border-width: 0.5px;
+
+            .ant-modal-close {
+                position: absolute;
+                right: 25px;
+                top: 25px;
+            }
+
+            .ant-modal-header {
+                border-bottom: none;
+                padding: 0;
+                overflow: hidden;
+
+                .ant-modal-title {
+                    margin-left: 20px;
+                    margin-top: 20px;
+                    font-size: 18px;
+                    font-weight: 500;
+                    letter-spacing: 1px;
+                    color: #4a4a4a;
+                }
+            }
+
+            .ant-modal-footer {
+                border-top: none;
+                padding: 0;
+                margin-left: 327px;
+                margin-top: 30px;
+                margin-bottom: 30px;
+
+                :local(.cancelBtn) {
+                    width: 68px;
+                    //height: 35px;
+                    color: #666666;
+                    border-radius: 3px;
+                }
+
+                :local(.okBtn) {
+                    width: 68px;
+                    //height: 35px;
+                    color: #ffffff;
+                    border-radius: 3px;
+                }
+            }
+
+            .ant-modal-body {
+                padding: 0;
+
+                :local(.nameDiv) {
+                    margin-left: 62px;
+                    margin-top: 31px;
+
+                    :local(.nameSpan) {
+                        font-size: 16px;
+                        line-height: 1.5;
+                        text-align: right;
+                        color: #4a4a4a;
+                        width: 80px;
+                        height: 25px;
+                        display: inline-block;
+                        text-align: left;
+                    }
+
+                    .ant-input-wrapper {
+                        :local(.nameInput) {
+                            width: 300px;
+                            height: 32px;
+                            border-radius: 6px;
+                            background-color: #ffffff;
+                            border: solid 1px #d9d9d9;
+                            margin-left: 4px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                :local(.Progress) {
+                    width: 390px;
+                    margin-left: 62px;
+                    margin-top: 22px;
+
+                    .ant-progress-text {
+                        width: 31px;
+                        height: 17px;
+                        line-height: 17px;
+                        text-align: center;
+                        font-size: 14px;
+                        text-align: right;
+                        color: #926dea;
+                        margin-left: 8px;
+                    }
+
+                    .ant-progress-bg {
+                        background-color: #926dea;
+                    }
+                }
+
+                :local(.failureProgressBar) {
+                    .ant-progress-bg {
+                        background-color: #9b9b9b;
+                    }
+
+                    .ant-progress-text {
+                        color: #9b9b9b;
+                    }
+                }
+
+                :local(.uploadVedioFailureTips) {
+                    margin-top: 7px;
+                    margin-left: 62px;
+
+                    @extend .u-text-l-14;
+
+                    span {
+                        color: $link-color;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+:local(.container) {
+  width: 100%;
+  overflow-y: auto;
+  max-height: 255px;
+  .ant-input-affix-wrapper {
+    height: 26px;
+  }
+  :local(.roleList) {
+    :local(.role) {
+      padding: 5px 10px;
+      cursor: pointer;
+
+      &:hover {
+        background: #faf8fe;
+      }
+
+      & > div {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      :local(.avatarWrapper) {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+
+        img {
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+        }
+
+      }
+
+    }
+  }
+}

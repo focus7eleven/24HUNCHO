@@ -1,0 +1,26 @@
+:local(.permissionWrapper) {
+  background-color: #fafafa;
+  padding: 10px 20px;
+  margin-top: 4px;
+  :local(.permission) {
+    div {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    :local(.label) {
+      color: #666;
+      margin-right: 8px;
+    }
+    :local(.originalInfo) {
+      color: #666;
+    }
+    :local(.newInfo) {
+      color: #926dea;
+    }
+    :local(.tag) {
+      color: #9b9b9b;
+      margin: 0 8px;
+      font-size: 10px;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+
+:local(.rolesContainer){
+  position: relative;
+  display:inline-block;
+
+  :local(.rolesWrapper){
+    width: 35px;
+    height: 24px;
+    position: relative;
+
+    :local(.avatarWrapper){
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid white;
+      >img {
+        width: 21px;
+        height: 21px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+}

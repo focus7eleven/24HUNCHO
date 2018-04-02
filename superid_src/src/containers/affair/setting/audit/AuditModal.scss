@@ -1,0 +1,160 @@
+:local(.modal) {
+  .ant-modal-body {
+    padding: 0;
+    height: 365px !important;
+    overflow-y: inherit !important;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+  }
+  :local(.aside) {
+    width: 100px;
+    background-color: #fafafa;
+    display:inline-block;
+    height: 100%;
+    vertical-align: top;
+    border-right: 1px solid #d9d9d9;
+    position: relative;
+    overflow-y: auto;
+
+    :local(.cursor) {
+      position: absolute;
+      height: 30px;
+      width: 3px;
+      right: 0;
+      transition: top .5s ease-in-out;
+      background-color: #926dea;
+      z-index: 5;
+    }
+
+    :local(.title) {
+      font-size: 12px;
+      padding-left: 10px;
+      color: #9b9b9b;
+      line-height: 30px;
+    }
+    :local(.affair) {
+      font-size: 12px;
+      padding-left: 30px;
+      color: #666666;
+      line-height: 30px;
+      white-space: nowrap;
+      cursor: pointer;
+      &[data-status='active'] {
+        color: #926dea;
+        background-color: #fff;
+        opacity: 0.9;
+        font-weight: 500;
+
+      }
+    }
+  }
+  :local(.main) {
+    display:inline-block;
+    height: 100%;
+    vertical-align: top;
+    width: calc(100% - 100px);
+    padding: 25px 20px 0 20px;
+    overflow-y: auto;
+
+    :local(.operation) {
+      position: relative;
+      border-radius: 3px;
+      background-color: #fafafa;
+      border: solid 1px #ebebeb;
+      margin-bottom: 10px;
+      padding: 10px;
+
+      :local(.icon) {
+        display: none;
+      }
+      :local(.titleWrapper) {
+        padding: 0 10px;
+        margin-bottom: 4px;
+        div {
+          vertical-align: middle;
+          display: inline-block;
+        }
+      }
+      :local(.title) {
+        font-size: 14px;
+        font-weight: 500;
+        color: #666666;
+        margin-right: 8px;
+      }
+      :local(.subTitle) {
+        font-size: 12px;
+        color: #9b9b9b;
+      }
+      :local(.content) {
+        padding: 0 10px;
+        :local(.item) {
+          display: inline-block;
+          font-size: 12px;
+          color: #9b9b9b;
+          margin-right: 20px;
+        }
+      }
+      :local(.linkButton) {
+        font-size: 12px;
+        color: #4a90e2;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 10px;
+      }
+
+      & > :local(.operation) {
+        background-color: #fff;
+        margin-top: 8px;
+        margin-bottom: 0;
+        :local(.icon) {
+          display: inherit;
+          position: absolute;
+          left: 10px;
+          top: 14px;
+          svg {
+            width: 10px;
+            fill: #b399dc;
+          }
+        }
+        :local(.titleWrapper) {
+          max-width: calc(100% - 30px);
+        }
+        :local(.title) {
+          font-size: 12px;
+          font-weight: normal;
+        }
+        :local(.titleWrapper),
+        :local(.content) {
+          position: relative;
+          left: 8px;
+        }
+        :local(.linkButton) {
+          right: 10px;
+        }
+      }
+    }
+  }
+}
+
+:local(.overlay) {
+  :local(.main) {
+    width: 160px;
+  }
+  :local(.content){
+    i {
+      color: #ffa700;
+      margin-right: 8px;
+    }
+    margin: 16px 0;
+  }
+  :local(.actionGroup) {
+    text-align: right;
+    button {
+      height: 22px;
+    }
+    button:not(:last-of-type) {
+      margin-right: 8px;
+    }
+  }
+}

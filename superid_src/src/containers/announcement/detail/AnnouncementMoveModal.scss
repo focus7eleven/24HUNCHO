@@ -1,0 +1,64 @@
+:local(.modal) {
+  .ant-modal-body {
+    padding-left: 60px;
+  }
+  .ant-modal-footer {
+    padding: 12px 24px 24px 24px;
+  }
+  .ant-select {
+    width: 300px;
+  }
+  :local(.body) {
+    :local(.controlWrapper) {
+      &:not(:first-of-type) {
+        margin-top: 8px;
+      }
+      & > div {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 14px;
+        color: #4a4a4a;
+      }
+      & > div:first-of-type {
+        width: 88px;
+        line-height: 32px;
+        &::after {
+          content: '：'
+        }
+      }
+      :local(.breadcrumb) {
+        & > div {
+          display: inline-block;
+          vertical-align: middle;
+          font-size: 14px;
+          color: #4a4a4a;
+          line-height: 32px;
+        }
+        :local(.divide) {
+          width: 30px;
+          color: #9b9b9b;
+          text-align: center;
+        }
+      }
+      .ant-form-item {
+        margin-bottom: 0;
+      }
+      .ant-form-item-with-help {
+        margin-bottom: 0;
+      }
+      .ant-form-explain {
+        position: absolute;
+      }
+    }
+  }
+}
+
+:local(.option) {
+  :local(.active) {
+    color: #926dea;
+  }
+}
+
+:local(.inline) {
+  display: inline-block;
+}

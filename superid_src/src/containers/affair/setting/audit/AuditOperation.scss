@@ -1,0 +1,180 @@
+:local(.auditWrapper) {
+  border-radius: 6px;
+  border: solid 1px #ebebeb;
+  margin-bottom: 20px;
+
+  & > :local(.criteria) {
+    position: relative;
+    & > div {
+      display: inline-block;
+    }
+  }
+  :local(.header) {
+    height: 40px;
+    background-color: #fafafa;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    position: relative;
+
+    & > div {
+      height: 40px;
+      line-height: 40px;
+    }
+    :local(.name) {
+      color: #4a4a4a;
+      display: inline-block;
+      vertical-align: top;
+      font-size: 12px;
+      font-weight: 500;
+      color: #9b9b9b;
+      padding-left: 20px;
+    }
+    :local(.right) {
+      position: absolute;
+      right: 6px;
+      top: 6px;
+      .ant-btn{
+        font-weight:400;
+      }
+      .ant-btn:active{
+        border-color:#926dea;
+        color:#926dea;
+      }
+      .ant-btn:focus{
+        border-color:#926dea;
+        color:#926dea;
+      }
+    }
+  }
+  :local(.body) {
+    padding: 5px 20px 5px 30px;
+    border-top: solid 1px #ebebeb;
+    & > div:not(:last-of-type) {
+      border-bottom: solid 1px #e9e9e9;
+    }
+  }
+  :local(.criteria) {
+    padding: 15px 0;
+    position: relative;
+    &:not(:last-of-type) {
+      border-bottom: solid 1px #e9e9e9;
+    }
+
+    :local(.left) {
+      height: 24px;
+      display: inline-block;
+
+      :local(.criteriaName) {
+        display: inline-block;
+        vertical-align: top;
+        line-height: 24px;
+        font-size: 14px;
+        color: #4a4a4a;
+      }
+      :local(.subTitle) {
+        font-size: 12px;
+        color: #9b9b9b;
+        margin-left: 8px;
+        line-height: 24px;
+        display: inline-block;
+        vertical-align: top;
+      }
+      :local(.auditorGroup) {
+        display: inline-block;
+        margin-left: 20px;
+        :local(.label) {
+          display: inline-block;
+          font-size: 12px;
+          color: #9b9b9b;
+        }
+      }
+    }
+    :local(.right) {
+      position: absolute;
+      right: 0;
+      top: 15px;
+      width: 60%;
+      text-align: right;
+      :local(.roleGroup) {
+        display: inline-block;
+        position: absolute;
+        right: 15px;
+
+        :local(.avatarWrapper) {
+          display: inline-block;
+          position: relative;
+          img {
+            width: 24px;
+            height: 24px;
+            border-radius: 12px;
+            vertical-align: middle;
+            margin-right: 6px;
+          }
+          :local(.treeIcon) {
+            position:absolute;
+            right: 6px;
+            bottom: 0;
+            width: 10px;
+            height: 10px;
+            background-color: #926dea;
+            border: solid 1px #fff;
+            border-radius: 50%;
+            svg {
+              fill: #fff;
+              width: 8px;
+              height: 7px;
+              cursor: default;
+            }
+          }
+        }
+      }
+
+      :local(.editActionGroup) {
+        position: relative;
+        top: 2px;
+        & > *:not(:last-child) {
+          margin-right: 10px;
+        }
+      }
+      button.ant-btn.ant-btn-ghost {
+        background-color: #fff;
+      }
+
+      :local(.moreAction) {
+        position: absolute;
+        top: 5px;
+        right: 0;
+        width: 20px;
+        text-align: right;
+        svg {
+          width: 14px;
+          fill: #ccc;
+          transition: fill .3s;
+        }
+        &:hover svg {
+          fill: #666;
+        }
+      }
+      :local(.actionGroup) {
+        height: 24px;
+        & > div {
+          display: inline-block;
+          margin-right: 20px;
+          &:hover svg {
+            fill:#926dea;
+          }
+
+        }
+        :local(.criteriaAction) {
+          position: relative;
+          top: 5px;
+        }
+      }
+    }
+  }
+}
+.ant-dropdown-menu-item{
+  &:hover{
+    font-weight:500;
+  }
+}

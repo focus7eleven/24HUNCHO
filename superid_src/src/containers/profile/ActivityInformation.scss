@@ -1,0 +1,201 @@
+@import '~theme.scss';
+:local(.activityContainer){
+    :local(.alliance) {
+      :local(.allianceCard) {
+        margin-bottom: 20px;
+        background: #fafafa;
+        border: solid 1px #ebebeb;
+        min-width:770px;
+        max-width:900px;
+        width:90%;
+
+        .ant-card-body{
+          padding: 0;
+        }
+
+        :local(.allianceHead) {
+          border-bottom: dashed 1px #d9d9d9;
+          position: relative;
+          padding: 10px 10px 10px 20px;
+
+          :local(.allianceAvatar) {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 3px;
+            background-color: #ffffff;
+            border: solid 1px #f4f4f4;
+            vertical-align: middle;
+
+          }
+          :local(.allianceName) {
+            display: inline-block;
+            height: 19px;
+            font-size:16px;
+            font-weight: 500;
+            color: #4a4a4a;
+            vertical-align: middle;
+            margin-right: 20px;
+            margin-left: 12px;
+          }
+          :local(.time) {
+            display: inline-block;
+            font-size: 14px;
+            line-height: 30px;
+            color: #9b9b9b;
+            vertical-align: middle;
+            float: right;
+          }
+        }
+
+        :local(.allianceBody) {
+          position: relative;
+          height: 190px;
+          color: #9b9b9b;
+          //width:100%;
+          //height:185px;
+          :local(.rootRole){
+            float: left;
+            width: 290px;
+            padding: 14px 20px 20px 20px;
+
+            :local(.rootRoleCard){
+              position: relative;
+              margin-top: 10px;
+
+              :local(.flag){
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 0;
+                height: 0;
+                border: 15px solid;
+                border-top-right-radius: 9px;
+                border-color:#f6a623 #f6a623 transparent transparent;
+                z-index:2;
+
+                :local(span){
+                  position: absolute;
+                  display: inline-block;
+                  top: -15px;
+                  right: -8px;
+                  color: #ffffff;
+
+                }
+              }
+            }
+
+
+          }
+
+          :local(.expatriateRoles){
+            margin-left:300px;
+            padding: 14px 20px 0 20px;
+            border-left: dashed 1px #d9d9d9;
+            height: 100%;
+            overflow: auto;
+
+            :local(.affair){
+              position:relative;
+              margin-top: 10px;
+              margin-bottom: 15px;
+
+              color: #9b9b9b;
+
+              :local(.avatar){
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                vertical-align: middle;
+              }
+              :local(.name){
+                display: inline-block;
+                margin-left:12px;
+                margin-right: 12px;
+                vertical-align: middle;
+                color: #4a4a4a;
+              }
+              :local(.roles){
+                display: inline-block;
+                margin-left: 12px;
+                vertical-align:middle;
+                color: #9b9b9b;
+
+                :local(.roleTitle){
+                  cursor:pointer;
+                }
+              }
+            }
+          }
+
+          //:local(.slidesContainer){
+          //
+          //  overflow: hidden;
+          //  white-space: nowrap;
+          //  display:flex;
+          //  position: relative;
+          //  align-items: center;
+          //
+          //  :local(.role){
+          //    position:relative;
+          //    display:inline-block;
+          //    margin:10px;
+          //    padding-bottom:19.5px;
+          //
+
+          //  }
+          //}
+          //:local(.leftIcon) {
+          //  position: absolute;
+          //  top: 0 ;
+          //  left: 0;
+          //  display: inline-block;
+          //  height: 170px;
+          //  width: 130px;
+          //  text-align: center;
+          //  background-color: #ffffff;
+          //  z-index:2;
+          //
+          //  :local(i){
+          //    font-size:18px;
+          //    color: #bdbdbd;
+          //    position:relative;
+          //    top:50%;
+          //    transform: translateY(-50%);
+          //  }
+          //}
+          //
+          //:local(.rightIcon) {
+          //  position:absolute;
+          //  top:0;
+          //  right:0;
+          //  display: inline-block;
+          //  height: 170px;
+          //  width: 130px;
+          //  text-align: center;
+          //  background-color: #ffffff;
+          //  z-index:2;
+          //
+          //  :local(i){
+          //    font-size: 18px;
+          //    color: #bdbdbd;
+          //    position:relative;
+          //    top:50%;
+          //    transform: translateY(-50%);
+          //  }
+          //}
+          //
+
+
+        }
+      }
+
+  }
+  :local(.defaultAvatar) {
+    display: inline-block;
+    background-color: $content-color;
+    width: 30px;
+    height: 30px;
+  }
+
+}

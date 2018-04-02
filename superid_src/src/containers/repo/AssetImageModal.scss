@@ -1,0 +1,57 @@
+:local(.assetImageModal){
+  .ant-modal-content{
+    .ant-modal-close-x{
+      right:23px;
+      top:23px;
+    }
+    .ant-modal-header{
+      padding:20px 0px 0px 20px;
+    }
+    .ant-modal-body{
+      padding:30px;
+      display:flex;
+      justify-content:center;
+      :local(.pic){
+        position:relative;
+        :local(.hover){
+          position:absolute;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          opacity:0;
+          height:300px;
+          width:300px;
+          border-radius:5px;
+          background-color:rgba(0,0,0,0.4);
+          left:0px;
+          top:0px;
+          span{
+            font-size:24px;
+            color:#ffffff;
+          }
+          &:hover{
+            opacity:1;
+            cursor:pointer;
+          }
+        }
+        :local(.img){
+          height:300px;
+          width:300px;
+        }
+        :local(.file){
+          display:none;
+        }
+      }
+    }
+    .ant-modal-footer{
+      padding:0px 30px 30px 0px;
+      .ant-btn{
+        margin-left:10px;
+        height:35px;
+        width:68px;
+        border-radius:3px;
+        padding:0px!important;
+      }
+    }
+  }
+}
